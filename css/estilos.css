@@ -99,7 +99,8 @@ body, html{
 		width: 80%;
 	}
 	.banner1>p, .banner2>p, .banner3>p{
-
+		width: 80;
+		float: left;
 	}
 	.banner1>i, .banner2>i, .banner3>i{
 		
