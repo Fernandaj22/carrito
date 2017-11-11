@@ -12,7 +12,7 @@
 <body>
 
 	<header class="encabezado">
-		<div class="container-fluid">
+		<div class="container-fluid toda">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 				<a>MenShop</a>
@@ -24,32 +24,46 @@
 			</div>
 			<div class="login">
 				<a href="">Iniciar Sesión</a>
-				<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				<i class="fa fa-shopping-cart" aria-hidden="true" title="Carrito"></i>
 			</div>
 		</div>
 	</header>
 
 	<div class="container-fluid banner">
-		<section class="main row">
-			<div class="col-xs-12 banner1" style="display: block !important;">
-				<i class="fa fa-chevron-left izq" aria-hidden="true"></i>
-				<h1>¡Bienvenido!</h1>
-				<i class="fa fa-chevron-right der" aria-hidden="true"></i>
-				<p>No podrás parar de comprar</p>
-			</div>
+		<section class="col-md-12-fluid">
+			<div id="carousel-1" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-1" data-slide-to="1"></li>
+					<li data-target="#carousel-1" data-slide-to="2"></li>
+				</ol>
 
-			<div class="col-xs-12 banner2">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i>
-				<h1>Promociones súper duper</h1>
-				<p>Entérate de las prendas más novedosas</p>
-				<i class="fa fa-chevron-right" aria-hidden="true"></i>
-			</div>
+				<div class="carousel-inner banner" role="listbox">
+					<div class="item active banner">
+						<img src="img/banner1.jpg" class="img-responsive" alt="">
+						<div class="carousel-caption">
+							<h1 class="tamañoh1">¡Bienvenido!</h1>
+							<p class="tamañop">No podrás parar de comprar</p>
+						</div>
+					</div>
 
-			<div class="col-xs-12 banner3">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i>
-				<h1>Nuevas playeras</h1>
-				<p>Colores vivos de temporada</p>
-				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+					<div class="item banner">
+						<img src="img/banner2.jpg" class="img-responsive" alt="">
+						<div class="carousel-caption">
+							<h1 class="tamañoh1">Mejores precios, mejores prendas</h1>
+							<p class="tamañop">Todo el estilo que necesitas</p>
+						</div>
+					</div>
+
+					<div class="item banner">
+						<img src="img/banner3.jpg" class="img-responsive" alt="">
+						<div class="carousel-caption">
+							<h1 class="tamañoh1">Viste a la moda</h1>
+							<p class="tamañop">Prendas novedosas</p>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</section>
 	</div>
@@ -57,18 +71,20 @@
 	<div class="container">
 		<section class="main row">
 			<div class="col-xs-12">
-				<a href="">PLAYERAS</a>
+				<div class="seccion1">
+					<a href="">PLAYERAS</a>
+				</div>
 			</div>
-			<div class="col-xs-12">
+			<div class="seccion2">
 				<a href="">CAMISAS</a>
 			</div>
-			<div class="col-xs-12">
+			<div class="seccion3">
 				<a href="">PANTALONES</a>
 			</div>
-			<div class="col-xs-12">
+			<div class="seccion4">
 				<a href="">SUÉTER Y CHAMARRAS</a>
 			</div>
-			<div class="col-xs-12">
+			<div class="seccion5">
 				<a href="">ZAPATOS</a>
 			</div>
 		</section>

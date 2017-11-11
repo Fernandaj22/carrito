@@ -13,6 +13,15 @@ body, html{
 .encabezado{
 	width: 100%;
 	height: 40px;
+	position: fixed;
+	float: left;
+	top: 0px;
+	left: 0px;
+	z-index: 999999;
+}
+.toda{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
 	.logo{
 		width: 37.5%;
@@ -20,7 +29,6 @@ body, html{
 		float: left;
 		position: relative;
 		background: rgba(255,255,255,200);
-		box-sizing: border-box;
 		border-bottom: 1px solid rgba(0,0,0,.2);
 	}
 		.logo>i{
@@ -44,7 +52,6 @@ body, html{
 		float: left;
 		position: relative;
 		background: rgba(255,255,255,200);
-		box-sizing: border-box;
 		border-bottom: 1px solid rgba(0,0,0,.2);
 		display: flex;
 		justify-content:center;
@@ -79,63 +86,31 @@ body, html{
 			text-decoration: none;
 			font-size: 15px;
 			line-height: 40px;
+			margin-right: 10px;
 		}
 /*B A N N E R S*/
 .banner{
-	height: 200px !important;
+	width: 100% !important;
+	height: 240px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
-	.banner1{
-		background-image: url(../img/banner1.jpg) !important;
-		background-repeat: cover;
-		background-position: center top;
-		background-size: 100%;
-	}
-	.banner1, .banner2, .banner3{
-		float: left;
-		position: relative;
-		display: none;
-	}
-	.banner1>h1, .banner2>h1, .banner3>h1{
-		width: 80%;
-	}
-	.banner1>p, .banner2>p, .banner3>p{
-		width: 80;
-		float: left;
-	}
-	.banner1>i, .banner2>i, .banner3>i{
-		
-	}
-	.izq{
-		
-	}
-	.der{
-		
-	}
-
-
-.articulos{
-	width: 100%;
-	height: calc(100% - 220px);
-	float: left;
-	position: relative;
-	background: blue;
-	top: 40px;
+.tamañoh1{
+	font-size: 30px !important;
 }
+.tamañop{
+	font-size: 20px !important;
+}
+/*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
 		width: 100%;
-		height: 98px;
+		height: 104px;
 		float: left;
 		position: relative;
-		background: green;
 	}
-	.cuatro{
-		width: 25%;
-		height: 100%;
-		float: left;
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
+	.seccion1{
+		background-image: url(img/banner1.jpg) !important;
+		background-repeat: cover
+		background-size: 100%;
 	}
 

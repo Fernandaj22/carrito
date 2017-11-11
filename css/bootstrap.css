@@ -1166,7 +1166,7 @@ hr {
   height: auto;
   margin: 0;
   overflow: visible;
-  clip: auto;
+  clip: 3s all;
 }
 [role="button"] {
   cursor: pointer;
@@ -1184,7 +1184,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.1;
   color: inherit;
 }
