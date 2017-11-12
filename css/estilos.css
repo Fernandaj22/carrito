@@ -6,6 +6,8 @@ body, html{
 	width: 100%;
 	height: 100%;
 	font-family: 'Nunito', sans-serif !important;
+	color: #000020;
+	background: rgba(255,255,255,.6);
 }
 :root{
 	--blancobanner: #fff;
@@ -20,11 +22,11 @@ body, html{
 	z-index: 999999;
 }
 .toda{
-	padding-left: 0px !important;
-	padding-right: 0px !important;
+	padding-left: 1px !important;
+	padding-right: 1px !important;
 }
 	.logo{
-		width: 37.5%;
+		width: 35%;
 		height: 100%;
 		float: left;
 		position: relative;
@@ -44,7 +46,8 @@ body, html{
 			font-weight: 400;
 			margin-left: 15px;
 			line-height: 40px;
-			text-decoration: none !important
+			text-decoration: none !important;
+			color: rgba(0,0,0,.5);
 		}
 	.redsociales{
 		width: 25%;
@@ -66,7 +69,7 @@ body, html{
 			margin-left: 10px;
 		}
 	.login{
-		width: 37.5%;
+		width: 40%;
 		height: 100%;
 		float: left;
 		position: relative;
@@ -83,10 +86,10 @@ body, html{
 		.login>a{
 			float: right;
 			margin-left: 10px;
-			text-decoration: none;
+			text-decoration: none !important;
 			font-size: 15px;
 			line-height: 40px;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 /*B A N N E R S*/
 .banner{
@@ -94,6 +97,7 @@ body, html{
 	height: 240px !important;
 	padding-left: 0px !important;
 	padding-right: 0px !important;
+	position: relative;
 }
 .tamañoh1{
 	font-size: 30px !important;
@@ -101,16 +105,135 @@ body, html{
 .tamañop{
 	font-size: 20px !important;
 }
+.center{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.bannertexto{
+	height: 40px !important;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin-top: 3px;
+}
+.top{
+	padding-top: 7px;	
+}
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
 		width: 100%;
-		height: 104px;
+		height: 140px;
 		float: left;
 		position: relative;
 	}
-	.seccion1{
-		background-image: url(img/banner1.jpg) !important;
-		background-repeat: cover
-		background-size: 100%;
+	.seccion1>.img, .seccion1>a,
+	.seccion2>.img, .seccion2>a,
+	.seccion3>.img, .seccion3>a,
+	.seccion4>.img, .seccion4>a,
+	.seccion5>.img, .seccion5>a{
+		width: 50%;
+		height: 100%;
+		float: left;
 	}
+	.seccion1>.img{
+		float: right !important;
+		background-image: url(../img/seccion1.jpg) !important;
+		background-repeat: cover;
+		background-size: 100%;
+		background-position: center top 90%;
+	}
+	.seccion2>.img{
+		float: left !important;
+		background-image: url(../img/seccion2.jpg) !important;
+		background-repeat: cover;
+		background-size: 100%;
+		background-position: center bottom 30%;
+	}
+	.seccion3>.img{
+		float: right !important;
+		background-image: url(../img/seccion3.jpg) !important;
+		background-repeat: cover cover;
+		background-size: 100%;
+		background-position: center top 10%;
+	}
+	.seccion4>.img{
+		float: left;
+		background-image: url(../img/seccion4.jpg) !important;
+		background-repeat: cover;
+		background-size: 100%;
+		background-position: center 35%;
+	}
+	.seccion5>.img{
+		float: right !important;
+		background-image: url(../img/seccion5.jpg) !important;
+		background-repeat: cover;
+		background-size: 100%;
+		background-position: center 35%;
+	}
+	.seccion1>a, .seccion2>a, .seccion3>a, .seccion4>a, .seccion5>a{
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		font-size: 1.8em;
+		font-weight: 600;
+		color: var(--blancobanner);
+		text-shadow: 2px 2px 7px rgba(150, 150, 150, 1);
+		text-decoration: none !important;
+	}
+	.seccion1>a{
+		background: #c0e0e0;
+	}
+	.seccion2>a{
+		float: right !important;
+		background: #a0c0e0;
+	}
+	.seccion3>a{
+		background: #c0e0e0;
+	}
+	.seccion4>a{
+		float: right !important;
+		background: #a0c0e0;
+	}
+	.seccion5>a{
+		background: #c0e0e0;
+	}
+footer{
+	background: #a0c0e0 !important;
+	line-height: 15px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	border-top: 5px solid rgba(0, 4, 33, .6);
+}
+.centrado{
+	text-align: center;
+	margin-top: 5px;
+	font-weight: 300;
+}
+.container>.redsociales{
+	background: #a0c0e0 !important;
+	border: none;
+	font-size: .9em !important;
 
+}
+.nombre{
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.nombre>p{
+	width: auto !important;	
+	margin-left: 5px;
+}
