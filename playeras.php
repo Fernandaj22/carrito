@@ -30,7 +30,7 @@
 	</header>
 
 	<div class="container-fluid">
-		<div class="col-xs-12 img img-responsive">Hla</div>
+		<div class="col-xs-12 imgcate img-responsive">Hla</div>
 	</div>
 
 	<div class="container-fluid center bannercate">
@@ -51,7 +51,7 @@
 	</div>
 
 	<div class="container">
-		<div class="main col-xs-12">
+		<div class="main col-xs-12 buscador">
 			<input type="text" name="" placeholder="Busca por nombre de producto"><i class="fa fa-search" aria-hidden="true"></i>
 		</div>
 	</div>
