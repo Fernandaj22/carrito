@@ -122,8 +122,43 @@ body, html{
 	border-bottom: 1px solid rgba(0,0,0,.09);
 	border-top: 1px solid rgba(0,0,0,.09);
 }
+.bannercate{
+	height: 47px !important;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin-top: 3px;
+	border-bottom: 1px solid rgba(0,0,0,.09);
+	border-top: 1px solid rgba(0,0,0,.09);
+}
 .top{
 	padding-top: 7px;	
+}
+/*M E N U DE C A D A C A T E G O R I A*/
+.home{
+	width: 20%;
+	height: 100% !important;
+	float: left;
+	position: relative;
+}
+.home>a{
+	border: none !important;
+}
+.categorias{
+	width: 80% !important;
+	height: 100% !important;
+	float: left;
+	position: relative;
+}
+.enlaces{
+	margin-left: 13px;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	text-decoration: none !important;
+}
+.enlaces:hover{
+	border-bottom: 2.5px solid rgba(0, 4, 33, .6);
 }
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
@@ -214,6 +249,7 @@ body, html{
 	background-size: 100%;
 	background-repeat: cover;
 }
+
 /*F O O T E R*/
 footer{
 	background: #a0c0e0 !important;

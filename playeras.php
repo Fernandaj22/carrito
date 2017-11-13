@@ -33,22 +33,70 @@
 		<div class="col-xs-12 img img-responsive">Hla</div>
 	</div>
 
-	<div class="container-fluid center">
-		<div class="col-xs-12">
-			<i class="fa fa-home" aria-hidden="true"></i>
-			<a href="">Home</a>
+	<div class="container-fluid center bannercate">
+		<div class="col-xs-12 main">
+			<div class="home">
+				<i class="fa fa-angle-left" aria-hidden="true"></i>
+				<a href="principal.php" class="enlaces">Home</a>
+			</div>
 
-			<a href="">Playeras</a>
-			<a href="">Camisas</a>
-			<a href="">Pantalones</a>
-			<a href="">Suéter/Chamarra</a>
-			<a href="">Zapatos</a>
+			<div class="categorias">
+				<a href="" class="enlaces">Playeras</a>
+				<a href="" class="enlaces">Camisas</a>
+				<a href="" class="enlaces">Pantalones</a>
+				<a href="" class="enlaces">Suéter/Chamarra</a>
+				<a href="" class="enlaces">Zapatos</a>
+			</div>
 		</div>
 	</div>
 
-
 	<div class="container">
-		
+		<div class="main col-xs-12">
+			<input type="text" name="" placeholder="Busca por nombre de producto"><i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+	</div>
+	<div class="container">
+		<div class="main">
+			<div class="col-xs-12 col-sm-3">
+				<div>
+					<img src="">
+					<p>Lentes de sol / RayBan </p>
+					<h1>$ 299.00 </h1>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-3">
+				<div>
+					<img src="">
+					<p>Lentes de sol / RayBan </p>
+					<h1>$ 299.00 </h1>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-3">
+				<div>
+					<img src="">
+					<p>Lentes de sol / RayBan </p>
+					<h1>$ 299.00 </h1>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-3">
+				<div>
+					<img src="">
+					<p>Lentes de sol / RayBan </p>
+					<h1>$ 299.00 </h1>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-3">
+				<div>
+					<img src="">
+					<p>Lentes de sol / RayBan </p>
+					<h1>$ 299.00 </h1>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
