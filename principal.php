@@ -78,7 +78,7 @@
 			<div class="col-xs-12">
 				<div class="seccion1">
 					<div class="img img-responsive"></div>
-					<a href="">PLAYERAS</a>
+					<a href="playeras.php">PLAYERAS</a>
 				</div>
 			</div>
 			<div class="col-xs-12">
