@@ -11,8 +11,8 @@
 </head>
 <body>
 
-	<header class="encabezado">
-		<div class="container-fluid">
+	<header>
+		<div class="container-fluid encabezado">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
 				<a>MenShop</a>
