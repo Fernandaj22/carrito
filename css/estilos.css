@@ -178,38 +178,38 @@ body, html{
 	}
 	.seccion1>.img{
 		float: right !important;
-		background-image: url(../img/seccion1.jpg) !important;
+		background-image: url(../img/seccion1.jpeg) !important;
 		background-repeat: cover;
 		background-size: 100%;
-		background-position: center top 90%;
+		background-position: center top 50%;
 	}
 	.seccion2>.img{
 		float: left !important;
-		background-image: url(../img/seccion2.jpg) !important;
+		background-image: url(../img/seccion2.jpeg) !important;
 		background-repeat: cover;
 		background-size: 100%;
 		background-position: center bottom 30%;
 	}
 	.seccion3>.img{
 		float: right !important;
-		background-image: url(../img/seccion3.jpg) !important;
+		background-image: url(../img/seccion3.jpeg) !important;
 		background-repeat: cover cover;
 		background-size: 100%;
 		background-position: center top 10%;
 	}
 	.seccion4>.img{
 		float: left;
-		background-image: url(../img/seccion4.jpg) !important;
+		background-image: url(../img/seccion4.jpeg) !important;
 		background-repeat: cover;
 		background-size: 100%;
 		background-position: center 35%;
 	}
 	.seccion5>.img{
 		float: right !important;
-		background-image: url(../img/seccion5.jpg) !important;
+		background-image: url(../img/seccion5.jpeg) !important;
 		background-repeat: no-repeat;
 		background-size: 100%;
-		background-position: center 35%;
+		background-position: center center;
 	}
 	.seccion1>a, .seccion2>a, .seccion3>a, .seccion4>a, .seccion5>a{
 		text-align: center;
