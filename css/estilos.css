@@ -20,13 +20,14 @@ body, html{
 	top: 0px;
 	left: 0px;
 	z-index: 999999;
+	background: rgba(255,255,255,200);
 }
 .toda{
 	padding-left: 1px !important;
 	padding-right: 1px !important;
 }
 	.logo{
-		width: 39%;
+		width: 40%;
 		height: 100%;
 		float: left;
 		position: relative;
@@ -38,7 +39,7 @@ body, html{
 			position: relative;
 			font-size: 1.3em;
 			line-height: 40px;
-			margin-left: 10px;
+			margin-left: 5px;
 		}
 		.logo>a{
 			float: left;
@@ -48,6 +49,7 @@ body, html{
 			line-height: 40px;
 			text-decoration: none !important;
 			color: rgba(0,0,0,.5);
+			margin-top: 3px;
 		}
 	.redsociales{
 		width: 20%;
@@ -66,30 +68,29 @@ body, html{
 			position: relative;
 			font-size: 1.4em;
 			line-height: 40px;
-			margin-left: 10px;
+			margin-left: 8px;
 		}
 	.login{
 		width: 40%;
 		height: 100%;
 		float: left;
 		position: relative;
-		background: rgba(255,255,255,200);
 		box-sizing: border-box;
 		border-bottom: 1px solid rgba(0,0,0,.2);
 	}
 		.login>i{
 			float: right;
 			position: relative;
-			font-size: 1.4em;
+			font-size: 1.3em;
 			line-height: 40px;
+			margin-right: 1px;
 		}
 		.login>a{
 			float: right;
-			margin-left: 6px;
+			margin-left: 2px;
 			text-decoration: none !important;
-			font-size: 15px;
 			line-height: 40px;
-			margin-right: 5px;
+
 		}
 /*B A N N E R S*/
 .banner{
@@ -185,14 +186,14 @@ body, html{
 	}
 	.seccion2>.img{
 		float: left !important;
-		background-image: url(../img/seccion2.jpg) !important;
+		background-image: url(../img/seccion2.jpeg) !important;
 		background-repeat: cover;
 		background-size: 100%;
 		background-position: center bottom 30%;
 	}
 	.seccion3>.img{
 		float: right !important;
-		background-image: url(../img/seccion3.jpg) !important;
+		background-image: url(../img/seccion3.jpeg) !important;
 		background-repeat: cover cover;
 		background-size: 100%;
 		background-position: center top 10%;
