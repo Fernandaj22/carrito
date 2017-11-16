@@ -138,48 +138,11 @@ body, html{
 	padding-top: 7px;	
 }
 /*M E N U DE C A D A C A T E G O R I A*/
-.contmenu{
-	width: 100% !important;
-	height: 100% !important;
+.cate{
+	width: 7%;
 	float: left;
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-}
-.home{
-	width: 10% !important;
-	height: 100% !important;
-	float: left;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-}
-.home>a{
-	border: none !important;
-}
-/*.categorias{
-	width: 70% !important;
-	height: 50% !important;
-	float: left;
-	position: relative;
-	display: flex;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	margin-left: 7%;
-}*/
-.enlaces{
-	width: auto;
-	border-bottom: 1px solid #fff;
-	outline: none;
-	text-decoration: none !important;
-}
-.enlaces:hover{
-	border-bottom: 2.5px solid rgba(0, 4, 33, .6);
+	margin-left: 10% !important;
 }
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
@@ -269,6 +232,7 @@ body, html{
 	background-position: center;
 	background-size: 100%;
 	background-repeat: cover;
+	margin-bottom: 3px;
 }
 /*B U S C A D O R*/
 .buscador{
