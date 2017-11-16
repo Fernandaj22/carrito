@@ -33,26 +33,27 @@
 		<div class="col-xs-12 imgcate img-responsive"></div>
 	</div>
 
-    <nav class="navbar navbar-default">
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="Principal.php" class="navbar-brand"><i class="fa fa-angle-left" aria-hidden="true"> </i>  Home</a>
-        </div>
-        <div id="navbarCollapse" class="collapse navbar-collapse categorias">
-            <!-- <ul class="nav navbar-nav">
-            	<li class="hover"><a href="playeras.php">Playeras</a></li>
-                <li class="hover"><a href="">Camisas</a></li>
-                <li class="hover"><a href="">Pantalones</a></li>
-                <li class="hover"><a href="">Suéter/Chamarra</a></li>
-                <li class="hover"><a href="">Zapatos</a></li>
-            </ul> -->
-        </div>
-    </nav>
+	<nav class="navbar navbar-default border" role="navigation">
+  		<div class="navbar-header">
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      		<span class="icon-bar"></span>
+      		<span class="icon-bar"></span>
+      		<span class="icon-bar"></span>
+    		</button>    
+  		</div>
+  		<div class="navbar-collapse collapse">
+    		<ul class="nav navbar-nav navbar-left">
+        		<li class="hover"><a href=""><i class="fa fa-angle-left" aria-hidden="true"></i>  Home</a></li>
+    		</ul>
+	   		<ul class="nav navbar-nav navbar-right">
+		     	 <li class="hover"><a href="#about">Playeras</a></li>
+		      	 <li class="hover"><a href="#contact">Camisas</a></li>
+		      	 <li class="hover"><a href="#contact">Pantalones</a></li>
+		      	 <li class="hover"><a href="#contact">Suéter/Chamarra</a></li>
+		      	 <li class="hover"><a href="#contact">Zapatos</a></li>
+	    	</ul>
+ 		</div>
+	</nav>
 
 	<div class="container">
 		<div class="main col-xs-12 buscador">

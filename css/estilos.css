@@ -138,11 +138,14 @@ body, html{
 	padding-top: 7px;	
 }
 /*M E N U DE C A D A C A T E G O R I A*/
-.cate{
-	width: 7%;
-	float: left;
-	position: relative;
-	margin-left: 10% !important;
+.hover{
+	border: 1px solid transparent;
+}
+.hover:hover{
+	border-bottom: 2px solid rgba(0, 4, 33, .6);
+}
+.border{
+	margin-bottom: 0px !important;
 }
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
