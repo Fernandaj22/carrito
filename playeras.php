@@ -34,7 +34,7 @@
 	</div>
 
 	<div class="container-fluid center bannercate">
-		<div class="col-xs-12 main">
+		<div class="col-xs-12 main contmenu">
 			<div class="home">
 				<i class="fa fa-angle-left" aria-hidden="true"></i>
 				<a href="principal.php" class="enlaces">Home</a>
@@ -52,7 +52,8 @@
 
 	<div class="container">
 		<div class="main col-xs-12 buscador">
-			<input type="text" name="" placeholder="Busca por nombre de producto"><i class="fa fa-search" aria-hidden="true"></i>
+			<input type="text" name="" placeholder="Busca por nombre de producto">
+			<div class="buscar"><i class="fa fa-search" aria-hidden="true"></i></div>
 		</div>
 	</div>
 	<div class="container">
