@@ -33,20 +33,18 @@
 		<div class="col-xs-12 imgcate img-responsive">Hla</div>
 	</div>
 
-	<div class="container-fluid center bannercate">
-		<div class="col-xs-12 main contmenu">
+	<div class="container-fluid bannercate">
+		<div class="col-xs-12 contmenu">
 			<div class="home">
 				<i class="fa fa-angle-left" aria-hidden="true"></i>
 				<a href="principal.php" class="enlaces">Home</a>
 			</div>
 
-			<div class="categorias">
 				<a href="" class="enlaces">Playeras</a>
 				<a href="" class="enlaces">Camisas</a>
-				<a href="" class="enlaces">Pantalones</a>
+				<a href="" class="enlaces">Pantalones</a><br>
 				<a href="" class="enlaces">Suéter/Chamarra</a>
 				<a href="" class="enlaces">Zapatos</a>
-			</div>
 		</div>
 	</div>
 
@@ -62,7 +60,9 @@
 				<div>
 					<img src="">
 					<p>Lentes de sol / RayBan </p>
+					<img src="">
 					<h1>$ 299.00 </h1>
+					<input type="submit" name="" value="Agregar al carrito">
 				</div>
 			</div>
 
