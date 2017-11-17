@@ -140,6 +140,8 @@ body, html{
 /*M E N U DE C A D A C A T E G O R I A*/
 .hover{
 	border: 1px solid transparent;
+	margin: none !important;
+	padding-bottom: 0px !important;
 }
 .hover:hover{
 	border-bottom: 2px solid rgba(0, 4, 33, .6);
@@ -149,14 +151,10 @@ body, html{
 	background: rgba(255,255,255,0.5) !important;
 	border-bottom: 1px solid rgba(0,0,0,.09) !important;
 	border-top: 1px solid rgba(0,0,0,.09) !important;
-	border-radius: none !important;
+	border-radius: none !important;	
 }
 .home>li>a{
-	padding-left: 0px !important;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
+	padding-left: 15px !important;
 }
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
@@ -254,7 +252,6 @@ body, html{
 	height: 37px;
 	float: left;
 	position: relative;
-	background: rgba(0,0,0,.09);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -263,15 +260,17 @@ body, html{
 }
 .buscador>input{
 	width: 80%;
+	height: 80%;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	outline: none;
 	border: 1px solid var(--bannertexto);
 	padding: 5px;
 	box-sizing: border-box;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 .buscador>.buscar{
-	width: 7%;
+	width: 8%;
 	border: 1px solid #A0C0E0;
 	height: 80%;
 	display: flex;
@@ -285,6 +284,65 @@ body, html{
 	float: left;
 	position: relative;
 	background: #A0C0E0;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+	overflow: hidden;
+}
+/*PRODUCTOS POR PAGINA*/
+.color{
+	background: rgba(0,0,0,.02);
+	margin-top: 5px !important; 
+	box-sizing: border-box;
+}
+.producto{
+	height: auto;
+	padding: 7px;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	background: rgba(0,0,0,.04);
+}
+.producto>img{
+	width: 90%;
+	height: 60% !important;
+	float: left;
+	position: relative;
+	margin-left: 50%;
+	left: -45%;
+}
+.producto>p{
+	width: 100%;
+	float: left;
+	position: relative;
+	text-align: center;
+	padding-top: 5px;
+	box-sizing: border-box;
+	margin-bottom: 0px !important;
+}
+.tipo1{
+	font-weight: 700;
+	font-size: 1.3em;
+}
+.tipo0{
+	font-weight: 500;
+	font-size: 1.2em;
+}
+.producto>input{
+	width: auto;
+	padding: 5px !important;
+	box-sizing: border-box;
+	height: 30px;
+	float: left;
+	position: relative;
+	margin-left: 6.5%;
+	margin-top: 8px !important;
+	border: none;
+	cursor: pointer;
+}
+.color1{
+	background: red;
+}
+.color0{
+	background: blue;
 }
 /*F O O T E R*/
 footer{

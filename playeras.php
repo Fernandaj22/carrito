@@ -39,19 +39,22 @@
       		<span class="icon-bar"></span>
       		<span class="icon-bar"></span>
       		<span class="icon-bar"></span>
-    		</button>    
+    		</button> 
+    		 <a class="navbar-brand" href="#">Menú</a> 
   		</div>
-  		<div class="navbar-collapse collapse">
-    		<ul class="nav navbar-nav navbar-left home">
-        		<li class="hover"><a href=""><i class="fa fa-angle-left" aria-hidden="true"></i>Home</a></li>
-    		</ul>
-	   		<ul class="nav navbar-nav navbar-right right">
+
+  		<div class="navbar-collapse collapse container">
+	   		<ul class="nav navbar-nav navbar-left right">
 		     	 <li class="hover"><a href="#about">Playeras</a></li>
 		      	 <li class="hover"><a href="#contact">Camisas</a></li>
 		      	 <li class="hover"><a href="#contact">Pantalones</a></li>
 		      	 <li class="hover"><a href="#contact">Suéter/Chamarra</a></li>
 		      	 <li class="hover"><a href="#contact">Zapatos</a></li>
 	    	</ul>
+
+	    	<ul class="nav navbar-nav navbar-right home">
+        		<li class="hover"><a href=""><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+    		</ul>
  		</div>
 	</nav>
 
@@ -61,74 +64,40 @@
 			<div class="buscar"><i class="fa fa-search" aria-hidden="true"></i></div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="main">
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<img src="">
-					<h1>$ 299.00 </h1>
-					<input type="submit" name="" value="Agregar al carrito">
-				</div>
-			</div>
 
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<h1>$ 299.00 </h1>
-				</div>
-			</div>
+	<div class="container color">
+			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
+					<p class="tipo0">Playera Minion</p>
+					<img src="img/playera0.png">
+					<p class="tipo1">$299.99</p>
+					<input type="submit" name="" value="Ver detalles" class="color1">
+					<input type="submit" name="" value="Agregar al carrito" class="color0">
 
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<h1>$ 299.00 </h1>
-				</div>
 			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
+					<p class="tipo0">Playera Minion</p>
+					<img src="img/playera0.png">
+					<p class="tipo1">$299.99</p>
+					<input type="submit" name="" value="Ver detalles" class="color1">
+					<input type="submit" name="" value="Agregar al carrito" class="color0">
 
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<h1>$ 299.00 </h1>
-				</div>
 			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
+					<p class="tipo0">Playera Minion</p>
+					<img src="img/playera0.png">
+					<p class="tipo1">$299.99</p>
+					<input type="submit" name="" value="Ver detalles" class="color1">
+					<input type="submit" name="" value="Agregar al carrito" class="color0">
 
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<h1>$ 299.00 </h1>
-				</div>
 			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
+					<p class="tipo0">Playera Minion</p>
+					<img src="img/playera0.png">
+					<p class="tipo1">$299.99</p>
+					<input type="submit" name="" value="Ver detalles" class="color1">
+					<input type="submit" name="" value="Agregar al carrito" class="color0">
 
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<h1>$ 299.00 </h1>
-				</div>
 			</div>
-
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<h1>$ 299.00 </h1>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-3">
-				<div>
-					<img src="">
-					<p>Lentes de sol / RayBan </p>
-					<h1>$ 299.00 </h1>
-				</div>
-			</div>
-		</div>
 	</div>
 
 
