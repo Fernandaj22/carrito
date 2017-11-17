@@ -2,9 +2,11 @@
 	padding: 0px;
 	margin: 0px;
 }
+body{
+	width: 100% !important;
+	height: 100% !important;
+}
 body, html{
-	width: 100%;
-	height: 100%;
 	font-family: 'Nunito', sans-serif !important;
 	color: #000020;
 	background: rgba(255,255,255,.6);
@@ -139,22 +141,24 @@ body, html{
 }
 /*M E N U DE C A D A C A T E G O R I A*/
 .hover{
-	border: 1px solid transparent;
 	margin: none !important;
 	padding-bottom: 0px !important;
+	box-sizing: border-box;
 }
 .hover:hover{
-	border-bottom: 2px solid rgba(0, 4, 33, .6);
+	padding-bottom: 0px !important;
+	box-sizing: border-box !important;
+	background: #DDE3EC;
 }
 .border{
 	margin-bottom: 0px !important;
-	background: rgba(255,255,255,0.5) !important;
-	border-bottom: 1px solid rgba(0,0,0,.09) !important;
-	border-top: 1px solid rgba(0,0,0,.09) !important;
 	border-radius: none !important;	
 }
 .home>li>a{
 	padding-left: 15px !important;
+}
+.actual{
+	background: #C6D0DF;
 }
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
@@ -237,7 +241,7 @@ body, html{
 		background: #c0e0e0;
 	}
 /*B A N N E R DE C A T E G O R I A S*/
-.imgcate{
+.imgcate1{
 	width: 100%;
 	height: 240px !important;
 	background-image: url(../img/p1.jpg);
@@ -246,8 +250,14 @@ body, html{
 	background-repeat: cover;
 	margin-bottom: 3px;
 }
-.txto{
-	height: 47px !important;
+.imgcate2{
+	width: 100%;
+	height: 240px !important;
+	background-image: url(../img/p2.jpeg);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: cover;
+	margin-bottom: 3px;
 }
 /*B U S C A D O R*/
 .buscador{
@@ -303,6 +313,7 @@ body, html{
 	float: left;
 	position: relative;
 	background: rgba(0,0,0,.04);
+	border: 1px solid rgba(0,0,0,.05);
 }
 .producto>img{
 	width: 90%;
@@ -317,35 +328,70 @@ body, html{
 	float: left;
 	position: relative;
 	text-align: center;
-	padding-top: 5px;
-	box-sizing: border-box;
 	margin-bottom: 0px !important;
+	color: rgba(0,0,0,.9);
 }
 .tipo1{
 	font-weight: 700;
 	font-size: 1.3em;
+	color: #35455E !important;
 }
 .tipo0{
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 1.2em;
 }
-.producto>input{
-	width: auto;
+.producto>.botones{
+	width: 100%;
+	height: 35px;
+	float: left;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+.botones>input{
+	width: 48% !important;
 	padding: 5px !important;
 	box-sizing: border-box;
 	height: 30px;
 	float: left;
 	position: relative;
-	margin-left: 6.5%;
-	margin-top: 8px !important;
 	border: none;
 	cursor: pointer;
+	color: #fff;
+	font-weight: 600;
+	outline: none;
+	box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
 }
 .color1{
-	background: red;
+	background: #A0C0E0;
+}
+.color1:active{
+	top: 1px;
 }
 .color0{
-	background: blue;
+	background: #6196CB;
+
+}
+.color0:active{
+	top: 1px;
+}
+.volver{
+	float: right !important;
+	margin-top: 10px;
+	height: 35px !important;
+	border: none;
+	cursor: pointer;
+	color: rgba(0,0,0,.7);
+	font-weight: 600;
+	outline: none;
+	background: rgba(0,0,0,.08);
+	text-decoration: none !important;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 /*F O O T E R*/
 footer{

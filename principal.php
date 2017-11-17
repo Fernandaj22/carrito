@@ -83,26 +83,26 @@
 			</div>
 			<div class="col-xs-12">
 				<div class="seccion2">
-					<a href="">CAMISAS</a>
+					<a href="camisas.php">CAMISAS</a>
 					<div class="img"></div>
 				</div>
 			</div>
 			<div class="col-xs-12">
 				<div class="seccion3">
 					<div class="img"></div>
-					<a href="">PANTALONES</a>
+					<a href="pantalones.php">PANTALONES</a>
 				</div>
 			</div>
 			<div class="col-xs-12">
 				<div class="seccion4">
 					<div class="img"></div>
-					<a href="">SUÉTER/<br>CHAMARRAS</a>
+					<a href="chamarras.php">SUÉTER/<br>CHAMARRAS</a>
 				</div>
 			</div>
 			<div class="col-xs-12">
 				<div class="seccion5">
 					<div class="img"></div>
-					<a href="">ZAPATOS</a>
+					<a href="zapatos.php">ZAPATOS</a>
 				</div>
 			</div>
 		</section>
