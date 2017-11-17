@@ -42,10 +42,10 @@
     		</button>    
   		</div>
   		<div class="navbar-collapse collapse">
-    		<ul class="nav navbar-nav navbar-left">
-        		<li class="hover"><a href=""><i class="fa fa-angle-left" aria-hidden="true"></i>  Home</a></li>
+    		<ul class="nav navbar-nav navbar-left home">
+        		<li class="hover"><a href=""><i class="fa fa-angle-left" aria-hidden="true"></i>Home</a></li>
     		</ul>
-	   		<ul class="nav navbar-nav navbar-right">
+	   		<ul class="nav navbar-nav navbar-right right">
 		     	 <li class="hover"><a href="#about">Playeras</a></li>
 		      	 <li class="hover"><a href="#contact">Camisas</a></li>
 		      	 <li class="hover"><a href="#contact">Pantalones</a></li>

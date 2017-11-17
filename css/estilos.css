@@ -146,6 +146,17 @@ body, html{
 }
 .border{
 	margin-bottom: 0px !important;
+	background: rgba(255,255,255,0.5) !important;
+	border-bottom: 1px solid rgba(0,0,0,.09) !important;
+	border-top: 1px solid rgba(0,0,0,.09) !important;
+	border-radius: none !important;
+}
+.home>li>a{
+	padding-left: 0px !important;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
