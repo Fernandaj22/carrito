@@ -33,7 +33,7 @@
 		<div class="col-xs-12 imgcate img-responsive"></div>
 	</div>
 
-	<nav class="navbar navbar-default border" role="navigation">
+	<nav class="navbar navbar-default border txto" role="navigation">
   		<div class="navbar-header">
     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       		<span class="icon-bar"></span>

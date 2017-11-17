@@ -246,6 +246,9 @@ body, html{
 	background-repeat: cover;
 	margin-bottom: 3px;
 }
+.txto{
+	height: 47px !important;
+}
 /*B U S C A D O R*/
 .buscador{
 	width: 100%;
