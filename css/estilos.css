@@ -259,6 +259,33 @@ body, html{
 	background-repeat: cover;
 	margin-bottom: 3px;
 }
+.imgcate3{
+	width: 100%;
+	height: 240px !important;
+	background-image: url(../img/p3.jpeg);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: cover;
+	margin-bottom: 3px;
+}
+.imgcate4{
+	width: 100%;
+	height: 240px !important;
+	background-image: url(../img/p4.jpeg);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: cover;
+	margin-bottom: 3px;
+}
+.imgcate5{
+	width: 100%;
+	height: 240px !important;
+	background-image: url(../img/p5.jpeg);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: cover;
+	margin-bottom: 3px;
+}
 /*B U S C A D O R*/
 .buscador{
 	width: 100%;

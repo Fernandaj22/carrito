@@ -46,8 +46,8 @@
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
 		     	 <li class="hover"><a href="playeras.php">Playeras</a></li>
-		      	 <li class="hover actual"><a href="#">Camisas</a></li>
-		      	 <li class="hover"><a href="pantalones.php">Pantalones</a></li>
+		      	 <li class="hover"><a href="camisas.php">Camisas</a></li>
+		      	 <li class="hover actual"><a href="#">Pantalones</a></li>
 		      	 <li class="hover"><a href="chamarras.php">Suéter/Chamarra</a></li>
 		      	 <li class="hover"><a href="zapatos.php">Zapatos</a></li>
 	    	</ul>
