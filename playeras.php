@@ -76,7 +76,7 @@
 					</div>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
+					<p class="tipo0">Playera Tipo Polo A</p>
 					<img src="img/playera1.png">
 					<p class="tipo1">$299.99</p>
 					<div class="botones">
@@ -123,42 +123,6 @@
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 					<p class="tipo0">Playera Minion</p>
 					<img src="img/playera6.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera0.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera0.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera0.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera0.png">
 					<p class="tipo1">$299.99</p>
 					<div class="botones">
 						<input type="submit" name="" value="Ver detalles" class="color1">

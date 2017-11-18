@@ -67,7 +67,7 @@
 
 	<div class="container color">
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Pantalón Recto</p>
+					<p class="tipo0">Camisa Azul</p>
 					<img src="img/camisa1.png">
 					<p class="tipo1">$590.99</p>
 					<div class="botones">
@@ -76,7 +76,7 @@
 					</div>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Pantalón Recto</p>
+					<p class="tipo0">Camisa Verde a cuadros</p>
 					<img src="img/camisa1.png">
 					<p class="tipo1">$590.99</p>
 					<div class="botones">
@@ -85,7 +85,7 @@
 					</div>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Pantalón Recto</p>
+					<p class="tipo0">Camisa Slim Fat</p>
 					<img src="img/camisa1.png">
 					<p class="tipo1">$590.99</p>
 					<div class="botones">
@@ -94,7 +94,7 @@
 					</div>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Pantalón Recto</p>
+					<p class="tipo0">Camisa Low</p>
 					<img src="img/camisa1.png">
 					<p class="tipo1">$590.99</p>
 					<div class="botones">
