@@ -32,66 +32,124 @@
 
 	<div class="container-fluid">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado6">
-			<h1>Mi perfil</h1>
+			<h2>Mi perfil</h2>
 
-			<p>Nombre: </p> <p>María Fernanda Juárez</p>
-			<p>Correo electrónico: </p> <p>ferjuareztirado@gmail.com</p>
-			<p>Tarjetas utilizadas: </p>
-			<ul>
-				<li>9803938479403</li>
-				<li>9803938479403</li>
-				<li>9803938479403</li>
-				<li>9803938479403</li>	
-			</ul>
-			<p>Direcciones utilizadas: </p>
-			<ul>
-				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>
-				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>
-				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>
-				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>	
-			</ul>
+			<div class="personal">
+				<p>Nombre: </p> <p>María Fernanda Juárez</p>
+				<p>Correo electrónico: </p> <p>ferjuareztirado@gmail.com</p>
+			</div>
+
+			<details>
+			  <summary>Tarjetas utilizadas: </summary>
+			  <p>5502 2154 98526 0152</p>
+			  <p>5502 2154 98526 0152</p>
+			  <p>5502 2154 98526 0152</p>
+			  <p>5502 2154 98526 0152</p>
+			</details>
+			
+			<details>
+			  <summary>Direcciones utilizadas: </summary>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>0 bhhhhhhhhhhhhhhn
+			</details>
+
+			<div>
+				<h2>Historial de pedidos</h2>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
+				    <p class="list-group-item-text">25/08/2017</p>
+				    <p class="list-group-item-text">Total de $542.32</p>
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
+				    <p class="list-group-item-text">25/08/2017</p>
+				    <p class="list-group-item-text">Total de $542.32</p>
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
+				    <p class="list-group-item-text">25/08/2017</p>
+				    <p class="list-group-item-text">Total de $542.32</p>
+				  </div>
+				</div>
+			</div>
 		</div>
 
-		<table class="table">
-
-    <!--Table head-->
-    <thead class="blue-grey lighten-4">
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-        </tr>
-    </thead>
-    <!--Table head-->
-
-    <!--Table body-->
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
-    </tbody>
-    <!--Table body-->
-</table>
-<!--Table-->
-
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado6">
-			<h1>Mi carrito</h1>
+			<h2>Mi carrito</h2>
+
+			<h4>Tienes 10 artículos en el carrito</h4>
+			<div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text">Cantidad: </p> <input type="number" name="">
+				    <input type="submit" name="" value="Eliminar">
+				    <input type="submit" name="" value="Comprar ahora">
+				  </div>
+				</div>
+			</div>
 		</div>
 	</div>
 

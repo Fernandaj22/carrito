@@ -432,9 +432,32 @@ body, html{
 }
 /*M I P E R F I L Y M I C A R R I T O*/
 .lado6{
-	background: red;
+	background: #c4daef;
 	border-left: 1px solid rgba(0,0,0,.04);
+	margin-top: 10px;		
 }
+.lado6>h2{
+	width: 100% !important;
+	height: 30px !important;
+	float: left !important;
+	position: relative !important;
+	font-weight: 700 !important;	
+	font-size: 1.9em;
+}
+.lado6>.personal{
+	width: 100%;
+	height: 80px;
+	float: left;
+	position: relative;
+	background: red;
+}
+	.personal>p{
+		height: 30px;
+		float: left;
+		position: relative;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
 /*F O O T E R*/
 footer{
 	background: #a0c0e0 !important;
