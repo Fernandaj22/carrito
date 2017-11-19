@@ -24,32 +24,76 @@
 			</div>
 			<div class="login">
 				<a href="">Iniciar Sesión</a>
-				<i class="fa fa-shopping-cart" aria-hidden="true" title="Carrito"></i>
 			</div>
 		</div>
 	</header>
 
+	<div class="container bannercart"></div>
+
 	<div class="container-fluid">
-		
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado6">
+			<h1>Mi perfil</h1>
+
+			<p>Nombre: </p> <p>María Fernanda Juárez</p>
+			<p>Correo electrónico: </p> <p>ferjuareztirado@gmail.com</p>
+			<p>Tarjetas utilizadas: </p>
+			<ul>
+				<li>9803938479403</li>
+				<li>9803938479403</li>
+				<li>9803938479403</li>
+				<li>9803938479403</li>	
+			</ul>
+			<p>Direcciones utilizadas: </p>
+			<ul>
+				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>
+				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>
+				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>
+				<li>Av. Pie de la Cuesta 1205-A no.117 cond. Tamayo, Querétaro, Qro</li>	
+			</ul>
+		</div>
+
+		<table class="table">
+
+    <!--Table head-->
+    <thead class="blue-grey lighten-4">
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+    <!--Table body-->
+</table>
+<!--Table-->
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado6">
+			<h1>Mi carrito</h1>
+		</div>
 	</div>
-
-	<nav class="navbar navbar-default border" role="navigation">
-  		<div class="navbar-header txto">
-    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      		<span class="icon-bar"></span>
-      		<span class="icon-bar"></span>
-      		<span class="icon-bar"></span>
-    		</button> 
-    		 <a class="navbar-brand" href="#">Menú</a> 
-  		</div>
-
-  		<div class="navbar-collapse collapse container">
-	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Tu Carrito</a></li>
-        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-    		</ul>
- 		</div>
-	</nav>
 
 	
 	<footer>

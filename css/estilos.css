@@ -136,6 +136,15 @@ body, html{
 	border-bottom: 1px solid rgba(0,0,0,.09);
 	border-top: 1px solid rgba(0,0,0,.09);
 }
+.bannercart{
+	float: left !important;
+	position: relative !important;
+	height: 41px !important;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
 .top{
 	padding-top: 7px;	
 }
@@ -420,6 +429,11 @@ body, html{
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+}
+/*M I P E R F I L Y M I C A R R I T O*/
+.lado6{
+	background: red;
+	border-left: 1px solid rgba(0,0,0,.04);
 }
 /*F O O T E R*/
 footer{

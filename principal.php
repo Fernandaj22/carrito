@@ -24,7 +24,6 @@
 			</div>
 			<div class="login">
 				<a href="">Iniciar Sesión</a>
-				<i class="fa fa-shopping-cart" aria-hidden="true" title="Carrito"></i>
 			</div>
 		</div>
 	</header>

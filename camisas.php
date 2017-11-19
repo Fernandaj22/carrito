@@ -24,7 +24,6 @@
 			</div>
 			<div class="login">
 				<a href="">Iniciar Sesión</a>
-				<i class="fa fa-shopping-cart" aria-hidden="true" title="Carrito"></i>
 			</div>
 		</div>
 	</header>
@@ -40,7 +39,7 @@
       		<span class="icon-bar"></span>
       		<span class="icon-bar"></span>
     		</button> 
-    		 <a class="navbar-brand" href="#">Menú</a> 
+    		 <a class="navbar-brand" href="" style="cursor:default;">Menú</a> 
   		</div>
 
   		<div class="navbar-collapse collapse container">
