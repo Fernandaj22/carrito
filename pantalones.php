@@ -53,6 +53,7 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
+	    		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Tu Carrito</a></li>
         		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
     		</ul>
  		</div>

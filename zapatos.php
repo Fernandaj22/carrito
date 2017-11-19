@@ -48,12 +48,13 @@
 		     	 <li class="hover"><a href="playeras.php">Playeras</a></li>
 		      	 <li class="hover"><a href="camisas.php">Camisas</a></li>
 		      	 <li class="hover"><a href="pantalones.php">Pantalones</a></li>
-		      	 <li class="hover"><a href="chamarra.php">Suéter/Chamarra</a></li>
+		      	 <li class="hover"><a href="chamarras.php">Suéter/Chamarra</a></li>
 		      	 <li class="hover actual"><a href="#">Zapatos</a></li>
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+	    		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Tu Carrito</a></li>
+        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i>  Home</a></li>
     		</ul>
  		</div>
 	</nav>
