@@ -3,9 +3,9 @@
     margin: 0;
     outline: none;
     font-family: sans-serif;
+    box-sizing:border-box;
 }
 body{
-  background:#517A92 !important;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -52,24 +52,28 @@ body{
   margin-bottom: 20px;
   }
 .cont{
-  background:#517A92;
-  margin-top:50px;
-  position: absolute;
-  height:90%;
+  position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
 }
+.cont img{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.8;
+}
 .center{
   background:#1F2F40;
   position: relative;
   box-sizing: border-box;
   display: flex;
-  height:450px;
-  margin-top: 60px;
+  height:500px;
+  margin-top: 100px;
   border-radius: 5px;
   flex-direction: row;
   align-content: center;
@@ -95,14 +99,14 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-around;
 }
-.ingleso>input{
-  justify-content: center;
+.ingreso>input{
+  justify-content: space-around;
 
 }
 .top, .bottom{
-  background:;
-  height: 25%;
+  height: 20%;
   width: 80%;
   display: flex;
   align-content: stretch;
@@ -111,6 +115,9 @@ body{
   justify-content: center;
   position: fixed;
 }
+  .bottom{
+    align-self: flex-end;
+  }
   .top>h1{
     font-family: 'Poiret One', cursive;
     font-size: 30px;
@@ -122,9 +129,11 @@ body{
     font-size: 15px;
     color:#e0e0e0;
   }
+#mid{
+  height: 40% !important;
+}
 .middle{
-  background:;
-  height: 50%;
+  height: 60%;
   width: 90%;
   display: flex;
   align-content: center;
@@ -226,17 +235,15 @@ body{
   transform: rotate(135deg);
 }
 @media screen and (max-width: 800px) and (min-width: 120px){
-  .izq{
-    background: red;
-    height: 0px;
-  }
-  .izq>img{
-    height: 0px;
-    width: 0px;
-  }
   .change{
     margin-left: 80%;
     height: 50px;
     width: 50px;
   }
+}
+@media screen and (min-width: 320px) and (max-width: 800px){
+  .center{
+    height: 450px;
+  }
+
 }

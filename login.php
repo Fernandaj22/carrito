@@ -21,14 +21,15 @@
       </div>
     <!-- ===========================CONTENIDO============================ -->
     <div class="container-fluid cont">
-        <div class="center col-xs-12 col-sm-7 col-md-8">
+      <img src="img/regis-backgound.jpeg" id="img" class="img-decor img-responsive">
+        <div class="center col-xs-12 col-sm-7 col-md-5">
               <button type="button" name="button" id="regis" class="change" onclick="registrarse()"><i class="fa fa-plus" aria-hidden="true"></i></button>
               <button type="button" name="button" id="log" class="change hidden" onclick="login()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-            <div class="izq col-md-6">
+            <!-- <div class="izq col-md-6">
               <img src="img/loginbackground.jpeg" id="img" class="img-decor"alt="">
               <img src="img/regis-backgound.jpeg" class="hidden" id="img-decor">
-            </div>
-            <div class="hidden  registra col-md-6 col-xs-12" id="registro">
+            </div> -->
+            <div class="hidden  registra col-md-12 col-xs-12" id="registro">
               <form class="registro" action="index.html" method="post">
                 <div class="top col-xs-12">
                     <h1>Registrate</h1>
@@ -38,6 +39,7 @@
                       <input type="text" class=" col-xs-12  col-xs-12  col-md-10" placeholder="&#128104; |  Nombre">
                       <input type="email" class=" col-xs-12  col-md-10" name=""  placeholder=" &#9993  |  Correo">
                       <input type="password" class=" col-xs-12  col-md-10" name="" placeholder="&#x1f511  |  Contraseña">
+                      <input type="password" class=" col-xs-12  col-md-10" name="" placeholder="&#x1f511  |  Repite tu contraseña">
                       <select class="pregunta  col-xs-12  col-md-10" onchange="habilitar()" name="">
                         <option value="">Elige una opcion</option>
                         <option value="" id="1">Nombre de tu primera mascota</option>
@@ -51,13 +53,13 @@
                 </div>
               </form>
             </div>
-            <div class="der col-md-6 col-xs-12" id="login">
+            <div class="der col-md-12 col-xs-12" id="login">
               <form class="ingreso" action="index.html" method="post">
                 <div class="top col-xs-12">
                     <h1>Ingresa</h1>
                     <h4>Unete para poder llenar tu guardarropa</h4>
                 </div>
-                <div class="middle col-xs-12">
+                <div class="middle col-xs-12" id="mid">
                       <input type="email" class=" col-xs-12  col-md-10" name=""  placeholder=" &#9993  |  Correo">
                       <input type="password" class=" col-xs-12  col-md-10" name="" placeholder="&#x1f511  |  Contraseña">
                 </div>
