@@ -23,7 +23,7 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="">Iniciar Sesión</a>
+				<a href="login.php">Iniciar Sesión</a>
 			</div>
 		</div>
 	</header>
