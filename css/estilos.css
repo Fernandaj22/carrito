@@ -440,10 +440,11 @@ body, html{
 }
 /*M I P E R F I L Y M I C A R R I T O*/
 .lado6{
-	background: #c4daef;
+	background: #eaf5ff;
 	border-left: 1px solid rgba(0,0,0,.04);
 	margin-top: 10px;	
-	height: 680px !important;	
+	height: 680px !important;
+	border-radius: 3px;		
 }
 .lado6>h2{
 	width: 100% !important;
@@ -480,7 +481,7 @@ details{
 	position: relative;
 	overflow-y: scroll;
 	margin-top: 10px;
-	padding: 5px;
+	padding: 10px;
 	box-sizing: border-box;
 	background: rgba(255,255,255,.7);
 	border-radius: 5px;
