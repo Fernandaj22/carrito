@@ -110,23 +110,17 @@
 
 	<footer>
 		<div class="container" style="text-align: center;">
-			<div class="col-xs-12 col-sm-3 col-md-3 centrado">
+			<div class="col-xs-12 col-sm-4 col-md-4 centrado">
 				<p>Facultad de Informática</p>
 				<p>Centro de Desarrollo, Betas</p>
 			</div>
 
-			<div class="col-xs-12 col-sm-3 col-md-3 centrado">
+			<div class="col-xs-12 col-sm-4 col-md-4 centrado">
 				<p>Contácto, reclamaciones, sugerencias</p>
 				<p>email@correo.com</p>
 			</div>
 
-			<div class="col-xs-12 col-sm-3 col-md-3 centrado redsociales">
-				<i class="fa fa-facebook-official" aria-hidden="true"></i>
-				<i class="fa fa-twitter-square" aria-hidden="true"></i>
-				<i class="fa fa-instagram" aria-hidden="true"></i>
-			</div>
-
-			<div class="col-xs-12 col-sm-3 col-md-3 nombre">
+			<div class="col-xs-12 col-sm-4 col-md-4 nombre">
 				<i class="fa fa-registered" aria-hidden="true"> </i>
 				<p>MenShop</p>
 			</div>
