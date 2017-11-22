@@ -36,7 +36,7 @@
                     <h4>Podrás ser parte de nuestra comunidad</h4>
                 </div>
                 <div class="middle col-xs-12">
-                      <input type="text" class=" col-xs-12  col-xs-12  col-md-10" placeholder="&#128104; |  Nombre">
+                      <input type="text" class=" col-xs-12  col-xs-12  col-md-10" placeholder="&#128104;  |  Nombre">
                       <input type="email" class=" col-xs-12  col-md-10" name=""  placeholder=" &#9993  |  Correo">
                       <input type="password" class=" col-xs-12  col-md-10" name="" placeholder="&#x1f511  |  Contraseña">
                       <input type="password" class=" col-xs-12  col-md-10" name="" placeholder="&#x1f511  |  Repite tu contraseña">
