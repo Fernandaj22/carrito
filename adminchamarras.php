@@ -30,7 +30,7 @@
 	</header>
 
 	<div class="container-fluid">
-		<div class="col-xs-12 imgcate2 img-responsive" id="top"></div>
+		<div class="col-xs-12 imgcate4 img-responsive" id="top"></div>
 	</div>
 
 	<nav class="navbar navbar-default border" role="navigation">
@@ -72,7 +72,7 @@
 						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
 					</div>
 					<p class="tipo0">Zapato Casual Azul Marino</p>
-					<img src="img/camisa1.png">
+					<img src="img/chamarra1.png">
 					<p class="tipo1">$950.00</p>
 			</div>
 
