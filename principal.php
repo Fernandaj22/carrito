@@ -85,7 +85,7 @@
  		</div>
 	</nav>
 
-	<div class="container-fluid">
+	<div class="container-fluid padding">
 		<div class="main col-xs-12 buscador">
 			<select class="col-xs-12">
 				<option>Todas las categorías</option>

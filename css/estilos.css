@@ -316,6 +316,10 @@ body, html{
 	align-content: center;
 	margin-top: 5px;
 }
+.padding{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
 .buscador>select{
 	width: 30%;
 	height: 80%;
