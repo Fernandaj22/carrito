@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-<style>@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,800i');</style>
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 	<title>Nombre de la Tienda - Principal</title>
 </head>
 <body>
@@ -67,9 +67,37 @@
 		</section>
 	</div>
 
-	<div class="container-fluid center bannertexto">
-		<div class="col-xs-12">¡Descubre nuestro productos a través de las categorías!</div>
-		><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a>
+	<nav class="navbar navbar-default border" role="navigation">
+  		<div class="navbar-header txto">
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      		<span class="icon-bar"></span>
+      		<span class="icon-bar"></span>
+      		<span class="icon-bar"></span>
+    		</button> 
+    		 <a class="navbar-brand" href="" style="cursor:default;">Menú</a> 
+  		</div>
+
+  		<div class="navbar-collapse collapse container">
+
+	    	<ul class="nav navbar-nav navbar-right home">
+	    		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
+    		</ul>
+ 		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="main col-xs-12 buscador">
+			<select class="col-xs-12">
+				<option>Todas las categorías</option>
+				<option>Playeras</option>
+				<option>Camisas</option>
+				<option>Pantalones</option>
+				<option>Suéter/Chamarra</option>
+				<option>Zapatos</option>
+			</select>
+			<input type="text" name="" placeholder="Ingresa el nombre del artículo">
+			<div class="buscar"><i class="fa fa-search" aria-hidden="true"></i></div>
+		</div>
 	</div>
 
 
