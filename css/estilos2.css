@@ -1,0 +1,120 @@
+/* .producto-inf{
+    height: 500px;
+    position: relative;
+    background: #f0f0f0;
+    background: red;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}*/
+  .imagen-producto{
+    margin-top: 10px !important;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    height: 500px !important;
+  }
+  .imagen-producto>img{
+    position: relative;
+    align-self: center;
+    background: green;
+  }
+  .disponibilidad{
+    position: absolute !important;
+    height: 50px;
+    background: red;
+    z-index: 999991;
+    margin-top: 100px;
+    margin-left: -150px;
+    border-radius: 5px;
+    font-family: 'Dosis', sans-serif;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important
+  }
+  .disponibilidad>h3{
+    margin-top: 15px !important;
+  }
+  .informacion-producto{
+    margin-top: 10px !important;
+    background: coral;
+    height: 500px !important;
+    display: flex;
+    justify-content: center;
+  }
+  .datos-producto{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 400px;
+    margin-top: 50px;
+    background: grey;
+  }
+  .datos-producto>input{
+    background: #f0f0f0;
+    outline: none;
+    border: none;
+    font-family: 'Dosis', sans-serif;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .nombre{
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .precio{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .descripcion{
+    font-size: 20px;
+    height: 100px;
+    background: #f0f0f0;
+    resize: none;
+    outline: none;
+    border-style: none;
+    border-color: Transparent;
+    overflow: hidden;
+    font-family:  'Poiret One', cursive;
+    font-size: 15px;
+  }
+  .cantidad{
+    margin-top: 20px;
+    border-top: 1px solid #000020 !important;
+    border-bottom: 1px solid #000020 !important;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+   cursor: pointer;
+}
+#enviar{
+  background: #A0E0C0 !important;
+  margin-top: 50px;
+  margin-left: 300px;
+  height: 10%;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.button{
+  background: #A0E0C0 !important;
+  align-self: flex-end;
+
+  height: 10%;
+  border-radius: 5px;
+  font-size: 20px;
+  overflow:hidden;
+  outline: none;
+  border: none;
+  font-family: 'Dosis', sans-serif;
+}
+.button:before {
+ font-family: FontAwesome;
+ content:"\f07a";
+ position: absolute;
+ left: -30px;
+ transition: all 200ms ease;
+}
+.button:hover:before {
+ left: 7px;
+}
