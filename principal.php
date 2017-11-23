@@ -49,7 +49,7 @@
 					<div class="item banner">
 						<img src="img/b2.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
-							<h1 class="tamañoh1">Mejores precios, mejores prendas</h1>
+							<h1 class="tamañoh1">Las mejores prendas</h1>
 							<p class="tamañop">Todo el estilo que necesitas</p>
 						</div>
 					</div>
@@ -69,6 +69,7 @@
 
 	<div class="container-fluid center bannertexto">
 		<div class="col-xs-12">¡Descubre nuestro productos a través de las categorías!</div>
+		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
 	</div>
 
 
@@ -110,23 +111,17 @@
 
 	<footer>
 		<div class="container" style="text-align: center;">
-			<div class="col-xs-12 col-sm-3 col-md-3 centrado">
+			<div class="col-xs-12 col-sm-4 col-md-4 centrado">
 				<p>Facultad de Informática</p>
 				<p>Centro de Desarrollo, Betas</p>
 			</div>
 
-			<div class="col-xs-12 col-sm-3 col-md-3 centrado">
+			<div class="col-xs-12 col-sm-4 col-md-4 centrado">
 				<p>Contácto, reclamaciones, sugerencias</p>
 				<p>email@correo.com</p>
 			</div>
 
-			<div class="col-xs-12 col-sm-3 col-md-3 centrado redsociales">
-				<i class="fa fa-facebook-official" aria-hidden="true"></i>
-				<i class="fa fa-twitter-square" aria-hidden="true"></i>
-				<i class="fa fa-instagram" aria-hidden="true"></i>
-			</div>
-
-			<div class="col-xs-12 col-sm-3 col-md-3 nombre">
+			<div class="col-xs-12 col-sm-4 col-md-4 nombre">
 				<i class="fa fa-registered" aria-hidden="true"> </i>
 				<p>MenShop</p>
 			</div>
