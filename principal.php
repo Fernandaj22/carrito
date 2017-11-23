@@ -69,7 +69,7 @@
 
 	<div class="container-fluid center bannertexto">
 		<div class="col-xs-12">¡Descubre nuestro productos a través de las categorías!</div>
-		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
+		><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a>
 	</div>
 
 
