@@ -39,7 +39,7 @@
 
 				<div class="carousel-inner banner" role="listbox">
 					<div class="item active banner">
-						<img src="img/b.jpg" class="img-responsive" alt="">
+						<img src="img/b1.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">¡Bienvenido!</h1>
 							<p class="tamañop">No podrás parar de comprar</p>
@@ -47,15 +47,15 @@
 					</div>
 
 					<div class="item banner">
-						<img src="img/b.jpg" class="img-responsive" alt="">
+						<img src="img/b2.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Las mejores prendas</h1>
-							<p class="tamañop">Todo el estilo que necesitas</p>
+							<p class="tamañop">Tu mejor estilo</p>
 						</div>
 					</div>
 
 					<div class="item banner">
-						<img src="img/b.jpg" class="img-responsive" alt="">
+						<img src="img/b3.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Viste a la moda</h1>
 							<p class="tamañop">Prendas novedosas</p>
@@ -88,7 +88,7 @@
 
 	<div class="container-fluid padding">
 		<div class="main col-xs-12 buscador">
-			<select class="col-xs-12">
+			<select class="col-xs-5 col-md-4">
 				<option>Todas las categorías</option>
 				<option>Playeras</option>
 				<option>Camisas</option>
@@ -96,8 +96,8 @@
 				<option>Suéter/Chamarra</option>
 				<option>Zapatos</option>
 			</select>
-			<input type="text" name="" placeholder="Ingresa el nombre del artículo">
-			<div class="buscar"><i class="fa fa-search" aria-hidden="true"></i></div>
+			<input type="text" name="" placeholder="Nombre del artículo" class="col-xs-5 col-md-6">
+			<div class="buscar col-xs-2 col-md-2"><i class="fa fa-search" aria-hidden="true"></i></div>
 		</div>
 	</div>
 

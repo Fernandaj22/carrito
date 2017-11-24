@@ -51,13 +51,17 @@
 		      	 <li class="hover actual"><a href="#">Suéter/Chamarra</a></li>
 		      	 <li class="hover"><a href="adminzapatos.php">Zapatos</a></li>
 	    	</ul>
+
+	    	<ul class="nav navbar-nav navbar-right home">
+	    		<li class="lectura"><a readonly>Administrador</a></li>
+    		</ul>
  		</div>
 	</nav>
 
-	<div class="container-fluid">
+	<div class="container">
 		<div class="main col-xs-12 buscador">
-			<input type="text" name="" placeholder="Busca por nombre de producto">
-			<div class="buscar"><i class="fa fa-search" aria-hidden="true"></i></div>
+			<input type="text" name="" placeholder="Busca por nombre de producto" class="col-xs-8 col-md-8">
+			<div class="buscar col-xs-4 col-md-4"><i class="fa fa-search" aria-hidden="true"></i></div>
 		</div>
 	</div>
 
@@ -75,7 +79,7 @@
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 				<div class="vacios"></div>
 				<div class="mas">
-					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto"></i>
+					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" onclick="location.href='nuevo_producto.php'"></i>
 				</div>
 				<p class="textoa">Agregar nuevo producto</p>
 				<div class="vacios"></div>

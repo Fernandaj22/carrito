@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/estilos2.css"> -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-
-	<title>Nombre de la Tienda - Principal</title>
+<script type="text/javascript" src="js/funciones2.js"></script>
+	<title>Nombre de la página - Detalles</title>
 </head>
 <body>
 
@@ -16,7 +17,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -30,7 +31,7 @@
 	</header>
 
 	<div class="container-fluid">
-		<div class="col-xs-12 imgcate2 img-responsive" id="top"></div>
+		<div class="col-xs-12 imgcate0 img-responsive" id="top"></div>
 	</div>
 
 	<nav class="navbar navbar-default border" role="navigation">
@@ -46,7 +47,7 @@
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
 		     	 <li class="hover"><a href="adminplayeras.php">Playeras</a></li>
-		      	 <li class="hover actual"><a href="#">Camisas</a></li>
+		      	 <li class="hover"><a href="admincamisas">Camisas</a></li>
 		      	 <li class="hover"><a href="adminpantalones.php">Pantalones</a></li>
 		      	 <li class="hover"><a href="adminchamarras.php">Suéter/Chamarra</a></li>
 		      	 <li class="hover"><a href="adminzapatos.php">Zapatos</a></li>
@@ -58,41 +59,35 @@
  		</div>
 	</nav>
 
-	<div class="container">
-		<div class="main col-xs-12 buscador">
-			<input type="text" name="" placeholder="Busca por nombre de producto" class="col-xs-8 col-md-8">
-			<div class="buscar col-xs-4 col-md-4"><i class="fa fa-search" aria-hidden="true"></i></div>
+
+	<div class="container-fluid" style="padding-top: 40px; padding-bottom: 40px;">
+		<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
+
+		<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 lado5">
+			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
+			  <div class="editable">
+			  	<i class="fa fa-pencil" aria-hidden="true" title="Editar"> </i>
+			  	<p>   Campos editables</p>
+			  </div>
+
+			  <span class="btn btn-default btn-file">
+    			Selecciona tu imagen <input type="file">
+			  </span>
+              <input type="text" name="" value="" class="nombrep col-xs-12  col-md-12">
+              <input type="text" name="" value="" class="precio col-xs-12  col-md-10">
+              <textarea type="text" name="" value=""  class="descripcion col-xs-12"></textarea>
+              <div class="contenedorcan">
+              	<p class="nombrec">Cantidad de artículos disponibles:</p>
+              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
+              </div>
+              <input type="submit" id="enviar" class="button col-md-4 color0" name="" value="Subir producto">
+              <button name="" class="button col-xs-6 col-sm-6 col-md-6 color0 hidden" value="">Agregar</button>
+              </form>
 		</div>
 	</div>
 
-	<div class="container color">
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<div class="opadmin">
-						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='adinfo_producto.php'"></i>
-						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
-					</div>
-					<p class="tipo0">Zapato Casual Azul Marino</p>
-					<img src="img/camisa1.png">
-					<p class="tipo1">$950.00</p>
-			</div>
-
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-				<div class="vacios"></div>
-				<div class="mas">
-					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" onclick="location.href='nuevo_producto.php'"></i>
-				</div>
-				<p class="textoa">Agregar nuevo producto</p>
-				<div class="vacios"></div>
-			</div>
-			
-	</div>
-
-	<div class="container">
-		<a href="#top" class="volver col-md-1 col-xs-12">Arriba</a>
-	</div>
-
 	<footer>
-		<div class="container" style="text-align: center;">
+		<div class="container" style="text-align: center; bottom: 0px;">
 			<div class="col-xs-12 col-sm-4 col-md-4 centrado">
 				<p>Facultad de Informática</p>
 				<p>Centro de Desarrollo, Betas</p>

@@ -60,8 +60,8 @@
 
 	<div class="container">
 		<div class="main col-xs-12 buscador">
-			<input type="text" name="" placeholder="Busca por nombre de producto">
-			<div class="buscar"><i class="fa fa-search" aria-hidden="true"></i></div>
+			<input type="text" name="" placeholder="Busca por nombre de producto" class="col-xs-8 col-md-8">
+			<div class="buscar col-xs-4 col-md-4"><i class="fa fa-search" aria-hidden="true"></i></div>
 		</div>
 	</div>
 
