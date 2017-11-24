@@ -8,30 +8,31 @@
 }*/
   .imagen-producto{
     margin-top: 10px !important;
-    background: blue;
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
     height: 500px !important;
+    background: rgba(0,0,0,.04);
   }
   .imagen-producto>img{
     position: relative;
     align-self: center;
-    background: green;
   }
   .disponibilidad{
     position: absolute !important;
     height: 50px;
-    background: red;
-    z-index: 999991;
-    margin-top: 100px;
-    margin-left: -150px;
+    background: rgba(0,0,0,.04);
+    z-index: 99999;
     border-radius: 5px;
     font-family: 'Dosis', sans-serif;
     padding-top: 0px !important;
-    padding-bottom: 0px !important
+    padding-bottom: 0px !important;
+    padding: 2px !important;
+    box-sizing: border-box;
   }
   .disponibilidad>h3{
-    margin-top: 15px !important;
+    margin-top: 10px !important;
   }
   .informacion-producto{
     margin-top: 10px !important;
@@ -58,7 +59,7 @@
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
-  .nombre{
+  .nombrep{
     font-size: 30px;
     font-weight: bolder;
   }
@@ -74,8 +75,6 @@
     outline: none;
     border-style: none;
     border-color: Transparent;
-    overflow: hidden;
-    font-family:  'Poiret One', cursive;
     font-size: 15px;
   }
   .cantidad{
@@ -99,7 +98,6 @@
 .button{
   background: #A0E0C0 !important;
   align-self: flex-end;
-
   height: 10%;
   border-radius: 5px;
   font-size: 20px;

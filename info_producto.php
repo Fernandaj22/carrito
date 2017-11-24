@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 <script type="text/javascript" src="js/funciones2.js"></script>
-	<title></title>
+	<title>Nombre de la página - Detalles</title>
 </head>
 <body>
 
@@ -60,9 +60,9 @@
  		</div>
 	</nav>
 
-	 <div class="container">
+	 <div class="container"s>
             <div class="imagen-producto col-xs-12 col-sm-6 col-md-6">
-              <div class=" disponibilidad  col-md-3">
+              <div class=" disponibilidad">
                 <h3>AGOTADO</h3>
               </div>
               <img src="img/camisa1.png" class="col-md-8 img-responsive" alt="">
@@ -70,9 +70,9 @@
 
            <div class="informacion-producto col-xs-12 col-sm-6 col-md-6 ">
               <form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
-              <input type="text" name="" value="Camisa Azul Rey" class="nombre col-xs-12  col-md-12" disabled>
+              <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
               <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10" disabled>
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12  col-md-12"disabled>Camisa color azul. 100% algodon. Hecha en china</textarea>
+              <textarea type="text" name="" value=""  class="descripcion col-xs-12  col-md-12" disabled>Camisa color azul. 100% algodon. Hecha en china</textarea>
               <input type="number" class="cantidad col-xs-12  col-md-4" value="1" name="quantity" min="0" max="20">
               <input type="submit" id="enviar" class="button col-md-4 hidden" name="" value="Guardar">
               <button name="" class="button col-xs-6 col-sm-6 col-md-6 " value=""> Agregar</button>
