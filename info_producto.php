@@ -17,7 +17,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>

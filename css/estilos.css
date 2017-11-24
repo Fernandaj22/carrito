@@ -323,8 +323,8 @@ body, html{
 .buscador>select{
 	width: 30%;
 	height: 80%;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 	outline: none;
 	border: 1px solid rgba(0,0,0,.09);
 	padding: 5px;
@@ -432,7 +432,6 @@ body, html{
 }
 .color0{
 	background: #6196CB;
-
 }
 .color0:active{
 	top: 1px;
@@ -636,7 +635,7 @@ input[type=number]{
 	float: right !important;
 }
 	.opindividual>input[type=submit]{
-		width: 30% !important;
+		width: 31% !important;
 		float: right !important;
 		margin-right: 5px;
 		padding: 5px !important;
@@ -661,7 +660,7 @@ input[type=number]{
 	height: 30px;
 	float: left;
 	position: relative;
-	margin-top: 5px;
+	margin-top: 10px;
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -682,8 +681,8 @@ input[type=number]{
 		border-radius: 3px;
 		box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
 	}
-	.opcompra>input[type=submit]:hover{
-		top: 1px;
+	.hovertop:active{
+		top: 1px !important;
 	}
 	.colorc{
 		background:#9cf246;

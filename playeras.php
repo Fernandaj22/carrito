@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-	<title>Nombre de la Tienda - Principal</title>
+	<title>Nombre de la Tienda - Playeras</title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -23,7 +23,7 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="">Iniciar Sesión</a>
+				<a href="login.php">Iniciar Sesión</a>
 			</div>
 		</div>
 	</header>
@@ -71,68 +71,17 @@
 					<img src="img/playera6.png">
 					<p class="tipo1">$299.99</p>
 					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Tipo Polo A</p>
-					<img src="img/playera1.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera2.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera3.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera4.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera5.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Minion</p>
-					<img src="img/playera6.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
+						<input type="submit" name="" value="Ver detalles" class="color1" onclick="location.href='info_producto.php'">
 						<input type="submit" name="" value="Agregar al carrito" class="color0">
 					</div>
 			</div>
 	</div>
+
 	<div class="container">
 		<a href="#top" class="volver col-md-1 col-xs-12">Arriba</a>
 	</div>
+
+
 
 	<footer>
 		<div class="container" style="text-align: center;">

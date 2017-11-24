@@ -15,7 +15,7 @@
 		<div class="container-fluid encabezado">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<a href="#">MenShop</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>

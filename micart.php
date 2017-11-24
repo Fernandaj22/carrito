@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-<style>@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,800i');</style>
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 	<title>Nombre de la Tienda - Principal</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -44,7 +44,7 @@
 
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
-		     	 <li class="hover"><a href="#">Playeras</a></li>
+		     	 <li class="hover"><a href="playeras.php">Playeras</a></li>
 		      	 <li class="hover"><a href="camisas.php">Camisas</a></li>
 		      	 <li class="hover"><a href="pantalones.php">Pantalones</a></li>
 		      	 <li class="hover"><a href="chamarras.php">Suéter/Chamarra</a></li>
@@ -172,16 +172,16 @@
 					<p class="list-group-item-text">Cantidad:</p> 
 					<input type="number" name="" min="0">
 					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc">
-					    <input type="submit" name="" value="Quitar" class="colore">
+						<input type="submit" name="" value="Comprar" class="colorc hovertop">
+					    <input type="submit" name="" value="Quitar" class="colore hovertop">
 					</div>
 				  </div>
 				</div>
 			</div>
 
 			<div class="opcompra">
-				<input type="submit" name="" value="Limpiar carrito" class="color1">
-				<input type="submit" name="" value="Comprar todo" class="color0">
+				<input type="submit" name="" value="Limpiar carrito" class="color1 hovertop">
+				<input type="submit" name="" value="Comprar todo" class="color0 hovertop">
 			</div>
 		</div>
 	</div>

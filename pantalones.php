@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-<style>@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,800i');</style>
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 	<title>Nombre de la Tienda - Principal</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -23,7 +23,7 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="">Iniciar Sesión</a>
+				<a href="login.php">Iniciar Sesión</a>
 			</div>
 		</div>
 	</header>
@@ -71,7 +71,7 @@
 					<img src="img/pantalon1.png">
 					<p class="tipo1">$150.00</p>
 					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
+						<input type="submit" name="" value="Ver detalles" class="color1" onclick="location.href='info_producto.php'">
 						<input type="submit" name="" value="Agregar al carrito" class="color0">
 					</div>
 			</div>
