@@ -75,11 +75,7 @@
 			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
               <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
               <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10" disabled>
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled>
-              Camisa color azul. 
-              100% algodon. 
-              Hecha en China.
-              </textarea>
+              <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled></textarea>
               <div class="contenedorcan">
               	<p class="nombrec">Cantidad:</p>
               	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
