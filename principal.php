@@ -39,7 +39,7 @@
 
 				<div class="carousel-inner banner" role="listbox">
 					<div class="item active banner">
-						<img src="img/b1.jpg" class="img-responsive" alt="">
+						<img src="img/b.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">¡Bienvenido!</h1>
 							<p class="tamañop">No podrás parar de comprar</p>
@@ -47,7 +47,7 @@
 					</div>
 
 					<div class="item banner">
-						<img src="img/b2.jpg" class="img-responsive" alt="">
+						<img src="img/b.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Las mejores prendas</h1>
 							<p class="tamañop">Todo el estilo que necesitas</p>
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="item banner">
-						<img src="img/b3.jpg" class="img-responsive" alt="">
+						<img src="img/b.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Viste a la moda</h1>
 							<p class="tamañop">Prendas novedosas</p>
@@ -67,6 +67,7 @@
 		</section>
 	</div>
 
+
 	<nav class="navbar navbar-default border" role="navigation">
   		<div class="navbar-header txto">
     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -77,13 +78,13 @@
     		 <a class="navbar-brand" href="" style="cursor:default;">Menú</a> 
   		</div>
 
-  		<div class="navbar-collapse collapse container">
-
+  		<div class="navbar-collapse collapse">
 	    	<ul class="nav navbar-nav navbar-right home">
 	    		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
     		</ul>
  		</div>
 	</nav>
+
 
 	<div class="container-fluid padding">
 		<div class="main col-xs-12 buscador">

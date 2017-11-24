@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="css/estilos.css">
-<link rel="stylesheet" type="text/css" href="css/estilos2.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/estilos2.css"> -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
@@ -60,28 +60,38 @@
  		</div>
 	</nav>
 
-	 <div class="container"s>
-            <div class="imagen-producto col-xs-12 col-sm-6 col-md-6">
-              <div class=" disponibilidad">
+
+	<div class="container-fluid" style="padding-top: 40px; padding-bottom: 40px;">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
+              <div class="disponibilidad col-xs-6 col-md-3">
                 <h3>AGOTADO</h3>
               </div>
-              <img src="img/camisa1.png" class="col-md-8 img-responsive" alt="">
-           	</div>
+              <div class=" imagen-producto">
+              	<img src="img/camisa1.png" class="col-xs-12 img-responsive">
+              </div>
+		</div>
 
-           <div class="informacion-producto col-xs-12 col-sm-6 col-md-6 ">
-              <form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
+			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
               <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
               <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10" disabled>
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12  col-md-12" disabled>Camisa color azul. 100% algodon. Hecha en china</textarea>
-              <input type="number" class="cantidad col-xs-12  col-md-4" value="1" name="quantity" min="0" max="20">
-              <input type="submit" id="enviar" class="button col-md-4 hidden" name="" value="Guardar">
-              <button name="" class="button col-xs-6 col-sm-6 col-md-6 " value=""> Agregar</button>
+              <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled>
+              Camisa color azul. 
+              100% algodon. 
+              Hecha en China.
+              </textarea>
+              <div class="contenedorcan">
+              	<p class="nombrec">Cantidad:</p>
+              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
+              </div>
+              <input type="submit" id="enviar" class="button col-md-4 hidden color1" name="" value="Actualizar">
+              <button name="" class="button col-xs-6 col-sm-6 col-md-6 color0" value="">Agregar</button>
               </form>
-           </div>
-     </div>
+		</div>
+	</div>
 
 	<footer>
-		<div class="container" style="text-align: center;">
+		<div class="container" style="text-align: center; bottom: 0px;">
 			<div class="col-xs-12 col-sm-4 col-md-4 centrado">
 				<p>Facultad de Informática</p>
 				<p>Centro de Desarrollo, Betas</p>
