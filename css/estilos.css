@@ -173,6 +173,13 @@ body, html{
 .lectura{
 	cursor: default;
 }
+.circle{
+	padding: 4px;
+	height: 20px;
+	border-radius: 30%;
+	background: rgba(0,0,0,.1);
+	font-weight: bold;
+}
 /*S E C C I O N E S*/
 	.seccion1, .seccion2, .seccion3, .seccion4, .seccion5{
 		width: 100%;
