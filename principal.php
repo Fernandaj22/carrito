@@ -39,7 +39,7 @@
 
 				<div class="carousel-inner banner" role="listbox">
 					<div class="item active banner">
-						<img src="img/b1.jpg" class="img-responsive" alt="">
+						<img src="img/b.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">¡Bienvenido!</h1>
 							<p class="tamañop">No podrás parar de comprar</p>
@@ -47,7 +47,7 @@
 					</div>
 
 					<div class="item banner">
-						<img src="img/b2.jpg" class="img-responsive" alt="">
+						<img src="img/b.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Las mejores prendas</h1>
 							<p class="tamañop">Tu mejor estilo</p>
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="item banner">
-						<img src="img/b3.jpg" class="img-responsive" alt="">
+						<img src="img/b.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Viste a la moda</h1>
 							<p class="tamañop">Prendas novedosas</p>
@@ -85,21 +85,28 @@
  		</div>
 	</nav>
 
+	<section class="">
+		<div class="container top">
+			<div class="col-xs-12 col-sm-4 col-md-4 padding">
+				<select class="select">
+			        <option class="">Todas las categorías</option>
+			        <option class="">Playeras</option>
+			        <option class="">Camisas</option>
+			        <option class="">Pantalones</option>
+			        <option class="">Suéter/Chamarra</option>
+			        <option class="">Zapatos</option>
+			      </select>
+			</div>
 
-	<div class="container-fluid padding">
-		<div class="main col-xs-12 buscador">
-			<select class="col-xs-5 col-md-4">
-				<option>Todas las categorías</option>
-				<option>Playeras</option>
-				<option>Camisas</option>
-				<option>Pantalones</option>
-				<option>Suéter/Chamarra</option>
-				<option>Zapatos</option>
-			</select>
-			<input type="text" name="" placeholder="Nombre del artículo" class="col-xs-5 col-md-6">
-			<div class="buscar col-xs-2 col-md-2"><i class="fa fa-search" aria-hidden="true"></i></div>
+			<div class="col-xs-12 col-sm-4 col-md-6 padding">
+				<input class="input col-xs-6 col-md-8" id="" type="text">
+			</div>
+
+			<div class="col-xs-12 col-sm-4 col-md-2 padding">
+				<input type="submit" name="" value="Buscar" class="buscar">
+			</div>
 		</div>
-	</div>
+	</section>
 
 
 	<div class="container top">
