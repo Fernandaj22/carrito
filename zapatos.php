@@ -61,7 +61,8 @@
 
 	<section class="">
 		<div class="container top">
-			<div class="col-xs-12 col-sm-10 col-md-10 padding">
+			<div class="col-xs-12 col-sm-2 col-md-2 padding"></div>
+			<div class="col-xs-12 col-sm-6 col-md-6 padding">
 				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
 			</div>
 
@@ -70,6 +71,7 @@
 			</div>
 		</div>
 	</section>
+	
 
 	<div class="container color">
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
