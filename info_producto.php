@@ -47,7 +47,7 @@
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
 		     	 <li class="hover"><a href="playeras.php">Playeras</a></li>
-		      	 <li class="hover"><a href="#">Camisas</a></li>
+		      	 <li class="hover"><a href="camisas.php">Camisas</a></li>
 		      	 <li class="hover"><a href="pantalones.php">Pantalones</a></li>
 		      	 <li class="hover"><a href="chamarras.php">Suéter/Chamarra</a></li>
 		      	 <li class="hover"><a href="zapatos.php">Zapatos</a></li>
@@ -75,7 +75,7 @@
 			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
               <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
               <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10" disabled>
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled></textarea>
+              <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled>Camisa 100% algodón, hecha con en territorios chinos. Color azul fuerte.</textarea>
               <div class="contenedorcan">
               	<p class="nombrec">Cantidad:</p>
               	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">

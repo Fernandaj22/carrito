@@ -85,9 +85,10 @@
  		</div>
 	</nav>
 
-	<section class="">
+	<section class="main">
 		<div class="container top">
-			<div class="col-xs-12 col-sm-4 col-md-4 padding">
+			<div class="col-xs-12 col-sm-2 col-md-1 padding"></div>
+			<div class="col-xs-12 col-sm-3 col-md-3 padding">
 				<select class="select">
 			        <option class="">Todas las categorías</option>
 			        <option class="">Playeras</option>
@@ -98,11 +99,11 @@
 			      </select>
 			</div>
 
-			<div class="col-xs-12 col-sm-4 col-md-6 padding">
+			<div class="col-xs-12 col-sm-3 col-md-5 padding">
 				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
 			</div>
 
-			<div class="col-xs-12 col-sm-4 col-md-2 padding">
+			<div class="col-xs-12 col-sm-3 col-md-2 padding">
 				<input type="submit" name="" value="Buscar" class="buscar">
 			</div>
 		</div>

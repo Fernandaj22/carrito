@@ -180,8 +180,8 @@
 			</div>
 
 			<div class="opcompra">
-				<input type="submit" name="" value="Limpiar carrito" class="color1 hovertop">
-				<input type="submit" name="" value="Comprar todo" class="color0 hovertop">
+				<input type="submit" name="" value="Limpiar carrito" class="colore hovertop">
+				<input type="submit" name="" value="Comprar todo" class="colorc hovertop">
 			</div>
 		</div>
 	</div>

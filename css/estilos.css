@@ -444,13 +444,13 @@ body, html{
 	border-radius: 3px;
 }
 .color1{
-	background: #A0C0E0;
+	background: rgba(0,0,0,.3);
 }
 .color1:active{
 	top: 1px;
 }
 .color0{
-	background: #6196CB;
+	background: rgba(0,0,0,.6) !important;
 }
 .color0:active{
 	top: 1px;
@@ -713,9 +713,12 @@ details{
 }*/
 input[type=number]{
 	width: 10% !important;
+	height: 20px;
 	float: left !important;
 	position: relative;
 	border: none;
+	padding: 1px;
+	box-sizing: border-box;
 	border-top: 1px solid rgba(0,0,0,.3);
 	border-bottom: 1px solid rgba(0,0,0,.3);
 	outline: none;
@@ -728,22 +731,22 @@ input[type=number]{
 		width: 31% !important;
 		float: right !important;
 		margin-right: 5px;
-		padding: 5px !important;
+		padding: 0px !important;
 		box-sizing: border-box;
-		height: 30px;
+		height: 25px;
 		border: none;
 		cursor: pointer;
 		color: #fff;
-		font-weight: 600;
+		font-weight: 500;
 		outline: none;
 		border-radius: 3px;
 		box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
 	}
 	.colorc{
-		background:#a2f26f !important;
+		background: rgba(0,0,0,.6) !important;
 	}
 	.colore{
-		background:#ed4a38; 
+		background: rgba(0,0,0,.4) !important;
 	}
 .opcompra{
 	width: 100%;
@@ -807,7 +810,7 @@ input[type=number]{
     padding: 2px !important;
     box-sizing: border-box;
     text-align: center;
-    display: none;
+    color: #fff;
   }
   .disponibilidad>h3{
     margin-top: 10px !important;
@@ -876,8 +879,8 @@ input[type=number]{
     float: right;
     position: relative;
     background: none;
-    border-top: 1px solid #000020 !important;
-    border-bottom: 1px solid #000020 !important;
+    border-top: 1px solid rgba(0,0,0,.5) !important;
+    border-bottom: 1px solid rgba(0,0,0,.5) !important;
   }
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
@@ -900,6 +903,8 @@ input[type=number]{
   outline: none;
   border: none;
   box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
+  color: #fff;
+  font-weight: 600;
 }
 .button:active{
   top: 1px;
