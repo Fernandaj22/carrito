@@ -69,13 +69,22 @@
 			  	<i class="fa fa-pencil" aria-hidden="true" title="Editar"> </i>
 			  	<p>   Campos editables</p>
 			  </div>
-
 			  <span class="btn btn-default btn-file">
-    			Selecciona tu imagen <input type="file">
-			  </span>
-              <input type="text" name="" value="" class="nombrep col-xs-12  col-md-12">
-              <input type="text" name="" value="" class="precio col-xs-12  col-md-10">
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12"></textarea>
+				<select class="escategoria">
+				  		<option style="display: none;">Selecciona la categoría</option>
+				  		<option>Playeras</option>
+				  		<option>Camisas</option>
+				  		<option>Pantalones</option>
+				  		<option>Suéter/Chamarra</option>
+				  		<option>Zapatos</option>
+				</select>
+			   </span>
+			   <span class="btn btn-default btn-file">
+			   	Selecciona el archivo<input type="file" name="">
+			   </span>
+              <input type="text" name="" value="" class="nombrep col-xs-12  col-md-12" placeholder="Nombre producto">
+              <input type="text" name="" value="" class="precio col-xs-12  col-md-10" placeholder="Precio producto">
+              <textarea type="text" name="" value=""  class="descripcion col-xs-12" placeholder="Escribe una descripción del producto"></textarea>
               <div class="contenedorcan">
               	<p class="nombrec">Cantidad de artículos disponibles:</p>
               	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
