@@ -58,12 +58,17 @@
  		</div>
 	</nav>
 
-	<div class="container">
-		<div class="main col-xs-12 buscador">
-			<input type="text" name="" placeholder="Busca por nombre de producto" class="col-xs-8 col-md-8">
-			<div class="buscar col-xs-4 col-md-4"><i class="fa fa-search" aria-hidden="true"></i></div>
+	<section class="">
+		<div class="container top">
+			<div class="col-xs-12 col-sm-10 col-md-10 padding">
+				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
+			</div>
+
+			<div class="col-xs-12 col-sm-2 col-md-2 padding">
+				<input type="submit" name="" value="Buscar" class="buscar">
+			</div>
 		</div>
-	</div>
+	</section>
 
 	<div class="container color">
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">

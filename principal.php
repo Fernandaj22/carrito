@@ -99,7 +99,7 @@
 			</div>
 
 			<div class="col-xs-12 col-sm-4 col-md-6 padding">
-				<input class="input col-xs-6 col-md-8" id="" type="text">
+				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
 			</div>
 
 			<div class="col-xs-12 col-sm-4 col-md-2 padding">
