@@ -60,39 +60,42 @@
 	</nav>
 
 
-	<div class="container-fluid" style="padding-top: 40px; padding-bottom: 40px;">
-		<div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"></div>
-
-		<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 lado5">
-			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
-			  <div class="editable">
-			  	<i class="fa fa-pencil" aria-hidden="true" title="Editar"> </i>
-			  	<p>   Campos editables</p>
-			  </div>
-			  <span class="btn btn-default btn-file">
-				<select class="escategoria">
-				  		<option style="display: none;">Selecciona la categoría</option>
-				  		<option>Playeras</option>
-				  		<option>Camisas</option>
-				  		<option>Pantalones</option>
-				  		<option>Suéter/Chamarra</option>
-				  		<option>Zapatos</option>
-				</select>
-			   </span>
-			   <span class="btn btn-default btn-file">
-			   	Selecciona el archivo<input type="file" name="">
-			   </span>
-              <input type="text" name="" value="" class="nombrep col-xs-12  col-md-12" placeholder="Nombre producto">
-              <input type="text" name="" value="" class="precio col-xs-12  col-md-10" placeholder="Precio producto">
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12" placeholder="Escribe una descripción del producto"></textarea>
-              <div class="contenedorcan">
-              	<p class="nombrec">Cantidad de artículos disponibles:</p>
-              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
-              </div>
-              <input type="submit" id="enviar" class="button col-md-4 color0" name="" value="Subir producto">
-              <button name="" class="button col-xs-6 col-sm-6 col-md-6 color0 hidden" value="">Agregar</button>
-              </form>
-		</div>
+	<div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+		<form role="form">
+		   <div class="form-group">
+		   	<label for="ejemplo_email_1">Categoría del producto</label>
+		    <select>
+		    	<option>Playeras</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="ejemplo_email_1">Nombre del producto</label>
+		    <input type="email" class="form-control" id="ejemplo_email_1"
+		           placeholder="Introduce el nombre del producto">
+		  </div>
+		  <div class="form-group">
+		    <label for="ejemplo_password_1">Precio del producto</label>
+		    <input type="password" class="form-control" id="ejemplo_password_1" 
+		           placeholder="Introduce el precio del producto">
+		  </div>
+		  <div class="form-group">
+		    <label for="ejemplo_archivo_1">Cargar imagen del producto</label>
+		    <input type="file" id="ejemplo_archivo_1">
+		    <p class="help-block">Sólo formato jpg, png, jpeg</p>
+		  </div>
+		  <div class="form-group">
+		   	<label for="ejemplo_email_1">Tallas disponibles</label>
+		   	<label>
+		   		<input type="checkbox">  Chicas
+		   		<input type="number" name="">
+		   	</label>
+		   	<input type="checkbox">  Mediana
+		   	<input type="checkbox">  Grande
+		  </div>
+		  <div class="checkbox">
+		  </div>
+  		  <button type="submit" class="btn btn-default">Enviar</button>
+		</form>
 	</div>
 
 	<footer>
