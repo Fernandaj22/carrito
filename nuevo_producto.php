@@ -61,40 +61,47 @@
 
 
 	<div class="container" style="padding-top: 40px; padding-bottom: 40px;">
-		<form role="form">
-		   <div class="form-group">
-		   	<label for="ejemplo_email_1">Categoría del producto</label>
-		    <select>
+		<div class="col-md-3"></div>
+		<form role="form" class="formulario col-md-6">
+			<label for="ejemplo_email_1" class="center titulo">Rellene la información del producto nuevo</label>
+		   <div class="form-group center">
+		   	<label for="ejemplo_email_1" class="subtitulos">Categoría</label>
+		    <select class="opcion form-control">
 		    	<option>Playeras</option>
+		    	<option>Camisas</option>
+		    	<option>Pantalones</option>
+		    	<option>Suéter/Chamarra</option>
+		    	<option>Zapatos</option>
 		    </select>
 		  </div>
 		  <div class="form-group">
-		    <label for="ejemplo_email_1">Nombre del producto</label>
+		    <label for="ejemplo_email_1" class="subtitulos">Nombre del producto</label>
 		    <input type="email" class="form-control" id="ejemplo_email_1"
 		           placeholder="Introduce el nombre del producto">
 		  </div>
 		  <div class="form-group">
-		    <label for="ejemplo_password_1">Precio del producto</label>
+		    <label for="ejemplo_password_1" class="subtitulos">Precio del producto</label>
 		    <input type="password" class="form-control" id="ejemplo_password_1" 
 		           placeholder="Introduce el precio del producto">
 		  </div>
 		  <div class="form-group">
-		    <label for="ejemplo_archivo_1">Cargar imagen del producto</label>
-		    <input type="file" id="ejemplo_archivo_1">
-		    <p class="help-block">Sólo formato jpg, png, jpeg</p>
+		    <label for="ejemplo_password_1" class="subtitulos">Descripción del producto</label>
+		    <textarea type="password" class="form-control resize" id="ejemplo_password_1" placeholder="Introduce una descripción del producto"></textarea>
 		  </div>
 		  <div class="form-group">
-		   	<label for="ejemplo_email_1">Tallas disponibles</label>
-		   	<label>
-		   		<input type="checkbox">  Chicas
-		   		<input type="number" name="">
-		   	</label>
-		   	<input type="checkbox">  Mediana
-		   	<input type="checkbox">  Grande
+		  	<label for="ejemplo_password_1" class="subtitulos">Imagen del producto</label>
+		    <input type="file" name="" class="">
+		    <p class="help-block">Sólo formato jpg, jpeg, png</p>
 		  </div>
-		  <div class="checkbox">
+		  <div class="form-group">
+		    <label for="ejemplo_password_1" class="subtitulos">Tallas disponibles</label>
+		    <div class="flex">
+			    <label class="check"><input type="checkbox" name="">Chica</label>
+			    <label class="check"><input type="checkbox" name="">Mediana</label>
+			    <label class="check"><input type="checkbox" name="">Grande</label>
+			</div>
 		  </div>
-  		  <button type="submit" class="btn btn-default">Enviar</button>
+  		  <input type="submit" class="btn btn-default derecha color0" value="Agregar producto">
 		</form>
 	</div>
 

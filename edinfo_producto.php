@@ -79,8 +79,7 @@
               	<p class="nombrec">Cantidad a agregar:</p>
               	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
               </div>
-              <input type="submit" id="enviar" class="button col-md-4 color1" name="" value="Actualizar">
-              <button name="" class="button col-xs-6 col-sm-6 col-md-6 color0 hidden" value="">Agregar</button>
+              <input type="submit" id="enviar" class="button col-md-4 color1 hidden" name="" value="Actualizar">
             </form>
 		</div>
 	</div>
