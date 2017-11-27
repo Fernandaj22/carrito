@@ -58,23 +58,11 @@
  		</div>
 	</nav>
 
-	<section class="">
-		<div class="container top">
-			<div class="col-xs-12 col-sm-2 col-md-2 padding"></div>
-			<div class="col-xs-12 col-sm-6 col-md-6 padding">
-				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
-			</div>
-
-			<div class="col-xs-12 col-sm-2 col-md-2 padding">
-				<input type="submit" name="" value="Buscar" class="buscar">
-			</div>
-		</div>
-	</section>
 
 	<div class="container color">
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 					<div class="opadmin">
-						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='adinfo_producto.php'"></i>
+						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='edinfo_producto.php'"></i>
 						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
 					</div>
 					<p class="tipo0">Zapato Casual Azul Marino</p>
