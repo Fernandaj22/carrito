@@ -12,7 +12,7 @@
 	<title>Nombre de la página - Detalles</title>
 </head>
 <body>
-
+<div class="bg"></div>
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
