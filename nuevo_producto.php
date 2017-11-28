@@ -60,7 +60,7 @@
 	</nav>
 
 
-	<div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+	<div class="container" style="margin-top: 10px; padding-top: 40px; padding-bottom: 40px; border-radius: 5px;">
 		<div class="col-md-3"></div>
 		<form role="form" class="formulario col-md-6">
 			<label for="ejemplo_email_1" class="center titulo">Rellene la información del producto nuevo</label>
@@ -93,7 +93,11 @@
 		    <input type="file" name="" class="">
 		    <p class="help-block">Sólo formato jpg, jpeg, png</p>
 		  </div>
-		  <div class="form-group">
+		  <div class="form-group center">
+		    <label for="ejemplo_email_1" class="subtitulos">Cantidad de productos disponibles</label>
+		    <div class="tallas"><input type="number" name="" class=""></div>
+		  </div>
+		  <div class="form-group top1">
 		    <label for="ejemplo_password_1" class="subtitulos">Tallas disponibles</label>
 		    <div class="flex">
 			    <label class="check"><input type="checkbox" name="">Chica</label>
