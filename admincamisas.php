@@ -7,10 +7,10 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-
-	<title>Nombre de la Tienda - Principal</title>
+<title>Nombre de la Tienda - Principal</title>
 </head>
 <body>
+<div id="bg"></div>
 
 	<header class="encabezado">
 		<div class="container-fluid">
@@ -19,7 +19,7 @@
 				<a>MenShop</a>
 			</div>
 			<div class="redsociales">
-				<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				<i class="fa fa-facebook-official" arisa-hidden="true"></i>
 				<i class="fa fa-twitter-square" aria-hidden="true"></i>
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
@@ -28,6 +28,9 @@
 			</div>
 		</div>
 	</header>
+
+	<!--MODAL AGREGAR PRODUCTO-->
+
 
 	<div class="container-fluid">
 		<div class="col-xs-12 imgcate2 img-responsive" id="top"></div>
@@ -72,7 +75,7 @@
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 				<div class="vacios"></div>
 				<div class="mas">
-					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" onclick="location.href='nuevo_producto.php'"></i>
+					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" data-toggle="modal" data-target="#myModal"></i>
 				</div>
 				<p class="textoa">Agregar nuevo producto</p>
 				<div class="vacios"></div>
