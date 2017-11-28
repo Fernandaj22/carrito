@@ -564,8 +564,8 @@ body, html{
 	resize: none;
 }
 .formulario{
-	height: 600px;
-	background: rgba(0,0,0,.04);
+	height: 670px;
+	background: #eaf5ff;
 	padding: 10px;
 	box-sizing: border-box;
 	border-radius: 5px;
@@ -574,10 +574,11 @@ body, html{
 	margin-top: 0px !important;
 	font-size: 1.4em;
 	font-weight: 600;
+	margin-bottom: 10px;
 }
 .subtitulos{
 	font-weight: 500;
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
 .opcion{
 	width: 30%;
@@ -593,7 +594,7 @@ input[type=file]{
 	outline: none;
 }
 input[type=file]::-webkit-file-upload-button {	
-	height: 34px;
+	height: 30px;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
@@ -605,7 +606,7 @@ input[type=file]::-webkit-file-upload-button {
     outline: none;
 }
 .flex{
-	height: 30px;
+	height: 35px;
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
@@ -633,6 +634,17 @@ input[type=file]::-webkit-file-upload-button {
 	float: right !important;
 	color: #fff !important;
 	font-weight: 600 !important;
+}
+.top1{
+	margin-top: 5px !important;
+}
+.tallas{
+	margin-left: 10px;
+	position: relative;
+}
+.tallas>input[type=number]{
+	width: 60% !important;
+	border-radius: 2px !important;
 }
 /*M I P E R F I L Y M I C A R R I T O*/
 .lado6{
