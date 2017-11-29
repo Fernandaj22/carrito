@@ -61,16 +61,15 @@
 	</nav>
 
 
-	<div class="container-fluid" style="padding-top: 40px; padding-bottom: 40px;">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-              <div class="disponibilidad col-xs-6 col-md-3">
-                <h3>AGOTADO</h3>
-              </div>
-              <div class=" imagen-producto">
-              	<img src="img/camisa1.png" class="col-xs-12 img-responsive">
-              </div>
+	<div class="container-fluid" style="padding-top: 10px;" class="sinpadding">
+		<div class="col-xs-12 col-sm-6 col-md-6 lado5">
+			<div class="disponibilidad col-md-4 col-xs-8">
+				<h3>AGOTADO</h3>
+			</div>
+			<div class="imagen-producto">
+				<img src="img/camisa1.png">
+			</div>
 		</div>
-
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
 			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
               <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
@@ -80,9 +79,8 @@
               	<p class="nombrec">Cantidad:</p>
               	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
               </div>
-              <input type="submit" id="enviar" class="button col-md-4 hidden color1" name="" value="Actualizar">
               <button name="" class="button col-xs-6 col-sm-6 col-md-6 color0" value="">Agregar</button>
-              </form>
+             </form>
 		</div>
 	</div>
 

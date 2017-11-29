@@ -110,7 +110,7 @@
 	</section>
 
 
-	<div class="container top">
+	<div class="container top" style="padding-top: 10px;">
 		<section class="main row">
 			<div class="col-xs-12">
 				<div class="seccion1">

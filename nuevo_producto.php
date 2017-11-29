@@ -12,7 +12,6 @@
 	<title>Nombre de la página - Detalles</title>
 </head>
 <body>
-<div class="bg"></div>
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
@@ -61,9 +60,7 @@
 
 
 	<div class="container" style="margin-top: 10px; padding-top: 40px; padding-bottom: 40px; border-radius: 5px;">
-		<div class="col-md-3"></div>
 		<form role="form" class="formulario col-md-6">
-			<label for="ejemplo_email_1" class="center titulo">Rellene la información del producto nuevo</label>
 		   <div class="form-group center">
 		   	<label for="ejemplo_email_1" class="subtitulos">Categoría</label>
 		    <select class="opcion form-control">
@@ -88,6 +85,8 @@
 		    <label for="ejemplo_password_1" class="subtitulos">Descripción del producto</label>
 		    <textarea type="password" class="form-control resize" id="ejemplo_password_1" placeholder="Introduce una descripción del producto"></textarea>
 		  </div>
+		</form>
+		<form class="col-md-6">
 		  <div class="form-group">
 		  	<label for="ejemplo_password_1" class="subtitulos">Imagen del producto</label>
 		    <input type="file" name="" class="">
