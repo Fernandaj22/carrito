@@ -14,8 +14,8 @@
 	<header>
 		<div class="container-fluid encabezado">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a href="#">MenShop</a>
+				<img src="img/morro.jpg" class="fa tamaño">
+				<a href="#">The Morro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -39,7 +39,7 @@
 
 				<div class="carousel-inner banner" role="listbox">
 					<div class="item active banner">
-						<img src="img/b.jpg" class="img-responsive" alt="">
+						<img src="img/b1.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">¡Bienvenido!</h1>
 							<p class="tamañop">No podrás parar de comprar</p>
@@ -160,7 +160,7 @@
 
 			<div class="col-xs-12 col-sm-4 col-md-4 nombre">
 				<i class="fa fa-registered" aria-hidden="true"> </i>
-				<p>MenShop</p>
+				<p>The Morro</p>
 			</div>
 		</div>
 	</footer>

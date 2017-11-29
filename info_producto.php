@@ -16,7 +16,7 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+				<img src="img/morro.jpg" class="fa tamaño">
 				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
@@ -62,24 +62,32 @@
 
 
 	<div class="container-fluid" style="padding-top: 10px;" class="sinpadding">
-		<div class="col-xs-12 col-sm-6 col-md-6 lado5">
-			<div class="disponibilidad col-md-4 col-xs-8">
-				<h3>AGOTADO</h3>
-			</div>
+		<div class="col-xs-12 col-sm-6 col-md-6">
 			<div class="imagen-producto">
 				<img src="img/camisa1.png">
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<form class="datos-producto col-xs-12  col-md-12" action="index.html" method="post">
               <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
-              <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10" disabled>
+              <input type="text" name="" value="$525.00" class="precio col-xs-12" disabled>
               <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled>Camisa 100% algodón, hecha con en territorios chinos. Color azul fuerte.</textarea>
               <div class="contenedorcan">
               	<p class="nombrec">Cantidad:</p>
               	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
               </div>
-              <button name="" class="button col-xs-6 col-sm-6 col-md-6 color0" value="">Agregar</button>
+              <div class="contenedorcan">
+              	<p class="nombrec">Tallas disponibles:</p>
+              	<select class="cantidad">
+              		<option>Chica</option>
+              		<option>Mediana</option>
+              		<option>Grande</option>
+              	</select>
+              </div>
+              <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>
+              <p class="centrado">Envíos a todo el país</p>
+              <p class="centrado">Envío gratis durante la exhibición del producto y hasta agotar existencias</p>
+              <button name="" class="button col-xs-6 col-sm-5 col-md-5 color0" value="">Agregar</button>
              </form>
 		</div>
 	</div>
