@@ -626,6 +626,9 @@ input[type=file]::-webkit-file-upload-button{
 	align-content: center;
 	align-items: center;
 }
+input[type=checkbox]{
+	display: none;
+}
 .check{
 	width: 30%;
 	height: 100%;
