@@ -15,8 +15,8 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<img src="img/morro.jpg" class="fa tamaño">
+				<a href="principal.php">The Morro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -62,7 +62,7 @@
 	<div class="container color">
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 					<div class="opadmin">
-						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='einfo_producto.php'"></i>
+						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='edinfo_producto.php'"></i>
 						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
 					</div>
 					<p class="tipo0">Zapato Casual Azul Marino</p>

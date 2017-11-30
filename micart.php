@@ -14,7 +14,7 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+				<img src="img/morro.jpg" class="fa tamaño">
 				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
@@ -53,6 +53,7 @@
 
 	    	<ul class="nav navbar-nav navbar-right home">
         		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="micart.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>

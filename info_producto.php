@@ -54,8 +54,9 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="micart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
-        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+	    		<li class="hover"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="micart.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>
@@ -82,6 +83,15 @@
               		<option>Chica</option>
               		<option>Mediana</option>
               		<option>Grande</option>
+              	</select>
+              </div>
+              <div class="contenedorcan hidden">
+              	<p class="nombrec">Talla:</p>
+              	<select class="cantidad">
+              		<option>24</option>
+              		<option>25</option>
+              		<option>26</option>
+              		<option>27</option>
               	</select>
               </div>
               <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>

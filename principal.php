@@ -47,7 +47,7 @@
 					</div>
 
 					<div class="item banner">
-						<img src="img/b.jpg" class="img-responsive" alt="">
+						<img src="img/b2.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Las mejores prendas</h1>
 							<p class="tamañop">Tu mejor estilo</p>
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="item banner">
-						<img src="img/b.jpg" class="img-responsive" alt="">
+						<img src="img/b3.jpg" class="img-responsive" alt="">
 						<div class="carousel-caption">
 							<h1 class="tamañoh1">Viste a la moda</h1>
 							<p class="tamañop">Prendas novedosas</p>
@@ -80,8 +80,9 @@
 
   		<div class="navbar-collapse collapse">
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="micart.php"><span class="circle">6</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito</a></li>
-	    		<li class="lectura"><a href="" class="lectura">Bienvenido, Jorge Rojas</a></li>
+	    		<li class="hover"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+	    		<!-- <li class="lectura"><a class="lectura"> Mi Cuenta</a></li> -->
+	    		<li class="hover"><a href="micart.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>

@@ -15,8 +15,8 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a>MenShop</a>
+				<img src="img/morro.jpg" class="fa tamaño">
+				<a href="principal.php">The Morro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" arisa-hidden="true"></i>
@@ -56,7 +56,7 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="lectura"><a readonly>Administrador</a></li>
+	    		<li class="lectura"><a readonly>Administrador</a></li>	
     		</ul>
  		</div>
 	</nav>
@@ -75,7 +75,7 @@
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 				<div class="vacios"></div>
 				<div class="mas">
-					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" data-toggle="modal" data-target="#myModal"></i>
+					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" onclick="location.href='nuevo_producto.php'"></i>
 				</div>
 				<p class="textoa">Agregar nuevo producto</p>
 				<div class="vacios"></div>

@@ -15,8 +15,8 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a href="principal.php">MenShop</a>
+				<img src="img/morro.jpg" class="fa tamaño">
+				<a href="principal.php">The Morro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -46,22 +46,24 @@
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
 		     	 <li class="hover"><a href="adminplayeras.php">Playeras</a></li>
-		      	 <li class="hover"><a href="admincamisas">Camisas</a></li>
+		      	 <li class="hover"><a href="admincamisas.php">Camisas</a></li>
 		      	 <li class="hover"><a href="adminpantalones.php">Pantalones</a></li>
 		      	 <li class="hover"><a href="adminchamarras.php">Suéter/Chamarra</a></li>
 		      	 <li class="hover"><a href="adminzapatos.php">Zapatos</a></li>
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="lectura"><a readonly>Administrador</a></li>
+	    		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+        		<li class="lectura"><a readonly>Administrador</a></li>
     		</ul>
  		</div>
 	</nav>
 
 
-	<div class="container">
+	<div class="container-fluid p">
+		<form action="" method="">
 		<div class="estiloi col-xs-12 col-sm-6 col-md-6">
-			<i class="fa fa-pencil-square-o" aria-hidden="true" title="Editar campos"></i>
+			<i class="fa fa-pencil-square-o" aria-hidden="true" title="Editar campos"> 	<span class="nombres">Información del producto</span></i>
 			<select class="col-xs-12">
 				<option style="display: none;">Categoría del producto</option>
 				<option>Playeras</option>
@@ -81,18 +83,40 @@
 				<input type="file" name="" class="col-xs-12">
 				<span>Sólo formato jpg, jpeg, png</span>
 			</div>
-			<div class="contenedorcan">
+			<div class="contenedorcan col-xs-12">
 				<p class="nombres">Cantidad de productos disponibles:</p>
-				<input type="number" name="" min="1" class=" cantidad">
+				<input type="number" name="" min="1" class="cantidad">
 			</div>
-			<div class="flex">
-				<p class="nombres">Tallas disponibles</p>
-				<input type="checkbox" name="x" checked="true" id="chica"><label for="chica" class="check">Chica</label>
-				<label class="check"><input type="checkbox" name="">Mediana</label>
-				<label class="check"><input type="checkbox" name="">Grande</label>
-			</div>
+			<div class="flex col-xs-12">
+			<p class="nombres">Tallas disponibles al cliente: </p>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">Chica</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">Mediana</label>
+			    </div>
+			    <div class="checkbox disabled">
+			      <label><input type="checkbox" value="">Grande</label>
+			    </div>
+  			</div>
+  			<div class="flex col-xs-12 hidden">
+			<p class="nombres" title="Selecciona las tallas disponibles">Tallas disponibles al cliente: </p>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">24</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">25</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">26</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">27</label>
+			    </div>
+  			</div>
 		</div>
-	</div>
+		</form>	
+	</div>	
 
 	<footer>
 		<div class="container" style="text-align: center; bottom: 0px;">

@@ -176,6 +176,7 @@ body, html{
 }
 .lectura{
 	cursor: default !important;
+  background: rgba(0,0,0,0.06);
 }
 .circle{
 	padding: 4px;
@@ -202,21 +203,21 @@ body, html{
 	}
 	.seccion1>.img{
 		float: right !important;
-		background-image: url(../img/seccion.jpeg) !important;
+		background-image: url(../img/seccion1.jpeg) !important;
 		background-repeat: cover;
 		background-size: 100%;
 		background-position: center top 50%;
 	}
 	.seccion2>.img{
 		float: left !important;
-		background-image: url(../img/seccion.jpg) !important;
+		background-image: url(../img/seccion2.jpg) !important;
 		background-repeat: cover;
 		background-size: 100%;
 		background-position: center bottom 30%;
 	}
 	.seccion3>.img{
 		float: right !important;
-		background-image: url(../img/seccion.jpg) !important;
+		background-image: url(../img/seccion3.jpg) !important;
 		background-repeat: cover cover;
 		background-size: 100%;
 		background-position: center top 10%;
@@ -564,23 +565,28 @@ body, html{
 	background: none;
 }
 /*ESTILOS DE PANTALLA AGREGAR NUEVO PRODUCTO*/
+.p{
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  box-sizing: border-box; 
+}
 .vacio{
-	height: 80px;
+	height: 40px;
 }
 .resize{
 	resize: none;
 }
 .estiloi{
 	width: 100%;
-	height: 497px;
+	height: 500px;
 	float: left;
 	position: relative;
 	display: flex;
 	justify-content: space-around;
-    flex-direction: column;
+  flex-direction: column;
 	align-content: center;
 	font-size: 1.3em;
-	background: #E3EFFD;
+	/*background: #E3EFFD;*/
 	margin-top: 10px;
 	border-radius: 3px;
 }
@@ -606,8 +612,11 @@ body, html{
 	padding-left: 10px !important;
 }
 .nombres{
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: 600;
+  font-family: 'Dosis'!important; 
+  cursor: default !important;
+  margin-bottom: 0px;
 }
 .pad{
 	padding-top: 100px;
@@ -618,16 +627,18 @@ input[type=file]::-webkit-file-upload-button{
 	font-family: 'Dosis';
 	border-radius: 5px;
 	height: 30px;
+  cursor: pointer;
 }
 .flex{
-	height: 40px;
+	height: 60px;
 	display: flex;
 	justify-content: space-around;
-	align-content: center;
-	align-items: center;
+  flex-direction: column;
+  float: left;
+  position: relative;
 }
 input[type=checkbox]{
-	display: none;
+	
 }
 .check{
 	width: 30%;
@@ -868,7 +879,7 @@ input[type=number]{
     left: -40% !important;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .imagen-producto>img{
     width: 97%;
@@ -879,16 +890,23 @@ input[type=number]{
     align-content: center;
   }
   .datos-producto{
+    width: 80% !important;
+    height: 550px !important;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
     align-content: center;
+    margin-left: 50% !important;
+    left: -40% !important;
+    border-radius: 5px;
+    margin-bottom: 10px;
   } 
   .datos-producto>p{
     font-size: 1.1em;
     font-weight: 500;
     cursor: default;
+    margin-bottom:0px;
   }
   .nombrep{
     padding: 15px;
@@ -899,12 +917,14 @@ input[type=number]{
     font-size: 1.3em;
     font-weight: 600;
     background: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
   .precio{
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     box-sizing: border-box;
     color: #2C3E50;
     font-size: 1.3em;
@@ -915,9 +935,10 @@ input[type=number]{
     background: red;
     color: #fff;
     text-align: center;
+    margin-top: 10px;
   }
   .descripcion{
-    height: 150px;
+    height: 12  0px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -927,13 +948,14 @@ input[type=number]{
     font-size: 1.2em;
     font-weight: 400;
     resize: none;
-    overflow-x: none;
-    overflow-y: none;
+    overflow-x: none !important;
+    overflow-y: none !important;
     background: none;
     cursor: default;
   }
   .contenedorcan{
     width: 100%;
+    margin-bottom: 50px;
     float: left !important;
     position: relative;
     display: flex;
@@ -951,7 +973,7 @@ input[type=number]{
     cursor: default;
   }
   .cantidad{
-    width: 70px;
+    width: 100px;
     height: 25px !important;
     padding-left: 5px !important;
     border: 1px solid #ccc;
@@ -962,6 +984,11 @@ input[type=number]{
     border-radius: 3px;
     cursor: pointer;
   }
+  .margin{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 1.4em !important;
+  }
   select>option{
   	cursor: pointer !important;
   }
@@ -970,9 +997,9 @@ input[type=number]{
    opacity: 1;
    cursor: pointer;
 }
-.button{
+.button, .button1{
   align-self: flex-end;
-  height: 8%;
+  height: 30px;
   border-radius: 5px;
   font-size: 1.3em;
   overflow:hidden;
@@ -982,7 +1009,7 @@ input[type=number]{
   color: #fff;
   font-weight: 600;
 }
-.button:active{
+.button:active, .button1:active{
   top: 1px;
 }
 #enviar:active{

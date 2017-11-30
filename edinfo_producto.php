@@ -16,7 +16,7 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+				<img src="img/morro.jpg" class="fa tamaño">
 				<a href="principal.php">MenShop</a>
 			</div>
 			<div class="redsociales">
@@ -52,35 +52,62 @@
 		      	 <li class="hover"><a href="adminchamarras.php">Suéter/Chamarra</a></li>
 		      	 <li class="hover"><a href="adminzapatos.php">Zapatos</a></li>
 	    	</ul>
+
+	    	<ul class="nav navbar-nav navbar-right home">
+        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+        		<li class="lectura"><a readonly>Administrador</a></li>
+    		</ul>
  		</div>
 	</nav>
 
 
-	<div class="container-fluid" style="padding-top: 40px; padding-bottom: 40px;">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-              <div class="disponibilidad col-xs-6 col-md-3">
-                <h3>AGOTADO</h3>
-              </div>
-              <div class=" imagen-producto">
-              	<img src="img/camisa1.png" class="col-xs-12 img-responsive">
-              </div>
+	<div class="container-fluid" style="padding-top: 10px;"	>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="imagen-producto">
+				<img src="img/camisa1.png">
+			</div>
 		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
-			  <div class="editable">
-			  	<i class="fa fa-pencil" aria-hidden="true" title="Editar"> </i>
-			  	<p>   Campos editables</p>
-			  </div>
-              <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12">
-              <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10">
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12">Camisa azul con botones blancos. Hecha en China</textarea>
-              <div class="contenedorcan">
-              	<p class="nombrec">Cantidad a agregar:</p>
-              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="border-left: 1px solid rgba(0,0,0,.02);">
+			<i class="fa fa-pencil-square-o margin" aria-hidden="true" title="Editar campos"> 	<span class="nombres">Edita la información del producto</span></i>
+			<form class="datos-producto col-xs-12  col-md-6" action="index.html" method="post">
+              <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" maxlength="30">
+              <input type="text" name="" value="$525.00" class="precio col-xs-12" maxlength="20">
+              <textarea type="text" name="" value=""  class="descripcion col-xs-12" maxlength="100">Camisa 100% algodón, hecha con en territorios chinos. Color azul fuerte.</textarea>
+              <div class="contenedorcan col-xs-12">
+              	<p class="nombres">Cantidad:</p>
+              	<input type="number" class="cantidad" value="1" name="quantity" min="1" max="20">
               </div>
-              <input type="submit" id="enviar" class="button col-md-4 color1 hidden" name="" value="Actualizar">
-            </form>
+              <div class="flex col-xs-12">
+				<p class="nombres">Tallas disponibles al cliente: </p>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">Chica</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">Mediana</label>
+			    </div>
+			    <div class="checkbox disabled">
+			      <label><input type="checkbox" value="">Grande</label>
+			    </div>
+  			</div>
+  			<div class="flex col-xs-12 hidden">
+				<p class="nombres" title="Selecciona las tallas disponibles">Tallas disponibles al cliente: </p>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">24</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">25</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">26</label>
+			    </div>
+			    <div class="checkbox">
+			      <label><input type="checkbox" value="">27</label>
+			    </div>
+  			</div>
+              <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>
+              <p class="vacio"></p>
+              <button name="" class="button1 col-xs-6 col-sm-4 col-md-4 color0" value="">Actualizar</button>
+             </form>
 		</div>
 	</div>
 
