@@ -29,6 +29,7 @@
 		public function autenticar($expediente, $password){
 			$alumnos = $this->db->select('COUNT(*) as num', 'alumnos', "Expediente = {$expediente}");
 			return $alumnos['num'];
+			
 		}
 	}
 
