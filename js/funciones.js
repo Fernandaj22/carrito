@@ -58,7 +58,7 @@ function cargarCamisas(){
 				"<p class='tipo1'>"+"$"+camisa[i].precio+"</p>"+
 				"<input type='text'readonly class='hidden' value='"+camisa[i].idProducto+"'>"+
 				"<div class='botones'>"+
-						"<input type='submit' onclick='verDetalles();' value='Ver detalles' class='color1'>"+
+						"<input type='submit' id='idProducto' onclick='verDetalles("+camisa[i].idProducto+");' value='Ver detalles'"+
 						"<input type='submit' onclick='agregarCarrito();' name='' "+
 						"value='Agregar al carrito' class='color0'>"+
 					"</div>"+
@@ -89,8 +89,8 @@ function cargarPantalones(){
 				"<p class='tipo1'>"+"$"+pantalon[i].precio+"</p>"+
 				"<input type='text'readonly class='hidden' value='"+pantalon[i].idProducto+"'>"+
 				"<div class='botones'>"+
-						"<input type='submit' onclick='verDetalles();' value='Ver detalles' class='color1'>"+
-					"</div>"+
+				"<input type='submit' id='idProducto' onclick='verDetalles("+pantalon[i].idProducto+");' value='Ver detalles'"+
+				"</div>"+
 				"</div>";
 					//console.log(div);
 				document.querySelector('section').innerHTML += div;
@@ -118,7 +118,7 @@ function cargarChamarras(){
 				"<p class='tipo1'>"+"$"+chamarra[i].precio+"</p>"+
 				"<input type='text'readonly class='hidden' value='"+chamarra[i].idProducto+"'>"+
 				"<div class='botones'>"+
-						"<input type='submit' onclick='verDetalles();' value='Ver detalles' class='color1'>"+
+						"<input type='submit' id='idProducto' onclick='verDetalles("+chamarra[i].idProducto+");' value='Ver detalles'"+
 						"<input type='submit' onclick='agregarCarrito();' name='' "+
 						"value='Agregar al carrito' class='color0'>"+
 					"</div>"+
@@ -149,7 +149,7 @@ function cargarZapatos(){
 				"<p class='tipo1'>"+"$"+zapato[i].precio+"</p>"+
 				"<input type='text'readonly class='hidden' value='"+zapato[i].idProducto+"'>"+
 				"<div class='botones'>"+
-						"<input type='submit' onclick='verDetalles();' value='Ver detalles' class='color1'>"+
+						"<input type='submit' id='idProducto' onclick='verDetalles("+zapato[i].idProducto+");' value='Ver detalles'"+
 						"<input type='submit' onclick='agregarCarrito();' name='' "+
 						"value='Agregar al carrito' class='color0'>"+
 					"</div>"+
