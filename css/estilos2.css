@@ -11,7 +11,7 @@
     height: 95%;
     float: left;
     position: relative;
-    justify-content: center;
+    justify-ent: center;
     display: flex;
     align-items: center;
     align-content: center;
@@ -19,7 +19,14 @@
   .imagen-producto>img{
     width: 100%;
     height: 95%;
-  }
+  }  /*.nombrep{
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.09);
+  }*/
   .disponibilidad{
     position: absolute !important;
     height: 50px;
@@ -53,14 +60,14 @@
     padding-left: 5px !important;
     padding-right: 0px !important;
   }
-  .nombrep{
+  /*.nombrep{
     font-size: 30px;
     font-weight: bold;
     border-radius: 3px;
     padding: 5px;
     box-sizing: border-box;
     background: rgba(0,0,0,.09);
-  }
+  }*/
   .precio{
     font-size: 25px;
     font-weight: bold;
@@ -139,3 +146,261 @@
 .button:hover:before {
  left: 7px;
 }
+
+}
+.datos{
+  height: 571px;
+  background:#fff;
+}
+
+
+
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+
+	/*background = gradient + image pattern combo*/
+	background:
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+#cont{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/*form styles*/
+#msform {
+	text-align: center;
+	position: relative;
+}
+#msform #dat1, #msform #dat2, #msform #dat3 {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	padding: 20px 30px;
+	box-sizing: border-box;
+  height: 570px;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+#msform input, #msform textarea, #msform select {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#msform .action-button {
+	background: #c0c0c0;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #c0c0c0;
+}
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+.cuadro-sup{
+  height: 85px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+}
+.direccion{
+  height: 100%;
+  background: #f0f0f0;
+  border:none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carga{
+  display: flex;
+  height: 100%;
+  background: red;
+  border-radius: 5px;
+  border: none;
+  background: #f0f0f0;
+}
+#dat2 input[type=button]{
+  margin-top: 100px;
+}
+#msform #mTar, #mPay, #mMer,#env{
+  color: #000020;
+  padding: 17px 60px 5px 90px;
+  height: 70px !important;
+  display: inline-block;
+  position: relative;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  font-family: monserrat;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition:  all 0.3s ease;
+}
+#msform #mTar:hover, #mPay:hover, #mMer:hover,#env:hover{
+  background: #f0f0f0;
+}
+#msform  #mTar::before, #mPay::before, #mMer::before,#env::before{
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: none;
+  border: 3px solid #000020;
+  border-radius: 50%;
+  position: absolute;
+  left: 45px;
+  top:20px;
+}
+.select{
+  background: #B6CCE0;
+  border-radius: 2px;
+  color: #2B363D;
+}
+ .select input[type=radio]{
+  background: #fff;
+  border: 3px solid #fff;
+}
+
+#dat3 .cuadro-sup{
+  margin-bottom: 20px;
+}
+#dat3 label{
+  padding: 25px 60px 5px 90px;
+}
+#msform h4{
+  margin-top: 25px;
+}
+.tarjeta{
+  padding: 0px 0px !important;
+  margin-top: 20px;
+}
+.info-producto{
+  height: 600px;
+  background:#f0f0f0;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+}
+.producto-pago{
+  height: 90px;
+  border-radius: 5px;
+  margin-top: 50px;
+  display: flex;
+  box-sizing: border-box;
+}
+.datos-pago h2{
+  align-self: flex-start;
+  font-size: 20px;
+  position: relative;
+  float: left;
+}
+.datos-pago h3{
+  font-size: 20px;
+  position: relative;
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.datos-pago{
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: column;
+}
+#cantidad{
+  margin-left: 70%;
+  margin-top: -7%;
+}
+.precio-pago{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.precio-pago h1{
+  align-self: center;
+  font-size: 20px;
+  position: relative;
+  float: left;
+}
+.imagen-pago{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-pago>img{
+  height: 70px;
+  width: 70px;
+}
+.subtotal{
+   height: 115px;
+   border-top: 2px solid #7A7A7A;
+   margin-top: 20px;
+   border-bottom: 2px solid #7A7A7A;
+   padding-bottom: 5px;
+ }
+@media screen and (max-width: 800px) and (min-width: 120px){
+  .cont{
+    margin-top: 62px;
+  }
+  .informacion,.datos,#msform,#dat1,#dat2,#dat3,.producto-pago,.imagen-pago,.datos-pago,.precio-pago{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .datos-pago>h2,.datos-pago>h3,.datos-pago>h1{
+    font-size: 15px;
+  }
+  .compras>h3,.suma>h3{
+    font-size: 18px;
+  }
+  .producto-pago{
+    margin-top: 20px;
+  }
+  .info-producto{
+    height: auto;
+    margin-top: 0%;
+    border-radius: 5px;
+    margin-right: -100%;
+  }
+  .datos{
+    margin-right: 100%;
+  }
+  #dat2 input[type=button] {
+    margin-top: 5px;
+  }
+}
+  @media screen and (min-width: 320px) and (max-width: 800px){
+  }
