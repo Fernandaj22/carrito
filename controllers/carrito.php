@@ -2,9 +2,6 @@
 
 	class Carrito extends Controller
 	{
-		public function prueba(){
-			$this->view->render($this,"prueba");
-		}
 		/***********ACCEDER A LAS PANTALLAS USUARIO 2 (normal)***********/
 
 		/*****Pantalla camisas*****/
@@ -40,6 +37,7 @@
 		/*****Pantalla login/registro*****/
 		public function login()
 		{
+			session_destroy();
 			$this->view->render($this, "login");
 		}
 		/*****Pantalla mi carrito/perfil*****/
@@ -48,9 +46,11 @@
 			$this->view->render($this, "micart");
 		}
 		/*puebaaas*/
-		public function infoProducto()
+		public function infoProducto($idProducto)
 		{
 			$this->view->render($this, "info_producto");
+			$prueba = $_GET['id'];
+
 		}
 
 		/***********ACCEDER A LAS PANTALLAS USUARIO 1 (admin)***********/
@@ -99,17 +99,7 @@
 
 		/*****Función: Registro*****/
 		public function registrarUsuario(){
-			// //Recibimos los datos de regis() ubicado en ../public/js/funciones-login.js
-			// $nombre = $_POST['nombre'];
-			// $mail = $_POST['mail'];
-			// $pass = $_POST['pass'];
-			// //$pregunta = $_POST['pregunta'];
-			// $respuesta = $_POST['respuesta'];
-			// //Cargamos el modelo
-			// $this->loadOtherModel('UsuarioCarrito');
-			// //Mandamos a llamar registroUsuario() ubicado en -> "../models/UsuarioCarrito_model"
-			// $this->UsuarioCarrito->registroUsuario($nombre, $mail, $pass, $respuesta);
-			// //$this->view->render($this, "principal");
+			session_start();
 			$nombre = $_POST['nombreRegistro'];
 			$mail = $_POST['mailRegistro'];
 			$pass = $_POST['passRegistro'];
@@ -119,8 +109,11 @@
 				$this->loadOtherModel('UsuarioCarrito');
 				//Mandamos a llamar registroUsuario() ubicado en -> "../models/UsuarioCarrito_model"
 				$this->UsuarioCarrito->registroUsuario($nombre, $mail, $pass, $respuesta, $pregunta);
+				$_SESSION['nombreUsuario'] = $nombre;
+				$_SESSION['correo'] = $mail;
 				echo "<script>alert('Usuario registrado con éxito')</script>";
-				$this->view->render($this, "principal");
+				// $this->view->render($this, "principal");
+				header('Location:'.URL.'Carrito/');
 			}else{
 				echo "<script>alert('Usuario no pudo ser registrado')</script>";
 				$this->view->render($this, "login");
@@ -132,6 +125,7 @@
 
 		/*****Función: Iniciar Sesión*****/
 		public function iniciar(){
+			session_start();
 			//Recibimos los datos de $_POST de la pantalla login
 			$email = $_POST['mailLog'];
 			$password = $_POST['passLog'];
@@ -139,19 +133,25 @@
 			$this->loadOtherModel('UsuarioCarrito');
 			//Mandamos a llamar iniciarSesion($mail, $pass) ubicado en -> "../models/UsuarioCarrito_model"
 			$login = $this->UsuarioCarrito->iniciarSesion($email, $password);
-			echo $login;
+
+			//print_r($login['correo']);
 			if($login['idTipoUsuario'] == "1"){
 				if($login['pass'] == $password && $login['correo'] == $email){
+					$_SESSION['nombreUsuario'] = $login['nombreUsuario'];
 					echo "<script>alert('Bienvenido administrador :)')</script>";
-					$this->view->render($this, "adminprincipal");
+					//$this->view->render($this, "adminprincipal");
+					header('Location:'.URL.'Carrito/adminPrincipal');
 				}else{
 					echo "<script>alert('Usuario/Contraseña incorrecto')</script>";
 					$this->view->render($this, "login");
 				}
 			}else{
-				if($login['pass'] == sha1($password) && $login['correo'] == $email && $login['idTipoUsuario'] == "1"){
-					echo "<script>alert('Bienvenido de vuelta :)')</script>";
-					$this->view->render($this, "principal");
+				if($login['pass'] == $password && $login['correo'] == $email && $login['idTipoUsuario'] == "2"){
+					$_SESSION['nombreUsuario'] = $login['nombreUsuario'];
+					$_SESSION['correo'] = $login['correo'];
+					echo "<script>alert('Bienvenido de vuelta')</script>";
+					//$this->view->render($this, "principal");
+					header('Location:'.URL.'Carrito/');
 				}else{
 					echo "<script>alert('Usuario/Contraseña incorrecto')</script>";
 					$this->view->render($this, "login");
@@ -163,52 +163,69 @@
 
 		/*****Función: agregar productos a bd*****/
 		public function addProductoDB(){
-			
+			//echo $temp = $_POST['talla'];;
 			if(isset($_POST['Agregar'])){
+				switch ($_POST['talla']) {
+					case 'c':
+						$talla = "chica";
+						break;
+					case 'm':
+						$talla = "mediana";
+						break;
+					case 'g':
+						$talla = "grande";
+						break;
+					default:
+						$talla = "chica";	
+						break;			
+				}
 				$categoria = $_POST['categoria'];
 				$producto = $_POST['nombreProducto'];
 				$descripcion = $_POST['descripcion'];
-				$imagen = $_POST['Imagen'];
+				$imagen = "/img/".$_POST['Imagen'];
 				$precio = $_POST['precio'];
 				$cantidad = $_POST['cantidad'];
 				if($categoria != "" && $producto != "" && $descripcion != "" && 
-					$precio != "" && $cantidad != "" && $categoria != "0"){
-					
-					//echo $categoria."/".$producto."/".$descripcion."/".$imagen."/".$precio."/".$cantidad;
+					$precio != "" && $talla != "" && $categoria != "0"){
+					//echo $imagen;
+					echo $categoria."/".$producto."/".$descripcion."/".$img."/".$precio."/".$talla;
 					$this->loadOtherModel('Admin');
 					$agregar = $this->Admin->agregarProductoA($categoria, $producto, $descripcion, 
-								$imagen, $precio, $cantidad);
-					$nombreCategoria = $this->Admin->selectCateByID($categoria);
-					$nameCate = $nombreCategoria['nombreCategoria'];
+																$imagen, $precio, $talla, $cantidad);
 					echo "<script>alert('¡Producto agregado exitosamente!')</script>";
-					switch ($nameCate) {
-						case 'Camisas':
-							$this->view->render($this, "admincamisas");
+					//print_r($agregar);
+					switch ($categoria) {
+						case '1':
+							//$this->view->render($this, "adminplayeras");
+							header('Location:'.URL.'Carrito/adminplayeras');
 							break;
-						case 'Sueter/Chamarra':
-							$this->view->render($this, "adminchamarras");
+						case '2':
+							//$this->view->render($this, "admincamisas");
+							header('Location:'.URL.'Carrito/admincamisas');
 							break;
-						case 'Pantalones':
-							$this->view->render($this, "adminpantalones");
+						case '3':
+							//$this->view->render($this, "adminpantalones");
+							header('Location:'.URL.'Carrito/adminpantalones');
 							break;
-						case 'Playeras':
-							$this->view->render($this, "adminplayeras");
+						case '4':
+							//$this->view->render($this, "adminchamarras");
+							header('Location:'.URL.'Carrito/adminchamarras');
 							break;
-						case 'Zapatos':
-							$this->view->render($this, "adminzapatos");
+						case '5':
+							//$this->view->render($this, "adminzapatos");
+							header('Location:'.URL.'Carrito/adminzapatos');
 							break;
 					}
+				}else{
+					echo "<script>alert('Error inesperado, reintentar más tarde')</script>";
+					$this->view->render($this, "nuevo_producto");
 				}
-			}
+			
+
+			 }
 			
 		}
-
-
-		public function deleteProducto(){
-			$this->loadOtherModel('Admin');
-			$select = $this->Admin->selectProductosId();
-			$select['idProducto'];
-		}
+		
 	}
 
  ?>
