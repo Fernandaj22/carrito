@@ -175,7 +175,7 @@ body, html{
 	background: #C6D0DF;
 }
 .lectura{
-	cursor: default;
+	cursor: default !important;
 }
 .circle{
 	padding: 4px;
@@ -433,7 +433,7 @@ body, html{
 	align-content: center;
 }
 .botones>input{
-	width: 49% !important;
+	width: 90%;
 	padding: 5px !important;
 	box-sizing: border-box;
 	height: 30px;
@@ -564,59 +564,63 @@ body, html{
 	background: none;
 }
 /*ESTILOS DE PANTALLA AGREGAR NUEVO PRODUCTO*/
-.from-control{
-  border: 1px solid #ccc !important;
-}
-.from-control:hover{
-  box-shadow: none !important;
+.vacio{
+	height: 80px;
 }
 .resize{
 	resize: none;
 }
-.titulo{
-	margin-top: 0px !important;
+.estiloi{
+	width: 100%;
+	height: 497px;
+	float: left;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+    flex-direction: column;
+	align-content: center;
+	font-size: 1.3em;
+	background: #E3EFFD;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+.estiloi>i{
 	font-size: 1.4em;
+}
+.estiloi>span{
+	font-size: 1em !important;
+}
+.estiloi>input, .estiloi>select, .estiloi>textarea{
+  	padding: 15px !important;
+  	border: 1px solid #ccc;
+  	border-radius: 3px;
+  	box-sizing: border-box;
+  	color: #2C3E50;
+  	font-size: 1em;
+  	cursor: auto;
+  	font-weight: 500 !important;
+  	background: #fff;
+}
+.estiloi>select{
+	cursor: pointer !important;
+	padding-left: 10px !important;
+}
+.nombres{
+	font-size: 1.1em;
 	font-weight: 600;
-	margin-bottom: 10px;
 }
-.subtitulos{
-	font-weight: 500;
-	font-size: 1.2em;
+.pad{
+	padding-top: 100px;
+	box-sizing: border-box;
 }
-.opcion{
-	padding: 5px !important;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  color: #2C3E50;
-  font-size: 13px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-input[type=file]{
-	padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  color: #2C3E50;
-  font-size: 13px;
-}
-input[type=file]::-webkit-file-upload-button {	
-	  height: 30px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
+input[type=file]::-webkit-file-upload-button{
+	border: none;
+	font-family: 'Dosis';
+	border-radius: 5px;
+	height: 30px;
 }
 .flex{
-	height: 35px;
+	height: 40px;
 	display: flex;
 	justify-content: space-around;
 	align-content: center;
@@ -636,6 +640,7 @@ input[type=file]::-webkit-file-upload-button {
 	cursor: pointer;
 	font-weight: 600;
 	font-size: 1em;
+	overflow: hidden;
 }
 .check:hover{
 	background: #a0c0e0;
@@ -645,17 +650,7 @@ input[type=file]::-webkit-file-upload-button {
 	color: #fff !important;
 	font-weight: 600 !important;
 }
-.top1{
-	margin-top: 5px !important;
-}
-.tallas{
-	margin-left: 10px;
-	position: relative;
-}
-.tallas>input[type=number]{
-	width: 60% !important;
-	border-radius: 2px !important;
-}
+
 /*M I P E R F I L Y M I C A R R I T O*/
 .lado6{
 	background: #eaf5ff;
@@ -890,12 +885,12 @@ input[type=number]{
   .datos-producto>p{
     font-size: 1.1em;
     font-weight: 500;
+    cursor: default;
   }
   .nombrep{
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    margin-bottom: 5px;
     box-sizing: border-box;
     color: #2C3E50;
     font-size: 1.3em;
@@ -932,6 +927,7 @@ input[type=number]{
     overflow-x: none;
     overflow-y: none;
     background: none;
+    cursor: default;
   }
   .contenedorcan{
     width: 100%;
@@ -949,6 +945,7 @@ input[type=number]{
     position: relative;
     font-weight: bold;
     font-size: 1.3em;
+    cursor: default;
   }
   .cantidad{
     width: 70px;
@@ -960,6 +957,10 @@ input[type=number]{
     color: #2C3E50;
     font-size: 1.2em;
     border-radius: 3px;
+    cursor: pointer;
+  }
+  select>option{
+  	cursor: pointer !important;
   }
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {

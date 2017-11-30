@@ -59,53 +59,39 @@
 	</nav>
 
 
-	<div class="container" style="margin-top: 10px; padding-top: 40px; padding-bottom: 40px; border-radius: 5px;">
-		<form role="form" class="formulario col-md-6">
-		   <div class="form-group center">
-		   	<label for="ejemplo_email_1" class="subtitulos">Categoría</label>
-		    <select class="opcion form-control">
-		    	<option>Playeras</option>
-		    	<option>Camisas</option>
-		    	<option>Pantalones</option>
-		    	<option>Suéter/Chamarra</option>
-		    	<option>Zapatos</option>
-		    </select>
-		  </div>
-		  <div class="form-group">
-		    <label for="ejemplo_email_1" class="subtitulos">Nombre del producto</label>
-		    <input type="email" class="form-control" id="ejemplo_email_1"
-		           placeholder="Introduce el nombre del producto">
-		  </div>
-		  <div class="form-group">
-		    <label for="ejemplo_password_1" class="subtitulos">Precio del producto</label>
-		    <input type="password" class="form-control" id="ejemplo_password_1" 
-		           placeholder="Introduce el precio del producto">
-		  </div>
-		  <div class="form-group">
-		    <label for="ejemplo_password_1" class="subtitulos">Descripción del producto</label>
-		    <textarea type="password" class="form-control resize" id="ejemplo_password_1" placeholder="Introduce una descripción del producto"></textarea>
-		  </div>
-		</form>
-		<form class="col-md-6">
-		  <div class="form-group">
-		  	<label for="ejemplo_password_1" class="subtitulos">Imagen del producto</label>
-		    <input type="file" name="" class="">
-		    <p class="help-block">Sólo formato jpg, jpeg, png</p>
-		  </div>
-		  <div class="form-group center">
-		    <label for="ejemplo_email_1" class="subtitulos">Cantidad de productos disponibles</label>
-		    <div class="tallas"><input type="number" name="" class=""></div>
-		  </div>
-		  <div class="form-group top1">
-		    <label for="ejemplo_password_1" class="subtitulos">Tallas disponibles</label>
-		    <div class="flex">
-			    <label class="check"><input type="checkbox" name="">Chica</label>
-			    <label class="check"><input type="checkbox" name="">Mediana</label>
-			    <label class="check"><input type="checkbox" name="">Grande</label>
+	<div class="container">
+		<div class="estiloi col-xs-12 col-sm-6 col-md-6">
+			<i class="fa fa-pencil-square-o" aria-hidden="true" title="Editar campos"></i>
+			<select class="col-xs-12">
+				<option style="display: none;">Categoría del producto</option>
+				<option>Playeras</option>
+				<option>Camisas</option>
+				<option>Pantalones</option>
+				<option>Suéter/Chamarra</option>
+				<option>Zapatos</option>
+			</select>
+			<input type="text" name="" placeholder="Nombre del prodcto" class="nombrep col-xs-12">
+			<input type="text" name="" placeholder="Precio del producto" class="nombrep col-xs-12">
+			<textarea placeholder="Descripción del producto" class="resize col-xs-12 descripcion"></textarea>
+
+		</div>
+		<div class="estiloi col-xs-12 col-sm-6 col-md-6">
+			<div>
+				<p class="nombres">Imagen del producto</p>
+				<input type="file" name="" class="col-xs-12">
+				<span>Sólo formato jpg, jpeg, png</span>
 			</div>
-		  </div>
-  		  <input type="submit" class="btn btn-default derecha color0" value="Agregar producto">
-		</form>
+			<div class="contenedorcan">
+				<p class="nombres">Cantidad de productos disponibles:</p>
+				<input type="number" name="" min="1" class=" cantidad">
+			</div>
+			<div class="flex">
+				<p class="nombres">Tallas disponibles</p>
+				<input type="checkbox" name="x" checked="true" id="chica"><label for="chica" class="check">Chica</label>
+				<label class="check"><input type="checkbox" name="">Mediana</label>
+				<label class="check"><input type="checkbox" name="">Grande</label>
+			</div>
+		</div>
 	</div>
 
 	<footer>

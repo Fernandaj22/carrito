@@ -81,6 +81,7 @@
   		<div class="navbar-collapse collapse">
 	    	<ul class="nav navbar-nav navbar-right home">
 	    		<li class="hover"><a href="micart.php"><span class="circle">6</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito</a></li>
+	    		<li class="lectura"><a href="" class="lectura">Bienvenido, Jorge Rojas</a></li>
     		</ul>
  		</div>
 	</nav>

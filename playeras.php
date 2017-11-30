@@ -54,6 +54,7 @@
 	    	<ul class="nav navbar-nav navbar-right home">
 	    		<li class="hover"><a href="micart.php"><span class="circle">6</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito</a></li>
         		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="lectura"><a href="" class="lectura">Bienvenido, Jorge Rojas</a></li>
     		</ul>
  		</div>
 	</nav>
@@ -78,7 +79,6 @@
 					<p class="tipo1">$299.99</p>
 					<div class="botones">
 						<input type="submit" name="" value="Ver detalles" class="color1" onclick="location.href='info_producto.php'">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
 					</div>
 			</div>
 	</div>

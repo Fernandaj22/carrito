@@ -78,7 +78,7 @@
 					<p class="tipo1">$590.99</p>
 					<div class="botones">
 						<input type="submit" name="" value="Ver detalles" class="color1" onclick="location.href='info_producto.php'">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
+						
 					</div>
 			</div>
 	</div>

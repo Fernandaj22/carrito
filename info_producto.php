@@ -74,10 +74,10 @@
               <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled>Camisa 100% algodón, hecha con en territorios chinos. Color azul fuerte.</textarea>
               <div class="contenedorcan">
               	<p class="nombrec">Cantidad:</p>
-              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
+              	<input type="number" class="cantidad" value="1" name="quantity" min="1" max="20">
               </div>
               <div class="contenedorcan">
-              	<p class="nombrec">Tallas disponibles:</p>
+              	<p class="nombrec">Talla:</p>
               	<select class="cantidad">
               		<option>Chica</option>
               		<option>Mediana</option>
