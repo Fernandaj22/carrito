@@ -3,7 +3,7 @@
 	error_reporting(E_ALL);
 	ini_set('display_errors', 'off');
 
-	define( 'URL' ,"http://localhost:81/".basename(getcwd())."/");
+	define( 'URL' ,"http://localhost/".basename(getcwd())."/");
 
 	define( 'CSS' , URL."public/css/");
 	define( 'JS' , URL."public/js/" );
@@ -23,7 +23,7 @@
 	define( 'DB_HOST' , 'localhost');
 	define( 'DB_USER' , 'root');
 	define( 'DB_PASS' , '');
-	define( 'DB_NAME' , 'pruebapf2');
+	define( 'DB_NAME' , 'carrito3');
 
 	define( 'DB_CHARSET' ,'utf8');
 
