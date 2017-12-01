@@ -16,15 +16,16 @@ body, html{
 	--blancobanner: #fff;
 }
 .encabezado{
-	width: 100%;
-	height: 40px;
-	position: fixed;
-	float: left;
-	top: 0px;
-	left: 0px;
-	z-index:999999;
-	background: rgba(255,255,255,200);
+	  width: 100%;
+    height: 40px;
+    position: fixed;
+    float: left;
+    top: 0px; 
+    left: 0px;
+    z-index:999999;
+    background: rgba(255,255,255,200);
 }
+
 .toda{
 	padding-left: 1px !important;
 	padding-right: 1px !important;
@@ -35,25 +36,30 @@ body, html{
 		float: left;
 		position: relative;
 		background: rgba(255,255,255,200);
-		border-bottom: 1px solid rgba(0,0,0,.2);
 	}
-		.logo>i{
+		.logo>img{
+      height: 35px;
+      margin-top: 4px;
+      padding-bottom: 2px;
+      box-sizing: border-box;
 			float: left;
 			position: relative;
 			font-size: 1.3em;
 			line-height: 40px;
 			margin-left: 5px;
 			cursor: pointer;
+      border-radius: 50%; 
 		}
 		.logo>a{
 			float: left;
 			position: relative;
-			font-weight: 400;
-			margin-left: 10px;
+			font-weight: 500;
+			margin-left: 6px;
 			line-height: 40px;
 			text-decoration: none !important;
 			color: rgba(0,0,0,.5);
 			cursor: pointer;
+      font-size: 1em;
 		}
 	.redsociales{
 		width: 20%;
@@ -61,7 +67,6 @@ body, html{
 		float: left;
 		position: relative;
 		background: rgba(255,255,255,200);
-		border-bottom: 1px solid rgba(0,0,0,.2);
 		display: flex;
 		justify-content:center;
 		align-content: center;
@@ -80,7 +85,6 @@ body, html{
 		float: left;
 		position: relative;
 		box-sizing: border-box;
-		border-bottom: 1px solid rgba(0,0,0,.2);
 	}
 		.login>i{
 			float: right;
@@ -163,6 +167,8 @@ body, html{
 .border{
 	margin-bottom: 0px !important;
 	border-radius: none !important;	
+	background: #ECF3FD !important;
+	border: 1px solid rgba(0,0,0,.02) !important;
 }
 .home>li>a{
 	padding-left: 15px !important;
@@ -171,7 +177,8 @@ body, html{
 	background: #C6D0DF;
 }
 .lectura{
-	cursor: default;
+	cursor: default !important;
+  background: rgba(0,0,0,0.06);
 }
 .circle{
 	padding: 4px;
@@ -198,21 +205,21 @@ body, html{
 	}
 	.seccion1>.img{
 		float: right !important;
-		background-image: url(../img/seccion.jpeg) !important;
+		background-image: url(../img/seccion1.jpeg) !important;
 		background-repeat: cover;
 		background-size: 100%;
 		background-position: center top 50%;
 	}
 	.seccion2>.img{
 		float: left !important;
-		background-image: url(../img/seccion.jpg) !important;
+		background-image: url(../img/seccion2.jpg) !important;
 		background-repeat: cover;
 		background-size: 100%;
 		background-position: center bottom 30%;
 	}
 	.seccion3>.img{
 		float: right !important;
-		background-image: url(../img/seccion.jpg) !important;
+		background-image: url(../img/seccion3.jpg) !important;
 		background-repeat: cover cover;
 		background-size: 100%;
 		background-position: center top 10%;
@@ -429,7 +436,7 @@ body, html{
 	align-content: center;
 }
 .botones>input{
-	width: 49% !important;
+	width: 90%;
 	padding: 5px !important;
 	box-sizing: border-box;
 	height: 30px;
@@ -444,13 +451,13 @@ body, html{
 	border-radius: 3px;
 }
 .color1{
-	background: #A0C0E0;
+	background: rgba(0,0,0,.3);
 }
 .color1:active{
 	top: 1px;
 }
 .color0{
-	background: #6196CB;
+	background: rgba(0,0,0,.6) !important;
 }
 .color0:active{
 	top: 1px;
@@ -541,28 +548,6 @@ body, html{
 	position: relative;
 	margin-left: 5px;
 }
-.btn-file {
-  position: relative;
-  overflow: hidden;
-  background: #6196CB !important;
-  border: none !important;
-  box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
-  font-size: 1.1em !important;
-}
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=2);
-    opacity: 0;
-    outline: none;
-    cursor: inherit;
-    display: block;
-}
 .column{
 	display: flex;
     justify-content: space-around;
@@ -581,19 +566,93 @@ body, html{
 .escategoria:hover{
 	background: none;
 }
+/*ESTILOS DE PANTALLA AGREGAR NUEVO PRODUCTO*/
+.p{
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  box-sizing: border-box; 
+}
+.vacio{
+	height: 40px;
+}
+.resize{
+	resize: none;
+}
+.estiloi{
+	width: 100%;
+	height: 500px;
+	float: left;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+  flex-direction: column;
+	align-content: center;
+	font-size: 1.3em;
+	/*background: #E3EFFD;*/
+	margin-top: 10px;
+	border-radius: 3px;
+}
+.estiloi>i{
+	font-size: 1.4em;
+}
+.estiloi>span{
+	font-size: 1em !important;
+}
+.estiloi>input, .estiloi>select, .estiloi>textarea{
+  	padding: 15px !important;
+  	border: 1px solid #ccc;
+  	border-radius: 3px;
+  	box-sizing: border-box;
+  	color: #2C3E50;
+  	font-size: 1em;
+  	cursor: auto;
+  	font-weight: 500 !important;
+  	background: #fff;
+}
+.estiloi>select{
+	cursor: pointer !important;
+	padding-left: 10px !important;
+}
+.nombres{
+	font-size: 1em;
+	font-weight: 600;
+  font-family: 'Dosis'!important; 
+  cursor: default !important;
+  margin-bottom: 0px;
+}
+.pad{
+	padding-top: 100px;
+	box-sizing: border-box;
+}
+input[type=file]::-webkit-file-upload-button{
+	border: none;
+	font-family: 'Dosis';
+	border-radius: 5px;
+	height: 30px;
+  cursor: pointer;
+}
+.flex{
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+  flex-direction: column;
+  float: left;
+  position: relative;
+}
+.derecha{
+	float: right !important;
+	color: #fff !important;
+	font-weight: 600 !important;
+}
 
 /*M I P E R F I L Y M I C A R R I T O*/
 .lado6{
-	background: #eaf5ff;
-	border-left: 1px solid rgba(0,0,0,.04);
-	margin-top: 10px;	
-	height: 680px !important;
+	margin-top: 10px;
 	border-radius: 3px;		
 }
 .lado5{
-	background: #eaf5ff;
-	border-left: 1px solid rgba(0,0,0,.04);	
-	height: 490px !important;
+  	height: 480px !important;
+	border-left: 1px solid rgba(0,0,0,.04);	 
 	border-radius: 3px;
 	display: flex;
 	justify-content: center;
@@ -604,9 +663,10 @@ body, html{
 	width: 100% !important;
 	height: 30px !important;
 	position: relative !important;
-	font-weight: 700 !important;	
-	font-size: 1.8em;
-	margin-bottom: 15px;
+	font-weight: 600 !important;	
+	font-size: 1.4em;
+ 	 margin-top: 15px !important;
+  	line-height: 30px;
 }
 summary{
 	width: 100%;
@@ -628,9 +688,19 @@ details summary::-webkit-details-marker {
 details{
 	width: 100%;
 }
+.vacios{
+  width: 100%;
+  height: 70px !important;
+  float: left;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .historial{
 	width: 100%;
-	height: 300px;
+  height: 550px;
 	float: left;
 	position: relative;
 	overflow-y: scroll;
@@ -641,7 +711,8 @@ details{
 	border-radius: 5px;
 }
 .bold{
-	font-weight: 600;
+	font-weight: 700;
+	font-size: 1.4em;
 }
 .historial>h3{
 	font-size: 1.3em;
@@ -688,17 +759,15 @@ details{
 }
 .pedidos{
 	width: 100%;
-	height: 520px;
 	float: left;
 	position: relative;
-	overflow-y: scroll;
 	padding: 5px;
 	box-sizing: border-box;
 	background: rgba(255,255,255,.7);
 	border-radius: 5px;
 }
 .pedidot{
-	height: 120px !important;
+	height: 130px !important;
 }
 .pedidot>p{
 	font-size: 1.09em;
@@ -712,38 +781,42 @@ details{
 	background: #d1e6fc;
 }*/
 input[type=number]{
-	width: 10% !important;
-	float: left !important;
-	position: relative;
-	border: none;
-	border-top: 1px solid rgba(0,0,0,.3);
-	border-bottom: 1px solid rgba(0,0,0,.3);
-	outline: none;
+    padding: 0px;
+    border: 1px solid #ccc;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 1.2em; 
 }
 .opindividual{
-	width: 100% !important;
+	width: 65% !important;
 	float: right !important;
 }
 	.opindividual>input[type=submit]{
-		width: 31% !important;
 		float: right !important;
 		margin-right: 5px;
-		padding: 5px !important;
+		padding: 2px !important;
 		box-sizing: border-box;
 		height: 30px;
 		border: none;
 		cursor: pointer;
 		color: #fff;
-		font-weight: 600;
+		font-weight: 500;
 		outline: none;
 		border-radius: 3px;
 		box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
 	}
 	.colorc{
-		background:#a2f26f !important;
+		background: rgba(0,0,0,.6) !important;
+	}
+	.colorc:active{
+		top: 1px;
 	}
 	.colore{
-		background:#ed4a38; 
+		background: rgba(0,0,0,.4) !important;
+	}
+	.colore:active{
+		top: 1px;
 	}
 .opcompra{
 	width: 100%;
@@ -781,127 +854,156 @@ input[type=number]{
 		background:#ed4a38; 
 	}
 /*DETALLES DEL PRODUCTO*/
+.sinpadding{
+  padding-top: 10px !important;
+  padding-bottom: 0px;
+}
 .imagen-producto{
-    width: 95% !important;
-    height: 95%;
+    width: 80% !important;
+    height: 50% !important;
     float: left;
     position: relative;
     justify-content: center;
     display: flex;
     align-items: center;
     align-content: center;
+    margin-left: 50% !important;
+    left: -40% !important;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
   .imagen-producto>img{
-    width: 100%;
-    height: 100%;
-  }
-  .disponibilidad{
-    position: absolute !important;
-    height: 50px;
-    background: red;
-    z-index: 99999;
-    margin-top: 195px;
-    border-radius: 5px;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    padding: 2px !important;
-    box-sizing: border-box;
-    text-align: center;
-    display: none;
-  }
-  .disponibilidad>h3{
-    margin-top: 10px !important;
+    width: 97%;
+    height: 97%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
   }
   .datos-producto{
+    width: 80% !important;
+    height: 550px !important;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    height: 470px;
-    background: rgba(0,0,0,.08);
+    margin-left: 50% !important;
+    left: -40% !important;
     border-radius: 5px;
-  }
-  .datos-producto>input{
-    outline: none;
-    border: none;
-    padding-left: 5px !important;
-    padding-right: 0px !important;
+    margin-bottom: 10px;
+  } 
+  .datos-producto>p{
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: default;
+    margin-bottom:0px;
   }
   .nombrep{
-    font-size: 30px;
-    font-weight: bold;
+    padding: 15px;
+    border: 1px solid #ccc;
     border-radius: 3px;
-    padding: 5px;
     box-sizing: border-box;
-    background: rgba(0,0,0,.09);
+    color: #2C3E50;
+    font-size: 1.3em;
+    font-weight: 600;
+    background: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
   .precio{
-    font-size: 25px;
-    font-weight: bold;
+    padding: 15px;
+    border: 1px solid #ccc;
     border-radius: 3px;
-    padding: 5px;
+    margin-bottom: 10px;
     box-sizing: border-box;
-    background: rgba(0,0,0,.09);
+    color: #2C3E50;
+    font-size: 1.3em;
+    font-weight: 600;
+    background: none;
+  }
+  .rojo{
+    background: red;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
   }
   .descripcion{
-    font-size: 20px;
-    height: 100px;
-    resize: none;
-    outline: none;
-    border-style: none;
-    border-color: Transparent;
-    font-size: 1.2em;
+    height: 12  0px;
+    padding: 15px;
+    border: 1px solid #ccc;
     border-radius: 3px;
-    padding: 5px;
+    margin-bottom: 5px;
     box-sizing: border-box;
-    background: rgba(0,0,0,.09);
+    color: #2C3E50;
+    font-size: 1.2em;
+    font-weight: 400;
+    resize: none;
+    overflow-x: none !important;
+    overflow-y: none !important;
+    background: none;
+    cursor: default;
   }
   .contenedorcan{
     width: 100%;
-    height: 30px;
+    margin-bottom: 30px;
+    float: left !important;
+    position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
+    line-height: 40px;		
   }
   .nombrec{
-    margin-top: 10px;
+    margin-top: 5px;
     margin-right: 10px;
     float: right;
     position: relative;
     font-weight: bold;
+    font-size: 1.3em;
+    cursor: default;
   }
   .cantidad{
-    float: right;
-    position: relative;
-    background: none;
-    border-top: 1px solid #000020 !important;
-    border-bottom: 1px solid #000020 !important;
+    width: 100px;
+    height: 25px !important;
+    padding-left: 5px !important;
+    border: 1px solid #ccc;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 1.2em;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .margin{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 1.4em !important;
+  }
+  select>option{
+  	cursor: pointer !important;
   }
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
    opacity: 1;
    cursor: pointer;
 }
-#enviar{
-  margin-top: 5px;
-  margin-left: 300px;
-  height: 8%;
-  border-radius: 5px;
-  font-size: 1.3em;
-}
-.button{
+.button, .button1{
   align-self: flex-end;
-  height: 8%;
+  height: 30px;
   border-radius: 5px;
   font-size: 1.3em;
   overflow:hidden;
   outline: none;
   border: none;
   box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
+  color: #fff;
+  font-weight: 600;
+  margin-top: 10px;
 }
-.button:active{
+.button:active, .button1:active{
   top: 1px;
 }
 #enviar:active{
@@ -915,16 +1017,6 @@ input[type=number]{
  transition: all 200ms ease;
 }
 .button:hover:before {
- left: 7px;
-}
-#enviar:before {
- font-family: FontAwesome;
- content:"\f07a";
- position: absolute;
- left: -30px;
- transition: all 200ms ease;
-}
-#enviar:hover:before {
  left: 7px;
 }
 /*F O O T E R*/
