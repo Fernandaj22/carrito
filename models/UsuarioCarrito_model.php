@@ -2,8 +2,15 @@
 
 	class UsuarioCarrito_Model extends Model
 	{
-		public function selectProductosId(){
+		public function selectProductos(){
 			return $this->db->select("*", "productos");
+		}
+		public function selectUsuarios($mail)
+		{
+			return $this->db->select("*", "usuarios", "correo = '{$mail}'");
+		}
+		public function selectProductosByIDProducto($idProducto){
+			return $this->db->select("*", "productos", "idProducto = {$idProducto}");
 		}
 		public function registroUsuario($nombre, $mail, $pass, $respuesta, $pregunta){
 			$data = array('nombreUsuario' => $nombre, 'correo' => $mail, 'pass' => $pass,
@@ -11,10 +18,19 @@
 			return $this->db->insert($data, 'usuarios');
 		}
 		public function iniciarSesion($mail, $pass){
-			$login = $this->db->select("`correo`, `pass`, `idTipoUsuario`", "usuarios", 
+			$login = $this->db->select("*", "usuarios", 
 										"`correo` = '{$mail}' AND `pass` = '{$pass}'");
 			return $login;
 		}
+		public function insertAgregarPU($idProducto, $talla, $nombreUsuario, $precio, $cantidad){
+
+			$dataUP = array('idProducto'=> $idProducto, 'talla' => $talla, 'nombreUsuario' => $nombreUsuario, 'precio' => $precio, 'cantidad' => $cantidad);
+
+			return $this->db->insert($dataUP, "carrito");
+
+
+		}
+
 		
 	}
 

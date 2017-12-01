@@ -31,6 +31,12 @@
 
 			return $this->db->select("nombreCategoria", "categoria", "idCategoria = '{$idCate}'");
 		}
+
+		public function actualizarPro($nombre, $precio, $descripcion, $talla, $cantidad, $idProducto)
+		{
+			$data = array('nombreProducto' =>$nombre, 'precio' =>$precio, 'descripcion' =>$descripcion, 'talla' =>$talla, 'cantidad' =>$cantidad);
+			return $this->db->update($data, "productos", "idProducto = '{$idProducto}'");
+		}
 	}
 
  ?>
