@@ -1,3 +1,10 @@
+<?php 
+
+	session_start();
+	if(isset($_SESSION['nombreUsuario'])){
+		$nombreUsuario = $_SESSION['nombreUsuario'];
+	}
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +14,9 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+<script type="text/javascript" src="<?=JS?>config.js"></script>
+<script type="text/javascript" src="../public/js/funciones.js"></script>
+
 	<title>Nombre de la Tienda - Principal</title>
 </head>
 <body>
@@ -14,8 +24,8 @@
 	<header>
 		<div class="container-fluid encabezado">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a href="#">MenShop</a>
+				<img src="../public/img/morro.png" class="fa tamaño">
+				<a href="<?=URL?>Carrito/">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -23,7 +33,15 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="<?=URL?>Carrito/login">Iniciar Sesión</a>
+				<?php 
+
+					if (isset($nombreUsuario)) {
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+					}else{
+						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
+					}
+
+				 ?>
 			</div>
 		</div>
 	</header>
@@ -80,40 +98,51 @@
   		<div class="navbar-collapse collapse">
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><span class="circle">6</span><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>
 
-	<div class="container-fluid padding">
-		<div class="main col-xs-12 buscador">
-			<select class="col-xs-5 col-md-4">
-				<option>Todas las categorías</option>
-				<option>Playeras</option>
-				<option>Camisas</option>
-				<option>Pantalones</option>
-				<option>Suéter/Chamarra</option>
-				<option>Zapatos</option>
-			</select>
-			<div class="col-xs-12 col-sm-4 col-md-6 padding">
-				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
+	<section class="main">
+		<div class="container-top">
+			<div  class="col-xs-12 col-sm-2 col-md-1 padding"></div>
+				<form onsubmit="return false" method="POST">
+					<div class="col-xs-12 col-sm-3 col-md-3 padding">
+						<select class="select" name="cateBuscar" id="cateBuscar">
+							<option value="0">Todas las categorías</option>
+							<option value="1">Playeras</option>
+							<option value="2">Camisas</option>
+							<option value="3">Pantalones</option>
+							<option value="4">Suéter/Chamarra</option>
+							<option value="5">Zapatos</option>
+						</select>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-5 padding">
+						<input class="input col-xs-6 col-md-9" id="valorBuscar" name="valorBuscar" type="text" placeholder="Ingresa nombre del producto">
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-2 padding">
+						<input type="submit" name="buscar" value="Buscar" class="buscar" onclick="buscarProducto();">
+					</div>
+				</form>
 			</div>
 		</div>
-	</div>
+	</section>
 
 
-	<div class="container top">
+	<div class="container top" style="padding-top: 10px;">
 		<section class="main row">
 			<div class="col-xs-12">
 				<div class="seccion1">
-					<div class="img img-responsive"></div>
+					<div class="img"></div>
 					<a href="<?=URL?>Carrito/playeras">PLAYERAS</a>
 				</div>
 			</div>
 			<div class="col-xs-12">
-				<div class="seccion2">
-					<a href="<?=URL?>Carrito/camisas">CAMISAS</a>
+				<div class="seccion2">				
 					<div class="img"></div>
+					<a href="<?=URL?>Carrito/camisas">CAMISAS</a>
 				</div>
 			</div>
 			<div class="col-xs-12">
@@ -152,7 +181,7 @@
 
 			<div class="col-xs-12 col-sm-4 col-md-4 nombre">
 				<i class="fa fa-registered" aria-hidden="true"> </i>
-				<p>MenShop</p>
+				<p>TheMorro</p>
 			</div>
 		</div>
 	</footer>

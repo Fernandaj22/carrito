@@ -1,3 +1,10 @@
+<?php 
+
+	session_start();
+	if(isset($_SESSION['nombreUsuario'])){
+		$nombreUsuario = $_SESSION['nombreUsuario'];
+	}
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,24 +14,33 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-
-	<title>Nombre de la Tienda - Camisas</title>
+<script type="text/javascript" src="../public/js/funciones.js"></script>
+<script type="text/javascript" src="<?=JS?>config.js"></script>
+<title>TheMorro- Camisas</title>
 </head>
 <body>
-
+<div id="bg"></div>
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a href="<?=URL?>Carrito/adminPrincipal">MenShop</a>
+				<img src="../public/img/morro.png" class="fa tamaño">
+				<a href="<?=URL?>Carrito/adminprincipal">TheMorro</a>
 			</div>
 			<div class="redsociales">
-				<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				<i class="fa fa-facebook-official" arisa-hidden="true"></i>
 				<i class="fa fa-twitter-square" aria-hidden="true"></i>
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="<?=URL?>Carrito/login">Cerrar Sesión</a>
+				<?php 
+
+					if (isset($nombreUsuario)) {
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+					}else{
+						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
+					}
+
+				 ?>
 			</div>
 		</div>
 	</header>
@@ -53,21 +69,13 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="lectura"><a readonly>Administrador</a></li>
+	    		<li class="lectura"><a readonly><?=strtoupper($nombreUsuario)?></a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/adminprincipal"><i class="fa fa-home" aria-hidden="true"></i>  Home</a></li>
     		</ul>
  		</div>
 	</nav>
-	<div class="container color">
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<div class="opadmin">
-						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='<?=URL?>Carrito/editarProducto'"></i>
-						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
-					</div>
-					<p class="tipo0">Camisa Azul Marino</p>
-					<img src="../public/img/camisa1.png">
-					<p class="tipo1">$950.00</p>
-			</div>
+	<section class="container color">
+			
 
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 				<div class="vacios"></div>
@@ -78,7 +86,7 @@
 				<div class="vacios"></div>
 			</div>
 			
-	</div>
+	</section>
 
 	<div class="container">
 		<a href="#top" class="volver col-md-1 col-xs-12">Arriba</a>
@@ -106,5 +114,6 @@
 
 <script type="text/javascript" src="../public/js/jquery.js"></script>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript">window.addEventListener('load', acargarCamisas, true);</script>
 </body>
 </html>

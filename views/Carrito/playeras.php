@@ -1,3 +1,10 @@
+<?php 
+
+	session_start();
+	if(isset($_SESSION['nombreUsuario'])){
+		$nombreUsuario = $_SESSION['nombreUsuario'];
+	}
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +14,8 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+<script type="text/javascript" src="<?=JS?>config.js"></script>
+<script type="text/javascript" src="../public/js/funciones.js"></script>
 	<title>Nombre de la Tienda - Playeras</title>
 </head>
 <body>
@@ -14,8 +23,8 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a href="<?=URL?>Carrito/">MenShop</a>
+				<img src="../public/img/morro.png" class="fa tamaño">
+				<a href="<?=URL?>Carrito/">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -23,7 +32,15 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="<?=URL?>Carrito/login">Iniciar Sesión</a>
+				<?php 
+
+					if (isset($nombreUsuario)) {
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+					}else{
+						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
+					}
+
+				 ?>
 			</div>
 		</div>
 	</header>
@@ -52,15 +69,17 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><span class="circle">6</span><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
-        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>
 
 	<section class="">
  		<div class="container top">
- 			<div class="col-xs-12 col-sm-10 col-md-10 padding">
+ 			<div class="col-xs-12 col-sm-10 col-md-10 padding"></div>
+ 			<div class="col-xs-12 col-sm-6 col-md-6 padding">
  				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
  			</div>
  
@@ -70,26 +89,9 @@
   		</div>
  	</section>
 
-	<div class="container color">
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Galgo</p>
-					<img src="../public/img/playera6.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<p class="tipo0">Playera Tipo Polo A</p>
-					<img src="../public/img/playera1.png">
-					<p class="tipo1">$299.99</p>
-					<div class="botones">
-						<input type="submit" name="" value="Ver detalles" class="color1" onclick="location.href='<?=URL?>Carrito/infoProducto'">
-						<input type="submit" name="" value="Agregar al carrito" class="color0">
-					</div>
-			</div>
-	</div>
+	<section class="container color">
+		
+	</section>
 	<div class="container">
 		<a href="#top" class="volver col-md-1 col-xs-12">Arriba</a>
 	</div>
@@ -116,5 +118,6 @@
 
 <script type="text/javascript" src="../public/js/jquery.js"></script>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript">window.addEventListener('load', cargarPlayeras, true);</script>
 </body>
 </html>

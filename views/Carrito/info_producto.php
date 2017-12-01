@@ -1,3 +1,14 @@
+<?php 
+	session_start();
+	if(isset($_SESSION['nombreUsuario'])){
+		$nombreUsuario = $_SESSION['nombreUsuario'];
+	}
+	$idProducto = $_GET['id'];
+	$conn = new mysqli(DB_HOST, DB_USER,DB_PASS,DB_NAME);
+	$info = $conn->query("SELECT * FROM productos WHERE idProducto = '{$idProducto}'");
+	$producto = $info->fetch_assoc();
+	$nombre = $producto['nombreProducto'];
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +19,18 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-<script type="text/javascript" src="../public/js/funciones2.js"></script>
-	<title>Nombre de la página - Detalles</title>
+<script type="text/javascript" src="<?=JS?>config.js"></script>
+<script type="text/javascript" src="../public/js/funciones.js"></script>
+
+	<title>TheMorro - Detalles</title>
 </head>
 <body>
 
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a href="<?=URL?>Carrito/">MenShop</a>
+				<img src="../public/img/morro.png" class="fa tamaño">
+				<a href="<?=URL?>Carrito/">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -25,7 +38,13 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="<?=URL?>Carrito/login">Iniciar Sesión</a>
+				<?php 
+					if (isset($nombreUsuario)) {
+						"<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+					}else{
+						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
+					}
+				 ?>
 			</div>
 		</div>
 	</header>
@@ -54,34 +73,43 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
-        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>
 
 
-	<div class="container-fluid" style="padding-top: 40px; padding-bottom: 40px;">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-              <div class="disponibilidad col-xs-6 col-md-3">
-                <h3>AGOTADO</h3>
-              </div>
-              <div class=" imagen-producto">
-              	<img src="../public/img/camisa1.png" class="col-xs-12 img-responsive">
+	<div class="container-fluid" style="padding-top: 10px;" class="sinpadding">
+		<div class="col-xs-12 col-sm-6 col-md-6">  
+              <div class="imagen-producto">
+              	<img src="../public/img/<?=$producto['imagen']?>">
               </div>
 		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-			<form class="datos-producto col-xs-12  col-md-10" >
-              <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
-              <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10" disabled>
-              
+		<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<form class="datos-producto col-xs-12  col-md-12" action="<?=URL?>Carrito/agregar" method="POST">
+				<input type="hidden" name="nombreUsuario" value="<?=$nombreUsuario?>">
+				<input type="hidden" name="idProducto" value="<?=$idProducto ?>">
+				<input type="hidden" name="cantidad" value="<?=$producto['cantidad']?>">
+				<input type="hidden" name="precio" value="<?=$producto['precio']?>">
+              	<input type="text" name="nombreProducto" value="<?=$nombre?>" class="nombrep col-xs-12  col-md-12" disabled>
+              <input type="text" name="precioProducto" value="$<?=$producto['precio']?>" class="precio col-xs-12" disabled>
+              <textarea type="text" name="descripcionProducto" class="descripcion col-xs-12" disabled><?=utf8_decode($producto['descripcion'])?></textarea>
               <div class="contenedorcan">
-              	<p class="nombrec">Cantidad:</p>
-              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
+              	<p class="nombrec">Cantidad disponible en stock:</p>
+              	<p name="quantity" class="nombrec"><?=$producto['cantidad']?></p>
               </div>
-              <input type="submit" id="enviar" class="button col-md-4 hidden color1" name="" value="Actualizar">
-              <button name="" class="button col-xs-6 col-sm-6 col-md-6 color0" value="">Agregar</button>
+              <div class="contenedorcan">
+              	<p class="nombrec">Tallas disponibles:</p>
+              	<select class="cantidad" name="talla">
+              		<option value="<?=$producto['talla']?>"><?=strtoupper($producto['talla'])?></option>
+              	</select>
+              </div>
+              <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>
+              <p class="centrado">Envíos a todo el país</p>
+              <p class="centrado">Envío gratis durante la exhibición del producto y hasta agotar existencias</p>
+              <button name="" onclick="alert('¡Producto agregado al carrito!')" class="button col-xs-6 col-sm-5 col-md-5 color0" value="">Agregar</button>
               </form>
 		</div>
 	</div>
@@ -108,5 +136,7 @@
 
 <script type="text/javascript" src="../public/js/jquery.js"></script>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+
+<!-- <script type="text/javascript">window.addEventListener('load', verDetalles, true);</script>-->
 </body>
 </html>
