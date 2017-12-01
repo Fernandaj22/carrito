@@ -17,7 +17,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<img src="img/morro.jpg" class="fa tamaño">
-				<a href="principal.php">MenShop</a>
+				<a href="principal.php">The Morro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>

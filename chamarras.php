@@ -76,7 +76,7 @@
 	<div class="container color">
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 					<p class="tipo0">Suéter cuello redondo</p>
-					<img src="img/sueter1.png">
+					<img src="img/chamarra2.png">
 					<p class="tipo1">$750.60</p>
 					<div class="botones">
 						<input type="submit" name="" value="Ver detalles" class="color1" onclick="location.href='info_producto.php'">

@@ -15,7 +15,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<img src="img/morro.jpg" class="fa tamaño">
-				<a href="principal.php">MenShop</a>
+				<a href="principal.php">The Morro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -52,6 +52,7 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
+	    		<li class="hover"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
         		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
         		<li class="hover actual"><a href="micart.php"> Mi Cuenta</a></li>
     		</ul>

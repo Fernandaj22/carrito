@@ -757,6 +757,18 @@ details{
 	font-weight: 600;
 	margin-top: 0px !important;
 }
+.close{
+	width: 100%;
+	float: right;
+}
+.close>i{
+	float: right;
+	margin-top: 5px;
+}
+.imgc{
+	height: 70%; 
+	margin-top: 10px;
+}
 .pedidos{
 	width: 100%;
 	float: left;
@@ -767,11 +779,15 @@ details{
 	border-radius: 5px;
 }
 .pedidot{
-	height: 130px !important;
+	height: 250px !important;
+	padding: 0px !important;
 }
 .pedidot>p{
 	font-size: 1.09em;
 	margin-top: 2px !important;
+}
+.list-group{
+	padding: 0px !important;
 }
 .list-group-item{
 	cursor: default;
