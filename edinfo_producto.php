@@ -1,14 +1,24 @@
+<?php 
+	session_start();
+	if(isset($_SESSION['nombreUsuario'])){
+		$nombreUsuario = $_SESSION['nombreUsuario'];
+	}
+	$idProducto = $_GET['id'];
+	$conn = new mysqli(DB_HOST, DB_USER,DB_PASS,DB_NAME);
+	$info = $conn->query("SELECT * FROM productos WHERE idProducto = '{$idProducto}'");
+	$producto = $info->fetch_assoc();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<link rel="stylesheet" type="text/css" href="../public/css/estilos.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/estilos2.css"> -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-<script type="text/javascript" src="js/funciones2.js"></script>
+<script type="text/javascript" src="../public/js/funciones2.js"></script>
 	<title>Nombre de la página - Detalles</title>
 </head>
 <body>
@@ -16,8 +26,8 @@
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				<a href="principal.php">MenShop</a>
+				<img src="img/morro.jpg" class="fa tamaño">
+				<a href="<?=URL?>Carrito/adminprincipal">MenShop</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -25,7 +35,7 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="">Iniciar Sesión</a>
+				<a href="<?=URL?>Carrito/login">Iniciar Sesión</a>
 			</div>
 		</div>
 	</header>
@@ -46,41 +56,56 @@
 
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
-		     	 <li class="hover"><a href="adminplayeras.php">Playeras</a></li>
-		      	 <li class="hover"><a href="admincamisas.php">Camisas</a></li>
-		      	 <li class="hover"><a href="adminpantalones.php">Pantalones</a></li>
-		      	 <li class="hover"><a href="adminchamarras.php">Suéter/Chamarra</a></li>
-		      	 <li class="hover"><a href="adminzapatos.php">Zapatos</a></li>
+		     	 <li class="hover"><a href="<?=URL?>Carrito/adminplayeras">Playeras</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/admincamisas">Camisas</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/adminpantalones">Pantalones</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/adminchamarras">Suéter/Chamarra</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/adminzapatos">Zapatos</a></li>
 	    	</ul>
+
+	    	<ul class="nav navbar-nav navbar-right home">
+        		<li class="hover"><a href="<?=URL?>Carrito/adminprincipal"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+        		<li class="lectura"><a readonly><?=strtoupper($nombreUsuario)?></a></li>
+    		</ul>
  		</div>
 	</nav>
 
 
-	<div class="container-fluid" style="padding-top: 40px; padding-bottom: 40px;">
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-              <div class="disponibilidad col-xs-6 col-md-3">
-                <h3>AGOTADO</h3>
-              </div>
-              <div class=" imagen-producto">
-              	<img src="img/camisa1.png" class="col-xs-12 img-responsive">
-              </div>
+	<div class="container-fluid" style="padding-top: 10px;"	>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="imagen-producto">
+				<img src="../public/img/<?=$producto['imagen']?>">
+			</div>
 		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado5">
-			<form class="datos-producto col-xs-12  col-md-10" action="index.html" method="post">
-			  <div class="editable">
-			  	<i class="fa fa-pencil" aria-hidden="true" title="Editar"> </i>
-			  	<p>   Campos editables</p>
-			  </div>
-              <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12">
-              <input type="text" name="" value="$525.00" class="precio col-xs-12  col-md-10">
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12">Camisa azul con botones blancos. Hecha en China</textarea>
-              <div class="contenedorcan">
-              	<p class="nombrec">Cantidad a agregar:</p>
-              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="border-left: 1px solid rgba(0,0,0,.02);">
+			<i class="fa fa-pencil-square-o margin" aria-hidden="true" title="Editar campos"> 	<span class="nombres">Edita la información del producto</span></i>
+			<form class="datos-producto col-xs-12  col-md-6" action="<?=URL?>Carrito/actualizarProducto" method="post">
+				<input type="hidden" name="idProducto" value="<?=$idProducto?>">
+              <input type="text" name="nombre" value="<?=$producto['nombreProducto']?>" class="nombrep col-xs-12  col-md-12" maxlength="30">
+              <input type="text" name="precio" value="<?=$producto['precio']?>" class="precio col-xs-12" maxlength="20">
+              <textarea type="text" name="descripcion" value=""  class="descripcion col-xs-12" maxlength="100"><?=utf8_decode($producto['descripcion'])?></textarea>
+              <div class="contenedorcan col-xs-12">
+              	<p class="nombres">Cantidad:</p>
+              	<input type="number" class="cantidad" value="<?=$producto['cantidad']?>" name="quantity" min="1" max="20">
               </div>
-              <input type="submit" id="enviar" class="button col-md-4 color1 hidden" name="" value="Actualizar">
-            </form>
+            <div class="contenedorcan col-xs-12">
+				<p class="nombres">Tallas:</p>
+				<select class="cantidad" name="talla">
+					<option value="c">Chica</option>
+					<option value="m">Mediana</option>
+					<option value="g">Grande</option>
+				</select>
+  			</div>
+  			<div class="contenedorcan col-xs-12 hidden">
+  				<p class="nombres">Talla:</p>
+  				<select class="cantidad">
+               		<option></option>
+               	</select>
+  			</div>
+              <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>
+              <p class="vacio"></p>
+              <button name="" class="button1 col-xs-6 col-sm-4 col-md-4 color0" value="">Actualizar</button>
+             </form>
 		</div>
 	</div>
 
@@ -104,7 +129,7 @@
 	</footer>
 
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
 </body>
 </html>

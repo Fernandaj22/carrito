@@ -24,7 +24,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<img src="../public/img/morro.png" class="fa tamaño">
-				<a href="#">TheMorro</a>
+				<a href="<?=URL?>Carrito/adminprincipal">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -35,7 +35,7 @@
 				<?php 
 
 					if (isset($nombreUsuario)) {
-						echo "Bienvenido ". strtoupper($nombreUsuario)."<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
 					}else{
 						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
 					}
@@ -69,13 +69,14 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="lectura"><a readonly>Administrador</a></li>
+	    		<li class="hover"><a href="<?=URL?>Carrito/adminprincipal"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+	    		<li class="lectura"><a readonly><?=strtoupper($nombreUsuario)?></a></li>
     		</ul>
  		</div>
 	</nav>
 
 
-	<div class="container" style="margin-top: 10px; padding-top: 40px; padding-bottom: 40px; border-radius: 5px;">
+	<div class="container-fluid p" style="margin-top: 10px; padding-top: 40px; padding-bottom: 40px; border-radius: 5px;">
 		<div class="col-md-3"></div>
 			<form role="form" enctype="multipart/form-data" class="formulario col-md-6" method="POST" action="<?=URL?>Carrito/addProductoDB"><br>
 			<label for="ejemplo_email_1" class="center titulo">Rellene la información del producto nuevo</label>
@@ -106,15 +107,15 @@
               	<label for="img" class="subtitulos">
 			   	Imagen del producto<input type="file" name="Imagen" id="img">
 			   </div>
-			 <div class="form-group center">
-			    <label class="subtitulos">Tallas disponibles</label>
-			    <div class="flex">
-				    <label class="check"><input type="checkbox" name="talla" value="c">Chica</label>
-				    <label class="check"><input type="checkbox" name="talla" value="m">Mediana</label>
-				    <label class="check"><input type="checkbox" name="talla" value="g">Grande</label>
-				</div>
-		  	</div>
-              <div class="contenedorcan">
+			 <div class="contenedorcan col-xs-12">
+				<p class="nombres">Tallas:</p>
+				<select class="cantidad" name="talla">
+					<option value="c">Chica</option>
+					<option value="m">Mediana</option>
+					<option value="g">Grande</option>
+				</select>
+  			</div>
+              <div class="contenedorcan  col-xs-12">
               	<p class="nombrec">Cantidad de artículos disponibles:</p>
               	<input type="number" class="cantidad" value="1" name="cantidad" min="0" max="20">
               </div>

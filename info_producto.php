@@ -1,9 +1,13 @@
 <?php 
-
 	session_start();
 	if(isset($_SESSION['nombreUsuario'])){
 		$nombreUsuario = $_SESSION['nombreUsuario'];
 	}
+	$idProducto = $_GET['id'];
+	$conn = new mysqli(DB_HOST, DB_USER,DB_PASS,DB_NAME);
+	$info = $conn->query("SELECT * FROM productos WHERE idProducto = '{$idProducto}'");
+	$producto = $info->fetch_assoc();
+	$nombre = $producto['nombreProducto'];
  ?>
 <!DOCTYPE html>
 <html>
@@ -15,10 +19,10 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-<script type="text/javascript" src="../public/js/funciones.js"></script>
 <script type="text/javascript" src="<?=JS?>config.js"></script>
+<script type="text/javascript" src="../public/js/funciones.js"></script>
 
-	<title>Nombre de la página - Detalles</title>
+	<title>TheMorro - Detalles</title>
 </head>
 <body>
 
@@ -26,7 +30,7 @@
 		<div class="container-fluid">
 			<div class="logo">
 				<img src="../public/img/morro.png" class="fa tamaño">
-				<a href="#">TheMorro</a>
+				<a href="<?=URL?>Carrito/">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -35,13 +39,11 @@
 			</div>
 			<div class="login">
 				<?php 
-
 					if (isset($nombreUsuario)) {
-						echo "Bienvenido ". strtoupper($nombreUsuario)."<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+						"<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
 					}else{
 						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
 					}
-
 				 ?>
 			</div>
 		</div>
@@ -71,8 +73,9 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
-        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> </i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>
@@ -81,30 +84,32 @@
 	<div class="container-fluid" style="padding-top: 10px;" class="sinpadding">
 		<div class="col-xs-12 col-sm-6 col-md-6">  
               <div class="imagen-producto">
-              	<img src="../public/img/camisa1.png">
+              	<img src="../public/img/<?=$producto['imagen']?>">
               </div>
 		</div>
 		<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<form class="datos-producto col-xs-12  col-md-12" >
-               <input type="text" name="" value="Camisa Azul Rey" class="nombrep col-xs-12  col-md-12" disabled>
-              <input type="text" name="" value="$525.00" class="precio col-xs-12" disabled>
-              <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled>Camisa 100% algodón, hecha con en territorios chinos. Color azul fuerte.</textarea>
+			<form class="datos-producto col-xs-12  col-md-12" action="<?=URL?>Carrito/agregar" method="POST">
+				<input type="hidden" name="nombreUsuario" value="<?=$nombreUsuario?>">
+				<input type="hidden" name="idProducto" value="<?=$idProducto ?>">
+				<input type="hidden" name="cantidad" value="<?=$producto['cantidad']?>">
+				<input type="hidden" name="precio" value="<?=$producto['precio']?>">
+              	<input type="text" name="nombreProducto" value="<?=$nombre?>" class="nombrep col-xs-12  col-md-12" disabled>
+              <input type="text" name="precioProducto" value="$<?=$producto['precio']?>" class="precio col-xs-12" disabled>
+              <textarea type="text" name="descripcionProducto" class="descripcion col-xs-12" disabled><?=utf8_decode($producto['descripcion'])?></textarea>
               <div class="contenedorcan">
-              	<p class="nombrec">Cantidad:</p>
-              	<input type="number" class="cantidad" value="1" name="quantity" min="0" max="20">
+              	<p class="nombrec">Cantidad disponible en stock:</p>
+              	<p name="quantity" class="nombrec"><?=$producto['cantidad']?></p>
               </div>
               <div class="contenedorcan">
               	<p class="nombrec">Tallas disponibles:</p>
-              	<select class="cantidad">
-              		<option>Chica</option>
-              		<option>Mediana</option>
-              		<option>Grande</option>
+              	<select class="cantidad" name="talla">
+              		<option value="<?=$producto['talla']?>"><?=strtoupper($producto['talla'])?></option>
               	</select>
               </div>
               <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>
               <p class="centrado">Envíos a todo el país</p>
               <p class="centrado">Envío gratis durante la exhibición del producto y hasta agotar existencias</p>
-              <button name="" class="button col-xs-6 col-sm-5 col-md-5 color0" value="">Agregar</button>
+              <button name="" onclick="alert('¡Producto agregado al carrito!')" class="button col-xs-6 col-sm-5 col-md-5 color0" value="">Agregar</button>
               </form>
 		</div>
 	</div>

@@ -14,6 +14,8 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+<script type="text/javascript" src="../public/js/funciones.js"></script>
+<script type="text/javascript" src="<?=JS?>config.js"></script>
 
 	<title>Nombre de la Tienda - Pantalones</title>
 </head>
@@ -34,7 +36,7 @@
 				<?php 
 
 					if (isset($nombreUsuario)) {
-						echo "Bienvenido ". strtoupper($nombreUsuario)."<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
 					}else{
 						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
 					}
@@ -68,24 +70,15 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="lectura"><a readonly>Administrador</a></li>
+	    		<li class="lectura"><a readonly><?=strtoupper($nombreUsuario)?></a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/adminprincipal"><i class="fa fa-home" aria-hidden="true"></i>  Home</a></li>
     		</ul>
  		</div>
 	</nav>
 
 
-	<div class="container color">
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<div class="opadmin">
-						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='<?=URL?>Carrito/editarProducto'"></i>
-						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
-					</div>
-					<p class="tipo0">Zapato Casual Azul Marino</p>
-					<img src="../public/img/pantalon1.png">
-					<p class="tipo1">$950.00</p>
-			</div>
-
+	<section class="container color">
+			
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 				<div class="vacios"></div>
 				<div class="mas">
@@ -95,7 +88,7 @@
 				<div class="vacios"></div>
 			</div>
 			
-	</div>
+	</section>
 
 	<div class="container">
 		<a href="#top" class="volver col-md-1 col-xs-12">Arriba</a>
@@ -123,5 +116,6 @@
 
 <script type="text/javascript" src="../public/js/jquery.js"></script>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript">window.addEventListener('load', acargarPantalones, true);</script>
 </body>
 </html>

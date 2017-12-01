@@ -7,7 +7,7 @@
 		$info = $conn->query("SELECT COUNT(*) AS Total FROM carrito WHERE nombreUsuario ='{$nombreUsuario}'");
 		$producto = $info->fetch_assoc();
 	}else{
-		echo "<script>alert('No existe tu carrito, inicia sesión para crear uno')</script>";
+		echo "<script>alert('Inicia sesión para crear un perfil')</script>";
 		echo "<script>location.href='".URL."Carrito/'</script>";
 	}
 	
@@ -21,7 +21,7 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-	<title>Nombre de la Tienda - Mi Carrito</title>
+	<title>Nombre de la Tienda - Mi perfil</title>
 </head>
 <body>
 
@@ -74,39 +74,97 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"> <?=$nombreUsuario?></a></li>
+        		<li class="hover actual"><a href="#"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>
 
 	<div class="container-fluid">
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado6">
-			<h2><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Mi carrito</h2>
+			<h2 class="centrado"> Mi perfil</h2>
 
-			<h3>Tienes <?=$producto['Total']?> artículos en el carrito</h3>
-			<div class="pedidos">
+			<div class="panel panel-default personal">
+			  <div class="panel-heading bold">Nombre</div>
+			  <div class="panel-body">
+			     <?=$nombreUsuario?>
+			  </div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title bold">Email</h3>
+			  </div>
+			  <div class="panel-body">
+			    CORREO
+			  </div>
+			</div>
+
+			<details>
+			  <summary>Tarjetas utilizadas: </summary>
+			  <p>5502 2154 98526 0152</p>
+			  <p>5502 2154 98526 0152</p>
+			  <p>5502 2154 98526 0152</p>
+			  <p>5502 2154 98526 0152</p>
+			</details>
+			
+			<details>
+			  <summary>Direcciones utilizadas: </summary>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			  <p>Av. Pie de la Cuesta 2015-A no. 117 condominio Tamayo, Querétaro, Qro.</p>
+			</details>
+		</div>
+		<div class="col-xs-12 col-md-6 col-sm-6 col-lg-6 lado6">
+			<div class="historial">
+				<h3>Historial de pedidos</h3>
 				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
-				    <p class="list-group-item-text nombres">Mediana</p>
-					<p class="list-group-item-text">Cantidad:</p> 
-					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
-					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
-					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
-					</div>
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
+				    <p class="list-group-item-text">25/08/2017</p>
+				    <p class="list-group-item-text">Total de $542.32</p>
 				  </div>
 				</div>
-
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
+				    <p class="list-group-item-text">28/09/2017</p>
+				    <p class="list-group-item-text">Total de $1042.92</p>
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
+				    <p class="list-group-item-text">25/08/2017</p>
+				    <p class="list-group-item-text">Total de $542.32</p>
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
+				    <p class="list-group-item-text">28/09/2017</p>
+				    <p class="list-group-item-text">Total de $1042.92</p>
+				  </div>
+				</div>
+				<div class="list-group">
+				  <div class="list-group-item">
+				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
+				    <p class="list-group-item-text">28/09/2017</p>
+				    <p class="list-group-item-text">Total de $1042.92</p>
+				  </div>
+				</div>
 				
 			</div>
-
-			<div class="opcompra">
-				<input type="submit" value="Limpiar carrito" class="colore hovertop">
-				<input type="submit" value="Comprar todo" class="colorc hovertop">
-			</div>
 		</div>
+		<div class="vacios1"></div>
+		<div class="vacios1"></div>
 	</div>
 
 	

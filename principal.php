@@ -25,7 +25,7 @@
 		<div class="container-fluid encabezado">
 			<div class="logo">
 				<img src="../public/img/morro.png" class="fa tamaño">
-				<a href="#">TheMorro</a>
+				<a href="<?=URL?>Carrito/">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -36,7 +36,7 @@
 				<?php 
 
 					if (isset($nombreUsuario)) {
-						echo "Bienvenido ". strtoupper($nombreUsuario)."<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
 					}else{
 						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
 					}
@@ -98,7 +98,9 @@
   		<div class="navbar-collapse collapse">
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><span class="circle">6</span><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Mi Carrito</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>

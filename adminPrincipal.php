@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+<script type="text/javascript" src="<?=JS?>config.js"></script>
 	<title>Nombre de la Tienda - Principal</title>
 </head>
 <body>
@@ -84,6 +85,7 @@
 
 	<nav class="navbar navbar-default border" role="navigation">
   		<div class="navbar-header txto">
+  			<li class="lectura"><a readonly></a></li>
     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       		<span class="icon-bar"></span>
       		<span class="icon-bar"></span>
@@ -97,7 +99,7 @@
 		<section class="main row">
 			<div class="col-xs-12">
 				<div class="seccion1">
-					<div class="img img-responsive"></div>
+					<div class="img"></div>
 					<a href="<?=URL?>Carrito/adminplayeras">PLAYERAS</a>
 				</div>
 			</div>
