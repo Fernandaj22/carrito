@@ -87,33 +87,45 @@
 				<p class="nombres">Cantidad de productos disponibles:</p>
 				<input type="number" name="" min="1" class="cantidad">
 			</div>
-			<div class="flex col-xs-12">
-			<p class="nombres">Tallas disponibles al cliente: </p>
+			<div class="contenedorcan col-xs-12">
+              	<p class="nombres">Talla:</p>
+              	<select class="cantidad">
+              		<option></option>
+              	</select>
+              </div>
+              <div class="contenedorcan col-xs-12 hidden">
+              	<p class="nombres">Talla:</p>
+              	<select class="cantidad">
+              		<option></option>
+              	</select>
+              </div>
+			<!-- <div class="flex col-xs-12">
+			<p class="nombres">Talla disponible al cliente: </p>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="">Chica</label>
+			      <input type="radio" value=""> Chica	
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="">Mediana</label>
+			      <input type="radio" value=""> Mediana	
 			    </div>
-			    <div class="checkbox disabled">
-			      <label><input type="checkbox" value="">Grande</label>
+			    <div class="checkbox">
+			      <input type="radio" value=""> Grande	
 			    </div>
   			</div>
   			<div class="flex col-xs-12 hidden">
 			<p class="nombres" title="Selecciona las tallas disponibles">Tallas disponibles al cliente: </p>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="">24</label>
+			      <label><input type="radio" value=""> 24</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="">25</label>
+			      <label><input type="radio" value=""> 25</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="">26</label>
+			      <label><input type="radio" value=""> 26</label>
 			    </div>
 			    <div class="checkbox">
-			      <label><input type="checkbox" value="">27</label>
+			      <label><input type="radio" value=""> 27</label>
 			    </div>
-  			</div>
+  			</div> -->
 		</div>
 		</form>	
 	</div>	

@@ -80,18 +80,13 @@
               <div class="contenedorcan">
               	<p class="nombrec">Talla:</p>
               	<select class="cantidad">
-              		<option>Chica</option>
-              		<option>Mediana</option>
-              		<option>Grande</option>
+              		<option></option>
               	</select>
               </div>
               <div class="contenedorcan hidden">
               	<p class="nombrec">Talla:</p>
               	<select class="cantidad">
-              		<option>24</option>
-              		<option>25</option>
-              		<option>26</option>
-              		<option>27</option>
+              		<option></option>
               	</select>
               </div>
               <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>

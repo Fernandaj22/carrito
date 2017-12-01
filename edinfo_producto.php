@@ -77,7 +77,19 @@
               	<p class="nombres">Cantidad:</p>
               	<input type="number" class="cantidad" value="1" name="quantity" min="1" max="20">
               </div>
-              <div class="flex col-xs-12">
+              <div class="contenedorcan col-xs-12">
+              	<p class="nombres">Talla:</p>
+              	<select class="cantidad">
+              		<option></option>
+              	</select>
+              </div>
+              <div class="contenedorcan col-xs-12 hidden">
+              	<p class="nombres">Talla:</p>
+              	<select class="cantidad">
+              		<option></option>
+              	</select>
+              </div>
+              <!-- <div class="flex col-xs-12">
 				<p class="nombres">Tallas disponibles al cliente: </p>
 			    <div class="checkbox">
 			      <label><input type="checkbox" value="">Chica</label>
@@ -103,7 +115,7 @@
 			    <div class="checkbox">
 			      <label><input type="checkbox" value="">27</label>
 			    </div>
-  			</div>
+  			</div> -->
               <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>
               <p class="vacio"></p>
               <button name="" class="button1 col-xs-6 col-sm-4 col-md-4 color0" value="">Actualizar</button>
