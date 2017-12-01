@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     outline: none;
-    font-family: sans-serif;
     box-sizing:border-box;
 }
 body{
@@ -15,13 +14,15 @@ body{
   justify-content: flex-start;
   flex-direction: column;
   overflow:inherit;
+  font-family: 'Dosis', sans-serif !important;
+  color: #000020;
 }
 .header{
   position: fixed;
-  z-index: 99999;
-  height: 200px;
+  height: 100px;
   width: 100%;
   display: flex;
+  z-index: 999; 
   align-items: center;
   justify-content: center;
 }
@@ -29,7 +30,7 @@ body{
     font-size: 35px !important;
   }
   .nombre{
-    height: 200px;
+    height: 100px;
     position: relative;
     float: left;
     box-sizing: border-box;
@@ -37,12 +38,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
   }
   .nombre>img{
-  height: 150px;
+  height: 100%;
   width: 200px;
-  margin-bottom: 20px;
   opacity: 0.8;
   }
   .nombre>h2{
@@ -74,8 +73,8 @@ body{
   position: relative;
   box-sizing: border-box;
   display: flex;
-  height:500px;
-  margin-top: 160px;
+  height: 400px;
+  margin-top: 130px;
   border-radius: 5px;
   flex-direction: row;
   align-content: center;
@@ -84,7 +83,7 @@ body{
   padding-right: 0px !important;
 }
 .der{
-  height:450px;
+  height:400px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -94,6 +93,7 @@ body{
   flex-wrap: wrap;
   padding-left: 0px !important;
   padding-right: 0px !important;
+  border-radius: 5px;
 }
 .ingreso{
   height: 450px;
@@ -121,13 +121,11 @@ body{
     align-self: flex-end;
   }
   .top>h1{
-    font-family: 'Poiret One', cursive;
     font-size: 20px;
     margin-bottom: 0px !important;
     color: #e0e0e0;
   }
   .top>h4{
-    font-family: 'Poiret One', cursive;
     font-size: 15px;
     color:#e0e0e0;
   }
@@ -149,7 +147,6 @@ body{
     border-radius: 3px;
     margin-bottom: 10px;
     box-sizing: border-box;
-    font-family: montserrat;
     color: #2C3E50;
     font-size: 13px;
   }
@@ -190,39 +187,34 @@ body{
   border-radius: 3px;
   margin-bottom: 10px;
   box-sizing: border-box;
-  font-family: montserrat;
   color: #2C3E50;
   font-size: 15px;
 }
 
   .ingresa, .registrate{
       height: 30px;
-      border-radius: 50px;
+      border-radius: 10px;
       background-color: #a0c0e0;
       border:none;
-      shadow:;
       outline: none;
-      font-family: 'Poiret One', cursive;
      }
      .ingresa:hover, .registrate:hover{
        background: #517A92;
        outline-color: #a0c0e0;
-       color: #a0c0e0;
+       color: #fff;
        font-weight: bolder;
      }
     .bottom>h6{
-      font-family: 'Poiret One', cursive;
+      cursor: default;
       color: #e0e0e0;
     }
 
     .link{
-      font-family: 'Poiret One', cursive;
       color: #e0e0e0 !important;
       background: transparent;
       width: 150px;
       color: #fff;
       border: none;
-      border-bottom: 1px solid #fff;
 
     }
 .izq{

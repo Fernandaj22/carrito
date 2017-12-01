@@ -56,7 +56,7 @@
 	    	<ul class="nav navbar-nav navbar-right home">
 	    		<li class="hover"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
         		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        		<li class="hover"><a href="micart.php"> Mi Cuenta</a></li>
+        		<li class="hover"><a href="miperfil.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>
@@ -74,8 +74,8 @@
               <input type="text" name="" value="$525.00" class="precio col-xs-12" disabled>
               <textarea type="text" name="" value=""  class="descripcion col-xs-12" disabled>Camisa 100% algodón, hecha con en territorios chinos. Color azul fuerte.</textarea>
               <div class="contenedorcan">
-              	<p class="nombrec">Cantidad:</p>
-              	<input type="number" class="cantidad" value="1" name="quantity" min="1" max="20">
+              	<p class="nombrec">Cantidad en stock: </p>
+              	<p class="nombrec">30</p>
               </div>
               <div class="contenedorcan">
               	<p class="nombrec">Talla:</p>

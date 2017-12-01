@@ -52,14 +52,117 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
+	    		<li class="hover actual"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
         		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        		<li class="hover"><a href="micart.php"> Mi Cuenta</a></li>
+        		<li class="hover"><a href="miperfil.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>
 
 	<div class="container-fluid">
-		
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lado6">
+			<h2><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Mi carrito</h2>
+
+			<h3>Tienes 10 artículos en el carrito</h3>
+			<div class="pedidos">
+				<div class="list-group">
+				  <div class="list-group-item select pedidot">
+				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text nombres">Mediana</p>
+					<p class="list-group-item-text">Cantidad:</p>
+					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
+					<div class="opindividual">
+						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
+					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					</div>
+				  </div>
+				</div>
+
+				<div class="list-group">
+				  <div class="list-group-item select pedidot">
+				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text nombres">Mediana</p>
+					<p class="list-group-item-text">Cantidad:</p>
+					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
+					<div class="opindividual">
+						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
+					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					</div>
+				  </div>
+				</div>
+
+				<div class="list-group">
+				  <div class="list-group-item select pedidot">
+				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text nombres">Mediana</p>
+					<p class="list-group-item-text">Cantidad:</p>
+					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
+					<div class="opindividual">
+						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
+					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					</div>
+				  </div>
+				</div>
+
+				<div class="list-group">
+				  <div class="list-group-item select pedidot">
+				    <p class="list-group-item-text bold">Pantalón azul marino liso</p>
+				    <p class="list-group-item-text nombres">Chica</p>
+					<p class="list-group-item-text">Cantidad:</p>
+					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
+					<div class="opindividual">
+						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
+					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					</div>
+				  </div>
+				</div>
+
+				<div class="list-group">
+				  <div class="list-group-item select pedidot">
+				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text nombres">Mediana</p>
+					<p class="list-group-item-text">Cantidad:</p>
+					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
+					<div class="opindividual">
+						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
+					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					</div>
+				  </div>
+				</div>
+
+				<div class="list-group">
+				  <div class="list-group-item select pedidot">
+				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text nombres">Mediana</p>
+					<p class="list-group-item-text">Cantidad:</p>
+					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
+					<div class="opindividual">
+						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
+					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					</div>
+				  </div>
+				</div>
+
+				<div class="list-group">
+				  <div class="list-group-item select pedidot">
+				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
+				    <p class="list-group-item-text nombres">Mediana</p>
+					<p class="list-group-item-text">Cantidad:</p>
+					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1">
+					<div class="opindividual">
+						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
+					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					</div>
+				  </div>
+				</div>
+
+				
+				<div class="opcompra">
+					<input type="submit" name="" value="Limpiar carrito" class="colore hovertop">
+					<input type="submit" name="" value="Comprar todo" class="colorc hovertop">
+				</div>
+			</div>
+	 	</div>
 	</div>
 
 	
@@ -87,62 +190,3 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
-<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 lado6">
-			<h2><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Mi carrito</h2>
-
-			<h3>Tienes 10 artículos en el carrito</h3>
-			<div class="pedidos">
-				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
-					<p class="list-group-item-text">Cantidad:</p> 
-					<input type="number" name="" min="0">
-					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc">
-					    <input type="submit" name="" value="Quitar" class="colore">
-					</div>
-				  </div>
-				</div>
-
-				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
-					<p class="list-group-item-text">Cantidad:</p> 
-					<input type="number" name="" min="0">
-					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc">
-					    <input type="submit" name="" value="Quitar" class="colore">
-					</div>
-				  </div>
-				</div>
-
-				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
-					<p class="list-group-item-text">Cantidad:</p> 
-					<input type="number" name="" min="0">
-					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc">
-					    <input type="submit" name="" value="Quitar" class="colore">
-					</div>
-				  </div>
-				</div>
-
-				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
-					<p class="list-group-item-text">Cantidad:</p> 
-					<input type="number" name="" min="0">
-					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc hovertop">
-					    <input type="submit" name="" value="Quitar" class="colore hovertop">
-					</div>
-				  </div>
-				</div>
-			</div>
-
-			<div class="opcompra">
-				<input type="submit" name="" value="Limpiar carrito" class="colore hovertop">
-				<input type="submit" name="" value="Comprar todo" class="colorc hovertop">
-			</div>
-		</div>

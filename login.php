@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/estilos-login.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <script type="text/javascript" src="js/funciones-login.js">
@@ -49,7 +49,7 @@
                       <input type="text"  class=" col-xs-12  col-md-10" id="respuesta" placeholder="&#10003; | Respuesta" disabled>
                 </div>
                 <div class="bottom col-xs-12">
-                      <input type="submit" class=" col-xs-8 col-md-6 registrate" id="registro" name="" value="Registrate">
+                      <input type="submit" class=" col-xs-8 col-md-6 registrate" id="registro" name="" value="Regístrate">
                 </div>
               </form>
             </div>
@@ -57,7 +57,7 @@
               <form class="ingreso" action="index.html" method="post">
                 <div class="top col-xs-12">
                     <h1>Ingresa</h1>
-                    <h4>Unete para poder llenar tu guardarropa</h4>
+                    <h4>Únete para poder llenar tu guardarropa</h4>
                 </div>
                 <div class="middle col-xs-12" id="mid">
                       <input type="email" class=" col-xs-12  col-md-10" name=""  placeholder=" &#9993  |  Correo">

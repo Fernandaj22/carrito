@@ -53,7 +53,7 @@
 
 	    	<ul class="nav navbar-nav navbar-right home">
         		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        		<li class="hover"><a href="micart.php"> Mi Cuenta</a></li>
+        		<li class="hover actual"><a href="micart.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>

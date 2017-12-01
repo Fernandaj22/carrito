@@ -82,7 +82,7 @@
 	    	<ul class="nav navbar-nav navbar-right home">
 	    		<li class="hover"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
 	    		<!-- <li class="lectura"><a class="lectura"> Mi Cuenta</a></li> -->
-	    		<li class="hover"><a href="micart.php"> Mi Cuenta</a></li>
+	    		<li class="hover"><a href="miperfil.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>

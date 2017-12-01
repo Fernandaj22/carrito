@@ -167,6 +167,8 @@ body, html{
 .border{
 	margin-bottom: 0px !important;
 	border-radius: none !important;	
+	background: #ECF3FD !important;
+	border: 1px solid rgba(0,0,0,.02) !important;
 }
 .home>li>a{
 	padding-left: 15px !important;
@@ -649,7 +651,7 @@ input[type=file]::-webkit-file-upload-button{
 	border-radius: 3px;		
 }
 .lado5{
-  height: 480px !important;
+  	height: 480px !important;
 	border-left: 1px solid rgba(0,0,0,.04);	 
 	border-radius: 3px;
 	display: flex;
@@ -663,11 +665,11 @@ input[type=file]::-webkit-file-upload-button{
 	position: relative !important;
 	font-weight: 600 !important;	
 	font-size: 1.4em;
-  margin-top: 15px !important;
-  line-height: 30px;
+ 	 margin-top: 15px !important;
+  	line-height: 30px;
 }
 summary{
-	  width: 100%;
+	width: 100%;
     outline: none;
     color: rgba(0,0,0,.9);
     font-weight: 600;
@@ -709,7 +711,8 @@ details{
 	border-radius: 5px;
 }
 .bold{
-	font-weight: 600;
+	font-weight: 700;
+	font-size: 1.4em;
 }
 .historial>h3{
 	font-size: 1.3em;
@@ -756,17 +759,15 @@ details{
 }
 .pedidos{
 	width: 100%;
-	height: 520px;
 	float: left;
 	position: relative;
-	overflow-y: scroll;
 	padding: 5px;
 	box-sizing: border-box;
 	background: rgba(255,255,255,.7);
 	border-radius: 5px;
 }
 .pedidot{
-	height: 120px !important;
+	height: 130px !important;
 }
 .pedidot>p{
 	font-size: 1.09em;
@@ -788,16 +789,15 @@ input[type=number]{
     font-size: 1.2em; 
 }
 .opindividual{
-	width: 100% !important;
+	width: 65% !important;
 	float: right !important;
 }
 	.opindividual>input[type=submit]{
-		width: 31% !important;
 		float: right !important;
 		margin-right: 5px;
-		padding: 0px !important;
+		padding: 2px !important;
 		box-sizing: border-box;
-		height: 25px;
+		height: 30px;
 		border: none;
 		cursor: pointer;
 		color: #fff;
@@ -809,8 +809,14 @@ input[type=number]{
 	.colorc{
 		background: rgba(0,0,0,.6) !important;
 	}
+	.colorc:active{
+		top: 1px;
+	}
 	.colore{
 		background: rgba(0,0,0,.4) !important;
+	}
+	.colore:active{
+		top: 1px;
 	}
 .opcompra{
 	width: 100%;
@@ -941,13 +947,14 @@ input[type=number]{
   }
   .contenedorcan{
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     float: left !important;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     align-items: center;
+    line-height: 40px;		
   }
   .nombrec{
     margin-top: 5px;
@@ -994,6 +1001,7 @@ input[type=number]{
   box-shadow: 0px 2px 1px -1px rgba(148,146,148,1);
   color: #fff;
   font-weight: 600;
+  margin-top: 10px;
 }
 .button:active, .button1:active{
   top: 1px;
