@@ -37,6 +37,10 @@
 			$data = array('nombreProducto' =>$nombre, 'precio' =>$precio, 'descripcion' =>$descripcion, 'talla' =>$talla, 'cantidad' =>$cantidad);
 			return $this->db->update($data, "productos", "idProducto = '{$idProducto}'");
 		}
+		public function borrar($idProducto)
+		{
+			return $this->db->delete("productos", "idProducto = {$idProducto}");
+		}
 	}
 
  ?>
