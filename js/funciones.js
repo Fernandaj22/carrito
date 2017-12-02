@@ -1,3 +1,10 @@
+
+function alert() {
+
+	alert("¡Producto agregado al carrito!");
+
+}
+
 function verDetalles(idProducto){
 
 	location.href=config['url']+"carrito/infoProducto?id="+idProducto;
@@ -6,6 +13,11 @@ function verDetalles(idProducto){
 function editar(idProducto){
 	
 	location.href=config['url']+"Carrito/editar?id="+idProducto;
+}
+
+function borrar(idProducto) {
+
+	location.href = config['url']+"Carrito/borrarProducto?idProducto="+idProducto;
 }
 
 function cargarPlayeras(){
@@ -177,7 +189,8 @@ function acargarPlayeras(){
 				"<div class='opadmin'>"+
 						"<i class='fa fa-pencil' aria-hidden='true' title='Editar'"+
 						"onclick='editar("+playera[i].idProducto+")'></i>"+
-						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'></i>"+
+						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'"+
+						"onclick='borrar("+playera[i].idProducto+")'></i>"+
 				"</div>"+
 				"<p class='tipo0'>"+playera[i].nombre+"</p>"+
 				"<img src='../public/img/"+playera[i].foto+"'>"+
@@ -209,8 +222,9 @@ function acargarCamisas(){
 				div = "<div class='col-xs-12 col-sm-4 col-md-3 centrado producto'>"+
 				"<div class='opadmin'>"+
 						"<i class='fa fa-pencil' aria-hidden='true' title='Editar'"+
-						"onclick='editar("+playera[i].idProducto+")'></i>"+
-						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'></i>"+
+						"onclick='editar("+camisa[i].idProducto+")'></i>"+
+						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'"+
+						"onclick='borrar("+camisa[i].idProducto+")'></i>"+
 				"</div>"+
 				"<p class='tipo0'>"+camisa[i].nombre+"</p>"+
 				"<img src='../public/img/"+camisa[i].foto+"'>"+
@@ -242,8 +256,9 @@ function acargarPantalones(){
 				div = "<div class='col-xs-12 col-sm-4 col-md-3 centrado producto'>"+
 				"<div class='opadmin'>"+
 						"<i class='fa fa-pencil' aria-hidden='true' title='Editar'"+
-						"onclick='editar("+playera[i].idProducto+")'></i>"+
-						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'></i>"+
+						"onclick='editar("+pantalon[i].idProducto+")'></i>"+
+						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'"+
+						"onclick='borrar("+pantalon[i].idProducto+")'></i>"+
 				"</div>"+
 				"<p class='tipo0'>"+pantalon[i].nombre+"</p>"+
 				"<img src='../public/img/"+pantalon[i].foto+"'>"+
@@ -273,8 +288,9 @@ function acargarChamarras(){
 				div = "<div class='col-xs-12 col-sm-4 col-md-3 centrado producto'>"+
 				"<div class='opadmin'>"+
 						"<i class='fa fa-pencil' aria-hidden='true' title='Editar'"+
-						"onclick='editar("+chamarra[i].idProducto+")'></i>"+
-						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'></i>"+
+						"onclick='editar("+pantalon[i].idProducto+")'></i>"+
+						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'"+
+						"onclick='borrar("+pantalon[i].idProducto+")'></i>"+
 				"</div>"+
 				"<p class='tipo0'>"+chamarra[i].nombre+"</p>"+
 				"<img src='../public/img/"+chamarra[i].foto+"'>"+
@@ -305,8 +321,9 @@ function acargarZapatos(){
 				div = "<div class='col-xs-12 col-sm-4 col-md-3 centrado producto'>"+
 				"<div class='opadmin'>"+
 						"<i class='fa fa-pencil' aria-hidden='true' title='Editar'"+
-						"onclick='editar("+playera[i].idProducto+")'></i>"+
-						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'></i>"+
+						"onclick='editar("+zapato[i].idProducto+")'></i>"+
+						"<i class='fa fa-trash' aria-hidden='true' title='Eliminar'"+
+						"onclick='borrar("+zapato[i].idProducto+")'></i>"+
 				"</div>"+
 				"<p class='tipo0'>"+zapato[i].nombre+"</p>"+
 				"<img src='../public/img/"+zapato[i].foto+"'>"+
