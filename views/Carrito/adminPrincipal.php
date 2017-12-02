@@ -34,7 +34,7 @@
 				<?php 
 
 					if (isset($nombreUsuario)) {
-						echo "Bienvenido ". strtoupper($nombreUsuario)."<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+						echo"<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
 					}else{
 						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
 					}
@@ -85,7 +85,8 @@
 
 	<nav class="navbar navbar-default border" role="navigation">
   		<div class="navbar-header txto">
-  			<li class="lectura"><a readonly></a></li>
+  			
+  			<li class="hover"><?=$nombreUsuario?><a readonly></a></li>
     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       		<span class="icon-bar"></span>
       		<span class="icon-bar"></span>
