@@ -98,7 +98,16 @@
               <textarea type="text" name="descripcionProducto" class="descripcion col-xs-12" disabled><?=utf8_decode($producto['descripcion'])?></textarea>
               <div class="contenedorcan">
               	<p class="nombrec">Cantidad disponible en stock:</p>
-              	<p name="quantity" class="nombrec"><?=$producto['cantidad']?></p>
+              	<p name="quantity" class="nombrec">
+              		<?php 
+              			if($producto['cantidad'] <= 0){
+              				echo "AGOTADO";
+              			}else{
+              				echo $producto['cantidad'];
+              			}
+              			
+              		?>
+              	</p>
               </div>
               <div class="contenedorcan">
               	<p class="nombrec">Tallas disponibles:</p>
@@ -109,7 +118,13 @@
               <input type="text" name="" value="AGOTADO	" class="nombrep col-xs-12 rojo hidden" disabled>
               <p class="centrado">Envíos a todo el país</p>
               <p class="centrado">Envío gratis durante la exhibición del producto y hasta agotar existencias</p>
-              <button name="" onclick="alert('¡Producto agregado al carrito!')" class="button col-xs-6 col-sm-5 col-md-5 color0" value="">Agregar</button>
+              <?php 
+              		if ($producto['cantidad'] > 0) {
+              			 echo "<button onclick='alert();' class='button col-xs-6 col-sm-5 col-md-5 color0'>Agregar</button>";
+              		}else{
+              			echo "<button disabled class='button col-xs-6 col-sm-5 col-md-5 color0'>Agregar</button>";
+              		}
+               ?>
               </form>
 		</div>
 	</div>
