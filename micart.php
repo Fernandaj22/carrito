@@ -65,49 +65,46 @@
 
 			<h3>Tienes 10 artículos en el carrito</h3>
 			<div class="pedidos">
-				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				  	<div class="col-xs-12 close">
+				  <div class="col-xs-1"></div> <!-- Agregar este div vacio cada dos <div class="col-xs-12 col-md-5 borde"> para alinear al centro -->
+				  <div class="col-xs-12 col-md-5 borde">
+				  	<div class="col-xs-12 col-md-12 close">
 						<i class="fa fa-times" aria-hidden="true" title="Eliminar producto"></i>
 					</div>
-					<img src="img/sueter1.png" class="col-xs-12 col-md-2 imgc">
-				    <p class="list-group-item-text bold col-md-10">Camisa a cuadros roja</p>
-					    	
-
-				  </div>
-				</div>
-
-				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
-				    <p class="list-group-item-text nombres">Mediana</p>
-					<p class="list-group-item-text">Cantidad:</p>
-					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1 cantidad">
-					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
-					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+					<img src="img/sueter1.png" class="col-xs-12 col-md-4 imgc">
+				    <p class="bold col-md-8 col-xs-12">Camisa a cuadros roja</p>
+					<p class="col-md-8 col-xs-12">Mediana</p>	
+					<div class="file col-xs-12 col-md-8">
+						<p class="">Cantidad</p>
+						<input type="number" class="cantidad" name="" min="1">
 					</div>
+					<p class="col-xs-12 col-md-8 top">Subtotal: <span class="bold">$ 350.00</span></p>
 				  </div>
-				</div>
-
-				<div class="list-group">
-				  <div class="list-group-item select pedidot">
-				    <p class="list-group-item-text bold">Camisa a cuadros roja</p>
-				    <p class="list-group-item-text nombres">Mediana</p>
-					<p class="list-group-item-text">Cantidad:</p>
-					<input type="number" name="" min="1" class="col-xs-4 col-sm-1 col-md-1 col-lg-1 cantidad">
-					<div class="opindividual">
-						<input type="submit" name="" value="Comprar" class="colorc col-xs-5">
-					    <input type="submit" name="" value="Quitar" class="colore col-xs-5">
+				  
+				  <div class="col-xs-12 col-md-5 borde">
+				  	<div class="col-xs-12 col-md-12 close">
+						<i class="fa fa-times" aria-hidden="true" title="Eliminar producto"></i>
 					</div>
+					<img src="img/sueter1.png" class="col-xs-12 col-md-4 imgc">
+				    <p class="bold col-md-8 col-xs-12">Camisa a cuadros roja</p>
+					<p class="col-md-8 col-xs-12">Mediana</p>	
+					<div class="file col-xs-12 col-md-8">
+						<p class="">Cantidad</p>
+						<input type="number" class="cantidad" name="" min="1">
+					</div>
+					<p class="col-xs-12 col-md-8 top">Subtotal: <span class="bold">$ 350.00</span></p>
 				  </div>
-				</div>
-				
-				<div class="opcompra">
-					<input type="submit" name="" value="Limpiar carrito" class="colore hovertop">
-					<input type="submit" name="" value="Comprar todo" class="colorc hovertop">
-				</div>
+
+				  
 			</div>
+
+			<div class="col-xs-12 col-md-12">
+				<p class="bold r">Subtotal:  <span class="bold r"> $ 700.00</span></p>
+			</div>
+			<div class="opcompra col-xs-12 col-md-12 padding">
+					<input type="submit" name="" value="Comprar con tarjeta" class="colorc hovertop col-xs-12 col-md-2" onclick="pago.php">
+					<div id="paypal-button" class=""></div>
+			</div>
+			<div class="vacios1"></div>
 	 	</div>
 	</div>
 
@@ -131,7 +128,10 @@
 		</div>
 	</footer>
 
-
+<script type="text/javascript" src="https://www.paypalobjects.com/api/checkout.js">
+</script>
+<script type="text/javascript" src="js/pagos_paypal.js">
+</script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
