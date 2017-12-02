@@ -533,6 +533,9 @@ body, html{
   height: 220px !important;
   float: left;
 }
+.b{
+  font-weight: bold;
+}
 .editable{
 	width: 100%;
 	height: 20px;

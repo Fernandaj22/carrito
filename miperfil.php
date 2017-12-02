@@ -105,40 +105,21 @@
 				<h3>Historial de pedidos</h3>
 				<div class="list-group">
 				  <div class="list-group-item">
-				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
+				    <p class="list-group-item-text">
+				   <span>1</span> Pantalón Recto Azul</p>
 				    <p class="list-group-item-text">25/08/2017</p>
 				    <p class="list-group-item-text">Total de $542.32</p>
+				    <p class="list-group-item-text">Compra hecha con <span class="b">PayPal</span></p>
 				  </div>
 				</div>
 				<div class="list-group">
 				  <div class="list-group-item">
-				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
+				    <p class="list-group-item-text"><span>3 </span>Camisas a cuadros verdes</p>
 				    <p class="list-group-item-text">28/09/2017</p>
 				    <p class="list-group-item-text">Total de $1042.92</p>
+				    <p class="list-group-item-text">Compra hecha con <span class="b">Tarjeta de Débito</span></p>
 				  </div>
 				</div>
-				<div class="list-group">
-				  <div class="list-group-item">
-				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
-				    <p class="list-group-item-text">25/08/2017</p>
-				    <p class="list-group-item-text">Total de $542.32</p>
-				  </div>
-				</div>
-				<div class="list-group">
-				  <div class="list-group-item">
-				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
-				    <p class="list-group-item-text">28/09/2017</p>
-				    <p class="list-group-item-text">Total de $1042.92</p>
-				  </div>
-				</div>
-				<div class="list-group">
-				  <div class="list-group-item">
-				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
-				    <p class="list-group-item-text">28/09/2017</p>
-				    <p class="list-group-item-text">Total de $1042.92</p>
-				  </div>
-				</div>
-				
 			</div>
 		</div>
 		<div class="vacios1"></div>
