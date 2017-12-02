@@ -270,6 +270,20 @@
 			$this->view->render($this, "adminprincipal");
 
 		}
+		public function borrarProducto()
+		{
+			if(isset($_GET['idProducto'])){
+				$borrar = $_GET['idProducto'];
+				$this->loadOtherModel('Admin');
+				echo $this->Admin->borrar($borrar);
+				echo "<script>alert('Producto borrado')</script>";
+				header('Location:'.URL.'Carrito/adminPrincipal');
+			}
+			else{
+				echo "<script>alert('Error inesperado, reintentar más tarde')</script>";
+			}
+			
+		}
 		
 	}
 
