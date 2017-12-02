@@ -111,11 +111,11 @@
 			$nombre = $_POST['nombreRegistro'];
 			$mail = $_POST['mailRegistro'];
 			$pass = $_POST['passRegistro'];
-			$respuesta = $_POST['respuestaRegistro'];
+			$respuesta = Hash::create(ALGOR, $_POST['respuestaRegistro'], KEY);
 			$pregunta = $_POST['preguntaRegistro'];
 			if($nombre != "" && $mail != "" && $pass != "" && $respuesta != "" || $pregunta != ""){
 				if($pass == $pass2){
-					$pass = sha1($pass);
+					$pass = Hash::create(ALGOR, $pass, KEY);
 					$this->loadOtherModel('UsuarioCarrito');
 					//Mandamos a llamar registroUsuario() ubicado en -> "../models/UsuarioCarrito_model"
 					$this->UsuarioCarrito->registroUsuario($nombre, $mail, $pass, sha1($respuesta), $pregunta);
@@ -143,7 +143,7 @@
 			//Recibimos los datos de $_POST de la pantalla login
 			$email = $_POST['mailLog'];
 			$passwordLog = $_POST['passLog'];
-			$passLog = sha1($passwordLog);
+			$passLog = Hash::create(ALGOR, $passwordLog, KEY);
 			//Cargamos el modelo
 			$this->loadOtherModel('UsuarioCarrito');
 			//Mandamos a llamar iniciarSesion($mail, $pass) ubicado en -> "../models/UsuarioCarrito_model"
