@@ -16,7 +16,7 @@ function cargarPlayeras(){
 		
 		if (playerasAjax.readyState == 4 && playerasAjax.status == 200){
 			playera = JSON.parse(playerasAjax.responseText);
-			//console.log(playera);
+			console.log(playera);
 				for(i=0; i<playera.length; i++){
 			
 				div = 
