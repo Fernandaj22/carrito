@@ -7,7 +7,6 @@ function editar(idProducto){
 	
 	location.href=config['url']+"Carrito/editar?id="+idProducto;
 }
-
 function cargarPlayeras(){
 	playerasAjax = new XMLHttpRequest();
 	playerasAjax.open('GET','../public/php/playera.php');
@@ -16,7 +15,7 @@ function cargarPlayeras(){
 		
 		if (playerasAjax.readyState == 4 && playerasAjax.status == 200){
 			playera = JSON.parse(playerasAjax.responseText);
-			console.log(playera);
+			//console.log(playera);
 				for(i=0; i<playera.length; i++){
 			
 				div = 
@@ -156,6 +155,58 @@ function cargarZapatos(){
 			
 		}
 	}
+}
+
+function cargarBusqueda(){
+	string = localStorage.getItem('busqueda');
+	localStorage.clear();
+	keywords = string.split(" ");
+	regex = "";
+	alert(keywords.length);
+	for (i = 0; i<keywords.length;i++){
+
+		if(i==((keywords.length)-1)){
+			regex= regex + keywords[i];
+		}
+		else{
+			regex= regex + keywords[i]+"|";
+		}
+	}
+	data = {'regex':regex};
+	busquedaAjax = new XMLHttpRequest();
+	busquedaAjax.open('POST','../public/php/busqueda.php');
+	busquedaAjax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	busquedaAjax.send(encodeURI('reg=' + regex));
+	busquedaAjax.onreadystatechange = function(){
+		
+		if (busquedaAjax.readyState == 4 && busquedaAjax.status == 200){
+			busqueda = JSON.parse(busquedaAjax.responseText);
+			console.log(busqueda);
+				for(i=0; i<busqueda.length; i++){
+			
+				div = "<div class='col-xs-12 col-sm-4 col-md-3 centrado producto'>"+
+				"<p class='tipo0'>"+busqueda[i].nombre+"</p>"+
+				"<img src='../public/img/"+busqueda[i].foto+"'>"+
+				"<p class='tipo1'>"+"$"+busqueda[i].precio+"</p>"+
+				"<input type='text'readonly class='hidden' value='"+busqueda[i].idProducto+"'>"+
+				"<div class='botones'>"+
+						"<input type='submit' id='idProducto' onclick='verDetalles("+busqueda[i].idProducto+");' value='Ver detalles'"+
+						"class='color0'>"+
+					"</div>"+
+				"</div>";
+					//console.log(div);
+				document.querySelector('section').innerHTML += div;
+			
+				}
+			
+		}
+	}
+}
+
+function buscarProducto(){
+	busqueda = document.getElementById("valorBuscar").value;
+	localStorage.setItem("busqueda", busqueda);
+	document.location.href = "busquedas";
 }
 
 /*PARA EL ADMIN*/

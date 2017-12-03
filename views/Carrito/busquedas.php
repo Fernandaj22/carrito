@@ -14,31 +14,36 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-<script type="text/javascript" src="../public/js/funciones.js"></script>
 <script type="text/javascript" src="<?=JS?>config.js"></script>
-<title>TheMorro- Camisas</title>
+<script type="text/javascript" src="../public/js/funciones.js"></script>
+	<title>Nombre de la Tienda - Camisas</title>
 </head>
-<div id="bg"></div>
+<body>
 
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<img src="img/morro.jpg" class="fa tamaño">
-				<a href="principal.php">The Morro</a>
+				<img src="../public/img/morro.png" class="fa tamaño">
+				<a href="<?=URL?>Carrito/">TheMorro</a>
 			</div>
 			<div class="redsociales">
-				<i class="fa fa-facebook-official" arisa-hidden="true"></i>
+				<i class="fa fa-facebook-official" aria-hidden="true"></i>
 				<i class="fa fa-twitter-square" aria-hidden="true"></i>
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="">Iniciar Sesión</a>
+				<?php 
+
+					if (isset($nombreUsuario)) {
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+					}else{
+						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
+					}
+
+				 ?>
 			</div>
 		</div>
 	</header>
-
-	<!--MODAL AGREGAR PRODUCTO-->
-
 
 	<div class="container-fluid">
 		<div class="col-xs-12 imgcate2 img-responsive" id="top"></div>
@@ -56,41 +61,37 @@
 
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
-		     	 <li class="hover"><a href="adminplayeras.php">Playeras</a></li>
+		     	 <li class="hover"><a href="<?=URL?>Carrito/playeras">Playeras</a></li>
 		      	 <li class="hover actual"><a href="#">Camisas</a></li>
-		      	 <li class="hover"><a href="adminpantalones.php">Pantalones</a></li>
-		      	 <li class="hover"><a href="adminchamarras.php">Suéter/Chamarra</a></li>
-		      	 <li class="hover"><a href="adminzapatos.php">Zapatos</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/pantalones">Pantalones</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/chamarras">Suéter/Chamarra</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/zapatos">Zapatos</a></li>
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="lectura"><a readonly>Administrador</a></li>	
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>
 
-	<div class="container color">
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<div class="opadmin">
-						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='edinfo_producto.php'"></i>
-						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
-					</div>
-					<p class="tipo0">Zapato Casual Azul Marino</p>
-					<img src="img/camisa1.png">
-					<p class="tipo1">$950.00</p>
-			</div>
+	<section class="">
+ 		<div class="container top">
+ 			<div class="col-xs-12 col-sm-10 col-md-10 padding"></div>
+ 			<div class="col-xs-12 col-sm-6 col-md-6 padding">
+ 				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
+ 			</div>
+ 
+ 			<div class="col-xs-12 col-sm-2 col-md-2 padding">
+ 				<input type="submit" name="" value="Buscar" class="buscar">
+ 			</div>
+  		</div>
+ 	</section>
 
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-				<div class="vacios"></div>
-				<div class="mas">
-					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" onclick="location.href='nuevo_producto.php'"></i>
-				</div>
-				<p class="textoa">Agregar nuevo producto</p>
-				<div class="vacios"></div>
-			</div>
-			
-	</div>
-
+	<section class="container color">
+		
+	</section>
 	<div class="container">
 		<a href="#top" class="volver col-md-1 col-xs-12">Arriba</a>
 	</div>
@@ -117,6 +118,6 @@
 
 <script type="text/javascript" src="../public/js/jquery.js"></script>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
-<script type="text/javascript">window.addEventListener('load', acargarCamisas, true);</script>
+<script type="text/javascript">window.addEventListener('load', cargarBusqueda, true);</script>
 </body>
 </html>

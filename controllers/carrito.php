@@ -34,6 +34,10 @@
 		{
 			$this->view->render($this, "zapatos");
 		}
+		/*****Pantalla busqedas*****/
+		public function busquedas(){
+			$this->view->render($this, "busquedas");
+		}
 		/*****Pantalla login/registro*****/
 		public function login()
 		{
