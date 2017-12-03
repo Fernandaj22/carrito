@@ -372,3 +372,36 @@ function acargarZapatos(){
 		}
 	}
 }
+
+function showSnackbar(id, text, time) {
+    // Obtiene el div #snackbar
+    var x = document.getElementById(id);
+    
+    //Añadde el texto a mostrar
+    x.innerHTML = text;
+
+    // Añade la clase para mostrar
+    x.className = "show";
+    
+    // Despues de x milisegundos, se remueve el div.
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, time);
+}
+function showSnackbarBol(id, text, i) {
+    // Obtiene el div #snackbar
+    var x = document.getElementById(id);
+    
+    //Añadde el texto a mostrar
+    x.innerHTML = text;
+
+    // Remueve/añade el div segun el index bool
+	if(!i){
+		setTimeout(function(){ x.className = x.className.replace("show", ""); }, 0);
+	}
+	else{
+		// Añade la clase para mostrar
+    	x.className = "show";
+	}
+}
+
+//Div de snackbars
+// <div id="snackbarBottom">...</div>
