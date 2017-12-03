@@ -80,11 +80,11 @@
  		<div class="container top">
  			<div class="col-xs-12 col-sm-10 col-md-10 padding"></div>
  			<div class="col-xs-12 col-sm-6 col-md-6 padding">
- 				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
+ 				<input class="input col-xs-6 col-md-8" id="valorBuscar" type="text" placeholder="Ingresa nombre del producto">
  			</div>
  
  			<div class="col-xs-12 col-sm-2 col-md-2 padding">
- 				<input type="submit" name="" value="Buscar" class="buscar">
+ 				<input type="submit" name="" value="Buscar" class="buscar" onclick="buscarProducto();">
  			</div>
   		</div>
  	</section>

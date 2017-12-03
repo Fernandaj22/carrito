@@ -162,7 +162,6 @@ function cargarBusqueda(){
 	localStorage.clear();
 	keywords = string.split(" ");
 	regex = "";
-	alert(keywords.length);
 	for (i = 0; i<keywords.length;i++){
 
 		if(i==((keywords.length)-1)){
