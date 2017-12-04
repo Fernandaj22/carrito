@@ -1,16 +1,15 @@
 <?php 
-
 	session_start();
 	if(isset($_SESSION['nombreUsuario'])){
 		$nombreUsuario = $_SESSION['nombreUsuario'];
 		$conn = new mysqli(DB_HOST, DB_USER,DB_PASS,DB_NAME);
 		$info = $conn->query("SELECT COUNT(*) AS Total FROM carrito WHERE nombreUsuario ='{$nombreUsuario}'");
 		$producto = $info->fetch_assoc();
+		
 	}else{
 		echo "<script>alert('No existe tu carrito, inicia sesión para crear uno')</script>";
 		echo "<script>location.href='".URL."Carrito/'</script>";
 	}
-	
  ?>
 <!DOCTYPE html>
 <html>
@@ -20,6 +19,8 @@
 <link rel="stylesheet" type="text/css" href="../public/css/estilos.css">
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
+<script type="text/javascript" src="../public/js/funciones.js">
+</script>
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 	<title>Nombre de la Tienda - Mi Carrito</title>
 </head>
@@ -66,36 +67,6 @@
 
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
-		     	 <li class="hover"><a href="<?=URL?>Carrito/playeras">Playeras</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/camisas">Camisas</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/pantalones">Pantalones</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/chamarras">Suéter/Chamarra</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/zapatos">Zapatos</a></li>
-	    	</ul>
-
-	    	<ul class="nav navbar-nav navbar-right home">
-        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"> <?=$nombreUsuario?></a></li>
-    		</ul>
- 		</div>
-	</nav>
-
-	<div class="container-fluid">
-		<div class="col-xs-12 imgcate0 img-responsive" id="top"></div>
-	</div>
-
-	<nav class="navbar navbar-default border" role="navigation">
-  		<div class="navbar-header txto">
-    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      		<span class="icon-bar"></span>
-      		<span class="icon-bar"></span>
-      		<span class="icon-bar"></span>
-    		</button> 
-    		 <a class="navbar-brand" href="" style="cursor:default;">Menú</a> 
-  		</div>
-
-  		<div class="navbar-collapse collapse container">
-	   		<ul class="nav navbar-nav navbar-left right">
 		     	 <li class="hover"><a href="playeras.php">Playeras</a></li>
 		      	 <li class="hover"><a href="camisas.php">Camisas</a></li>
 		      	 <li class="hover"><a href="pantalones.php">Pantalones</a></li>
@@ -114,51 +85,13 @@
 	<div class="container-fluid">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lado6">
 			<h2><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Mi carrito</h2>
-
-			<h3>Tienes 10 artículos en el carrito</h3>
-			<div class="pedidos">
-				  <div class="col-xs-1"></div> <!-- Agregar este div vacio cada dos <div class="col-xs-12 col-md-5 borde"> para alinear al centro -->
-				  <div class="col-xs-12 col-md-5 borde">
-				  	<div class="col-xs-12 col-md-12 close">
-						<i class="fa fa-times" aria-hidden="true" title="Eliminar producto"></i>
-					</div>
-					<img src="img/sueter1.png" class="col-xs-12 col-md-4 imgc">
-				    <p class="bold col-md-8 col-xs-12">Camisa a cuadros roja</p>
-					<p class="col-md-8 col-xs-12">Mediana</p>	
-					<div class="file col-xs-12 col-md-8">
-						<p class="">Cantidad</p>
-						<input type="number" class="cantidad" name="" min="1">
-					</div>
-					<p class="col-xs-12 col-md-8 top">Subtotal: <span class="bold">$ 350.00</span></p>
-				  </div>
-				  
-				  <div class="col-xs-12 col-md-5 borde">
-				  	<div class="col-xs-12 col-md-12 close">
-						<i class="fa fa-times" aria-hidden="true" title="Eliminar producto"></i>
-					</div>
-					<img src="img/sueter1.png" class="col-xs-12 col-md-4 imgc">
-				    <p class="bold col-md-8 col-xs-12">Camisa a cuadros roja</p>
-					<p class="col-md-8 col-xs-12">Mediana</p>	
-					<div class="file col-xs-12 col-md-8">
-						<p class="">Cantidad</p>
-						<input type="number" class="cantidad" name="" min="1">
-					</div>
-					<p class="col-xs-12 col-md-8 top">Subtotal: <span class="bold">$ 350.00</span></p>
-				  </div>
-
-				  
-			</div>
-
-			<div class="col-xs-12 col-md-12">
-				<p class="bold r">Subtotal:  <span class="bold r"> $ 700.00</span></p>
-			</div>
-			<div class="opcompra col-xs-12 col-md-12 padding">
-					<input type="submit" name="" value="Comprar con tarjeta" class="colorc hovertop col-xs-12 col-md-2" onclick="pago.php">
-					<div id="paypal-button" class=""></div>
-			</div>
-			<div class="vacios1"></div>
+			
 	 	</div>
 	</div>
+
+	<section class="container color"></section>
+
+	<input type="submit" value="Comprar Carrito">
 
 	
 	<footer>
@@ -179,12 +112,15 @@
 			</div>
 		</div>
 	</footer>
-
 <script type="text/javascript" src="https://www.paypalobjects.com/api/checkout.js">
 </script>
-<script type="text/javascript" src="js/pagos_paypal.js">
+<script type="text/javascript" src="../public/js/pagos_paypal.js">
 </script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	window.addEventListener('load', cargarCarrito("<?php echo $_SESSION['nombreUsuario'];?>"), true);
+</script>
+
 </body>
 </html>
