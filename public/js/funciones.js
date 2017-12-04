@@ -1,21 +1,20 @@
 function verDetalles(idProducto){
-
-	location.href=config['url']+"carrito/infoProducto?id="+idProducto;
+	console.log(idProducto);
+	location.href = config['url']+"carrito/infoProducto?id="+idProducto;
 
 }
 function editar(idProducto){
-	
 	location.href=config['url']+"Carrito/editar?id="+idProducto;
 }
 function cargarPlayeras(){
 	playerasAjax = new XMLHttpRequest();
-	playerasAjax.open('GET','../public/php/playera.php');
+	playerasAjax.open('GET','http://localhost/Carrito/public/php/playera.php');
 	playerasAjax.send();
 	playerasAjax.onreadystatechange = function(){
 		
 		if (playerasAjax.readyState == 4 && playerasAjax.status == 200){
 			playera = JSON.parse(playerasAjax.responseText);
-			//console.log(playera);
+			console.log(playera);
 				for(i=0; i<playera.length; i++){
 			
 				div = 
@@ -40,13 +39,13 @@ function cargarPlayeras(){
 
 function cargarCamisas(){
 	camisasAjax = new XMLHttpRequest();
-	camisasAjax.open('GET','../public/php/camisa.php');
+	camisasAjax.open('GET','http://localhost/Carrito/public/php/camisa.php');
 	camisasAjax.send();
 	camisasAjax.onreadystatechange = function(){
 		
 		if (camisasAjax.readyState == 4 && camisasAjax.status == 200){
 			camisa = JSON.parse(camisasAjax.responseText);
-			//console.log(camisa);
+			// console.log(camisa);
 				for(i=0; i<camisa.length; i++){
 			
 				div = "<div class='col-xs-12 col-sm-4 col-md-3 centrado producto'>"+
@@ -70,13 +69,13 @@ function cargarCamisas(){
 
 function cargarPantalones(){
 	pantalonesAjax = new XMLHttpRequest();
-	pantalonesAjax.open('GET','../public/php/pantalon.php');
+	pantalonesAjax.open('GET','http://localhost/Carrito/public/php/pantalon.php');
 	pantalonesAjax.send();
 	pantalonesAjax.onreadystatechange = function(){
 		
 		if (pantalonesAjax.readyState == 4 && pantalonesAjax.status == 200){
 			pantalon = JSON.parse(pantalonesAjax.responseText);
-			//console.log(pantalon);
+			console.log(pantalon);
 				for(i=0; i<pantalon.length; i++){
 			
 				div = "<div class='col-xs-12 col-sm-4 col-md-3 centrado producto'>"+
@@ -408,3 +407,30 @@ function showSnackbarBol(id, text, i) {
 
 //Div de snackbars
 // <div id="snackbarBottom">...</div>
+
+function cargarHistorial(){
+	historialAjax = new XMLHttpRequest();
+	historialAjax.open('GET','../public/php/historial.php');
+	historialAjax.send();
+	historialAjax.onreadystatechange = function(){
+		
+		if (historialAjax.readyState == 4 && historialAjax.status == 200){
+			historial = JSON.parse(historialAjax.responseText);
+			console.log(historial);
+				for(i=0; i<historial.length; i++){
+			
+				div = "<div class='list-group'>"+
+				    "<div class='list-group-item'>"+
+				    "<p class='list-group-item-text'>"+historial[i].cantidad+"  "+ historial[i].nombre+"</p>"+
+				    "<p class='list-group-item-text'>"+historial[i].fecha+"</p>"+
+				    "<p class='list-group-item-text'>"+"Total de: $ " +historial[i].cantidad+"</p>"+
+				  "</div>"+
+				  "</div>";
+					// console.log(div);
+				 document.querySelector('section').innerHTML += div;
+			
+				}
+			
+		}
+	}
+}

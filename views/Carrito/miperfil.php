@@ -1,17 +1,3 @@
-<?php 
-
-	session_start();
-	if(isset($_SESSION['nombreUsuario'])){
-		$nombreUsuario = $_SESSION['nombreUsuario'];
-		$conn = new mysqli(DB_HOST, DB_USER,DB_PASS,DB_NAME);
-		$info = $conn->query("SELECT COUNT(*) AS Total FROM carrito WHERE nombreUsuario ='{$nombreUsuario}'");
-		$producto = $info->fetch_assoc();
-	}else{
-		echo "<script>alert('Inicia sesión para crear un perfil')</script>";
-		echo "<script>location.href='".URL."Carrito/'</script>";
-	}
-	
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,15 +7,16 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-	<title>Nombre de la Tienda - Mi perfil</title>
+<script type="text/javascript" src="../public/js/funciones.js"></script>
+	<title>Nombre de la Tienda - Principal</title>
 </head>
 <body>
 
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<img src="../public/img/morro.jpg" class="fa tamaño">
-				<a href="<?=URL?>Carrito/">TheMorro</a>
+				<img src="img/morro.jpg" class="fa tamaño">
+				<a href="principal.php">The Morro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -37,15 +24,7 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<?php 
-
-					if (isset($nombreUsuario)) {
-						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
-					}else{
-						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
-					}
-
-				 ?>
+				<a href="">Iniciar Sesión</a>
 			</div>
 		</div>
 	</header>
@@ -66,17 +45,17 @@
 
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
-		     	 <li class="hover"><a href="<?=URL?>Carrito/playeras">Playeras</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/camisas">Camisas</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/pantalones">Pantalones</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/chamarras">Suéter/Chamarra</a></li>
-		      	 <li class="hover"><a href="<?=URL?>Carrito/zapatos">Zapatos</a></li>
+		     	 <li class="hover"><a href="playeras.php">Playeras</a></li>
+		      	 <li class="hover"><a href="camisas.php">Camisas</a></li>
+		      	 <li class="hover"><a href="pantalones.php">Pantalones</a></li>
+		      	 <li class="hover"><a href="chamarras.php">Suéter/Chamarra</a></li>
+		      	 <li class="hover"><a href="zapatos.php">Zapatos</a></li>
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
-        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        		<li class="hover actual"><a href="#"><?=$nombreUsuario?></a></li>
+	    		<li class="hover"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover actual"><a href="micart.php"> Mi Cuenta</a></li>
     		</ul>
  		</div>
 	</nav>
@@ -88,7 +67,7 @@
 			<div class="panel panel-default personal">
 			  <div class="panel-heading bold">Nombre</div>
 			  <div class="panel-body">
-			     <?=$nombreUsuario?>
+			    María Fernanda Juárez Tirado
 			  </div>
 			</div>
 
@@ -97,7 +76,7 @@
 			    <h3 class="panel-title bold">Email</h3>
 			  </div>
 			  <div class="panel-body">
-			    CORREO
+			    ferjuareztirado@gmail.com
 			  </div>
 			</div>
 
@@ -123,8 +102,8 @@
 			</details>
 		</div>
 		<div class="col-xs-12 col-md-6 col-sm-6 col-lg-6 lado6">
-			<div class="historial">
-				<h3>Historial de pedidos</h3>
+			<section class="historial">
+					<h3>Historial de pedidos</h3>
 				<div class="list-group">
 				  <div class="list-group-item">
 				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
@@ -132,36 +111,7 @@
 				    <p class="list-group-item-text">Total de $542.32</p>
 				  </div>
 				</div>
-				<div class="list-group">
-				  <div class="list-group-item">
-				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
-				    <p class="list-group-item-text">28/09/2017</p>
-				    <p class="list-group-item-text">Total de $1042.92</p>
-				  </div>
-				</div>
-				<div class="list-group">
-				  <div class="list-group-item">
-				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
-				    <p class="list-group-item-text">25/08/2017</p>
-				    <p class="list-group-item-text">Total de $542.32</p>
-				  </div>
-				</div>
-				<div class="list-group">
-				  <div class="list-group-item">
-				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
-				    <p class="list-group-item-text">28/09/2017</p>
-				    <p class="list-group-item-text">Total de $1042.92</p>
-				  </div>
-				</div>
-				<div class="list-group">
-				  <div class="list-group-item">
-				    <p class="list-group-item-text">3 Camisas a cuadros verdes</p>
-				    <p class="list-group-item-text">28/09/2017</p>
-				    <p class="list-group-item-text">Total de $1042.92</p>
-				  </div>
-				</div>
-				
-			</div>
+			</section>
 		</div>
 		<div class="vacios1"></div>
 		<div class="vacios1"></div>
@@ -182,13 +132,14 @@
 
 			<div class="col-xs-12 col-sm-4 col-md-4 nombre">
 				<i class="fa fa-registered" aria-hidden="true"> </i>
-				<p>TheMorro</p>
+				<p>MenShop</p>
 			</div>
 		</div>
 	</footer>
 
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../public/js/jquery.js"></script>
+<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+<script type="text/javascript">window.addEventListener('load', cargarHistorial, true);</script>
 </body>
 </html>
