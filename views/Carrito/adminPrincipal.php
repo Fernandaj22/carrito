@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 <script type="text/javascript" src="<?=JS?>config.js"></script>
-	<title>Nombre de la Tienda - Principal</title>
+	<title>TheMorro - Principal</title>
 </head>
 <body>
 

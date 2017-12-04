@@ -19,7 +19,7 @@
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 <script type="text/javascript" src="../public/js/funciones2.js"></script>
-	<title>Nombre de la página - Detalles</title>
+	<title>TheMorro - Detalles</title>
 </head>
 <body>
 

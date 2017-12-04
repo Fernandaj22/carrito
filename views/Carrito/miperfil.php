@@ -3,11 +3,15 @@
 	session_start();
 	if(isset($_SESSION['nombreUsuario'])){
 		$nombreUsuario = $_SESSION['nombreUsuario'];
-		$correo = $_SESSION['correo'];
+		$conn = new mysqli(DB_HOST, DB_USER,DB_PASS,DB_NAME);
+		$info = $conn->query("SELECT COUNT(*) AS Total FROM carrito WHERE nombreUsuario ='{$nombreUsuario}'");
+		$producto = $info->fetch_assoc();
+	}else{
+		echo "<script>alert('Inicia sesión para crear un perfil')</script>";
+		echo "<script>location.href='".URL."Carrito/'</script>";
 	}
+	
  ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,16 +21,15 @@
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
-<script type="text/javascript" src="../public/js/funciones.js"></script>
-	<title>Nombre de la Tienda - Principal</title>
+	<title>TheMorro - Mi perfil</title>
 </head>
 <body>
 
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<img src="img/morro.jpg" class="fa tamaño">
-				<a href="principal.php">The Morro</a>
+				<img src="../public/img/morro.jpg" class="fa tamaño">
+				<a href="<?=URL?>Carrito/">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -34,7 +37,15 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="">Iniciar Sesión</a>
+				<?php 
+
+					if (isset($nombreUsuario)) {
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+					}else{
+						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
+					}
+
+				 ?>
 			</div>
 		</div>
 	</header>
@@ -55,17 +66,17 @@
 
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
-		     	 <li class="hover"><a href="playeras.php">Playeras</a></li>
-		      	 <li class="hover"><a href="camisas.php">Camisas</a></li>
-		      	 <li class="hover"><a href="pantalones.php">Pantalones</a></li>
-		      	 <li class="hover"><a href="chamarras.php">Suéter/Chamarra</a></li>
-		      	 <li class="hover"><a href="zapatos.php">Zapatos</a></li>
+		     	 <li class="hover"><a href="<?=URL?>Carrito/playeras">Playeras</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/camisas">Camisas</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/pantalones">Pantalones</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/chamarras">Suéter/Chamarra</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/zapatos">Zapatos</a></li>
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="hover"><a href="micart.php"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
-        		<li class="hover"><a href="principal.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        		<li class="hover actual"><a href="micart.php"> Mi Cuenta</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito</a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        		<li class="hover actual"><a href="#"><?=$nombreUsuario?></a></li>
     		</ul>
  		</div>
 	</nav>
@@ -77,12 +88,7 @@
 			<div class="panel panel-default personal">
 			  <div class="panel-heading bold">Nombre</div>
 			  <div class="panel-body">
-			    <?php 
-
-					if (isset($nombreUsuario)) {
-						echo "<p>".$nombreUsuario."</p>";
-					}
-				 ?>
+			     <?=$nombreUsuario?>
 			  </div>
 			</div>
 
@@ -91,12 +97,7 @@
 			    <h3 class="panel-title bold">Email</h3>
 			  </div>
 			  <div class="panel-body">
-			    <?php 
-
-					if (isset($correo)) {
-						echo "<p>".$correo."</p>";
-					}
-				 ?>
+			    CORREO
 			  </div>
 			</div>
 
@@ -122,16 +123,16 @@
 			</details>
 		</div>
 		<div class="col-xs-12 col-md-6 col-sm-6 col-lg-6 lado6">
-			<section class="historial">
-					<h3>Historial de pedidos</h3>
+			<div class="historial">
+				<h3>Historial de pedidos</h3>
 				<div class="list-group">
 				  <div class="list-group-item">
 				    <p class="list-group-item-text">1 Pantalón Recto Azul</p>
 				    <p class="list-group-item-text">25/08/2017</p>
-				    <p class="list-group-item-text">Total de $542.32</p>
+				    <p class="list-group-item-text">Total de <span class="b">$542.32</span></p>
 				  </div>
-				</div>
-			</section>
+				</div>				
+			</div>
 		</div>
 		<div class="vacios1"></div>
 		<div class="vacios1"></div>
@@ -152,7 +153,7 @@
 
 			<div class="col-xs-12 col-sm-4 col-md-4 nombre">
 				<i class="fa fa-registered" aria-hidden="true"> </i>
-				<p>MenShop</p>
+				<p>TheMorro</p>
 			</div>
 		</div>
 	</footer>
@@ -160,6 +161,5 @@
 
 <script type="text/javascript" src="../public/js/jquery.js"></script>
 <script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
-<script type="text/javascript">window.addEventListener('load', cargarHistorial, true);</script>
 </body>
 </html>

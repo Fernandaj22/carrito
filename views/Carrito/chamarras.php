@@ -1,5 +1,4 @@
 <?php 
-
 	session_start();
 	if(isset($_SESSION['nombreUsuario'])){
 		$nombreUsuario = $_SESSION['nombreUsuario'];
@@ -16,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 <script type="text/javascript" src="<?=JS?>config.js"></script>
 <script type="text/javascript" src="../public/js/funciones.js"></script>
-	<title>Nombre de la Tienda - Suéter/Chamarras</title>
+	<title>TheMorro - Suéter/Chamarras</title>
 </head>
 <body>
 
@@ -33,13 +32,11 @@
 			</div>
 			<div class="login">
 				<?php 
-
 					if (isset($nombreUsuario)) {
 						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
 					}else{
 						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
 					}
-
 				 ?>
 			</div>
 		</div>
@@ -69,7 +66,7 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito</a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>

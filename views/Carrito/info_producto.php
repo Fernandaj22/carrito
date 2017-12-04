@@ -15,7 +15,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="../public/css/estilos.css">
-<link rel="stylesheet" type="text/css" href="../public/css/estiloSnackbar.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/estilos2.css"> -->
 <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../public/css/font-awesome.css">
@@ -74,7 +73,7 @@
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito</a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
@@ -121,7 +120,7 @@
               <p class="centrado">Envío gratis durante la exhibición del producto y hasta agotar existencias</p>
               <?php 
               		if ($producto['cantidad'] > 0) {
-              			 echo "<button onclick='showSnackbar(\"snackbarBottom\",\"Prodcuto añadido a Carrito\", 1000);' class='button col-xs-6 col-sm-5 col-md-5 color0'>Agregar</button>";
+              			 echo "<button onclick='alert();' class='button col-xs-6 col-sm-5 col-md-5 color0'>Agregar</button>";
               		}else{
               			echo "<button disabled class='button col-xs-6 col-sm-5 col-md-5 color0'>Agregar</button>";
               		}
@@ -129,7 +128,6 @@
               </form>
 		</div>
 	</div>
-	<div id="snackbarBottom">...</div>
 
 	<footer>
 		<div class="container" style="text-align: center; bottom: 0px;">

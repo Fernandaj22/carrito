@@ -17,7 +17,7 @@
 <script type="text/javascript" src="../public/js/funciones.js"></script>
 <script type="text/javascript" src="<?=JS?>config.js"></script>
 
-	<title>Nombre de la Tienda - Zapatos</title>
+	<title>TheMorro - Zapatos</title>
 </head>
 <body>
 

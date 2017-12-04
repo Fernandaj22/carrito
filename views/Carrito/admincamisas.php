@@ -18,13 +18,13 @@
 <script type="text/javascript" src="<?=JS?>config.js"></script>
 <title>TheMorro- Camisas</title>
 </head>
+<body>
 <div id="bg"></div>
-
 	<header class="encabezado">
 		<div class="container-fluid">
 			<div class="logo">
-				<img src="img/morro.jpg" class="fa tamaño">
-				<a href="principal.php">The Morro</a>
+				<img src="../public/img/morro.png" class="fa tamaño">
+				<a href="<?=URL?>Carrito/adminprincipal">TheMorro</a>
 			</div>
 			<div class="redsociales">
 				<i class="fa fa-facebook-official" arisa-hidden="true"></i>
@@ -32,16 +32,21 @@
 				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</div>
 			<div class="login">
-				<a href="">Iniciar Sesión</a>
+				<?php 
+
+					if (isset($nombreUsuario)) {
+						echo "<a href='".URL."Carrito/login'>Cerrar Sesión</a>";
+					}else{
+						echo "<a href='".URL."Carrito/login'>Iniciar Sesión</a>";
+					}
+
+				 ?>
 			</div>
 		</div>
 	</header>
 
-	<!--MODAL AGREGAR PRODUCTO-->
-
-
 	<div class="container-fluid">
-		<div class="col-xs-12 imgcate2 img-responsive" id="top"></div>
+		<div class="col-xs-12 imgcate5 img-responsive" id="top"></div>
 	</div>
 
 	<nav class="navbar navbar-default border" role="navigation">
@@ -56,40 +61,32 @@
 
   		<div class="navbar-collapse collapse container">
 	   		<ul class="nav navbar-nav navbar-left right">
-		     	 <li class="hover"><a href="adminplayeras.php">Playeras</a></li>
-		      	 <li class="hover actual"><a href="#">Camisas</a></li>
-		      	 <li class="hover"><a href="adminpantalones.php">Pantalones</a></li>
-		      	 <li class="hover"><a href="adminchamarras.php">Suéter/Chamarra</a></li>
-		      	 <li class="hover"><a href="adminzapatos.php">Zapatos</a></li>
+		     	 <li class="hover"><a href="<?=URL?>Carrito/adminplayeras">Playeras</a></li>
+		      	 <li class="hover actual"><a href="<?=URL?>Carrito/admincamisas">Camisas</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/adminpantalones">Pantalones</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/adminchamarras">Suéter/Chamarra</a></li>
+		      	 <li class="hover"><a href="<?=URL?>Carrito/adminzapatos">Zapatos</a></li>
 	    	</ul>
 
 	    	<ul class="nav navbar-nav navbar-right home">
-	    		<li class="lectura"><a readonly>Administrador</a></li>	
+	    		<li class="lectura"><a readonly><?=strtoupper($nombreUsuario)?></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/adminprincipal"><i class="fa fa-home" aria-hidden="true"></i>  Home</a></li>
     		</ul>
  		</div>
 	</nav>
-
-	<div class="container color">
-			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
-					<div class="opadmin">
-						<i class="fa fa-pencil" aria-hidden="true" title="Editar" onclick="location.href='edinfo_producto.php'"></i>
-						<i class="fa fa-trash" aria-hidden="true" title="Eliminar"></i>
-					</div>
-					<p class="tipo0">Zapato Casual Azul Marino</p>
-					<img src="img/camisa1.png">
-					<p class="tipo1">$950.00</p>
-			</div>
+	<section class="container color">
+			
 
 			<div class="col-xs-12 col-sm-4 col-md-3 centrado producto">
 				<div class="vacios"></div>
 				<div class="mas">
-					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" onclick="location.href='nuevo_producto.php'"></i>
+					<i class="fa fa-plus-square-o grande" aria-hidden="true" title="Agregar nuevo producto" onclick="location.href='<?=URL?>Carrito/agregarProducto'"></i>
 				</div>
 				<p class="textoa">Agregar nuevo producto</p>
 				<div class="vacios"></div>
 			</div>
 			
-	</div>
+	</section>
 
 	<div class="container">
 		<a href="#top" class="volver col-md-1 col-xs-12">Arriba</a>

@@ -17,7 +17,7 @@
 <script type="text/javascript" src="<?=JS?>config.js"></script>
 <script type="text/javascript" src="../public/js/funciones.js"></script>
 
-	<title>Nombre de la Tienda - Principal</title>
+	<title>TheMorro</title>
 </head>
 <body>
 
@@ -98,7 +98,7 @@
   		<div class="navbar-collapse collapse">
 
 	    	<ul class="nav navbar-nav navbar-right home">
-        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito <span class="circle">0</span></a></li>
+        		<li class="hover"><a href="<?=URL?>Carrito/miCarrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mi Carrito</a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
         		<li class="hover"><a href="<?=URL?>Carrito/miPerfil"><?=$nombreUsuario?></a></li>
     		</ul>
@@ -106,10 +106,10 @@
 	</nav>
 
 	<section class="main">
-		<div class="container-top">
+		<div class="container top"><br>
 			<div  class="col-xs-12 col-sm-2 col-md-1 padding"></div>
-				<form onsubmit="return false" method="POST">
 					<div class="col-xs-12 col-sm-3 col-md-3 padding">
+						<form onsubmit="return false" method="POST">
 						<select class="select" name="cateBuscar" id="cateBuscar">
 							<option value="0">Todas las categorías</option>
 							<option value="1">Playeras</option>
@@ -124,9 +124,9 @@
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-2 padding">
 						<input type="submit" name="buscar" value="Buscar" class="buscar" onclick="buscarProducto();">
+
 					</div>
 				</form>
-			</div>
 		</div>
 	</section>
 
