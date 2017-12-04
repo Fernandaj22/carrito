@@ -9,6 +9,10 @@
 		{
 			return $this->db->select("*", "usuarios", "correo = '{$mail}'");
 		}
+		public function loginSeguridad($correo, $pregunta, $respuesta)
+		{
+			return $this->db->select("*", "usuarios", "correo = '{$correo}' AND idPregunta = '{$pregunta}' AND respSeguridad = '{$respuesta}'");
+		}
 		public function selectProductosByIDProducto($idProducto){
 			return $this->db->select("*", "productos", "idProducto = {$idProducto}");
 		}
