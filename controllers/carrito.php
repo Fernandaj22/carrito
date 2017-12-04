@@ -35,7 +35,7 @@
 			$this->view->render($this, "zapatos");
 		}
 		/*****Pantalla busqedas*****/
-		public function busquedas(){
+	 	public function busquedas(){
 			$this->view->render($this, "busquedas");
 		}
 		/*****Pantalla login/registro*****/
@@ -122,7 +122,7 @@
 					$pass = Hash::create(ALGOR, $pass, KEY);
 					$this->loadOtherModel('UsuarioCarrito');
 					//Mandamos a llamar registroUsuario() ubicado en -> "../models/UsuarioCarrito_model"
-					$this->UsuarioCarrito->registroUsuario($nombre, $mail, $pass, sha1($respuesta), $pregunta);
+					$this->UsuarioCarrito->registroUsuario($nombre, $mail, $pass, $respuesta, $pregunta);
 					$_SESSION['nombreUsuario'] = $nombre;
 					$_SESSION['correo'] = $mail;
 					echo "<script>alert('Usuario registrado con éxito')</script>";
@@ -177,6 +177,30 @@
 				}	
 			}
 			
+		}
+
+		public function seguridad()
+		{
+			session_start();
+			$correoSeg = $_POST['correoSeg'];
+			$idPreguntaSeg = $_POST['preguntaSeg2'];
+			$respuestaSeg = $_POST['respSeg2'];
+			if ($correoSeg != "" && $idPreguntaSeg != "" && $respuestaSeg != ""){
+				$hashResp = Hash::create(ALGOR, $respuestaSeg, KEY);
+				$this->loadOtherModel('UsuarioCarrito');
+				$seguridad = $this->UsuarioCarrito->loginSeguridad($correoSeg, $idPreguntaSeg, $hashResp);
+				if ($seguridad['correo'] == $correoSeg && $seguridad['idPregunta'] == $idPreguntaSeg && $seguridad['respSeguridad'] == $hashResp) {
+					$_SESSION['nombreUsuario'] = $login['nombreUsuario'];
+					$_SESSION['correo'] = $login['correo'];
+					echo "<script>alert('Bienvenido de nuevo :)')</script>";
+					header('Location:'.URL.'Carrito/');
+				}else{
+					echo "<script>alert('Datos incorrectos')</script>";
+					$this->view->render('login');
+				}
+			}else{
+				echo "<script>alert('Rellenar campos')</script>";
+			}
 		}
 
 
