@@ -1,3 +1,10 @@
+
+function alert() {
+
+	alert("¡Producto agregado al carrito!");
+
+}
+
 function verDetalles(idProducto){
 	console.log(idProducto);
 	location.href = config['url']+"carrito/infoProducto?id="+idProducto;
