@@ -163,16 +163,16 @@
 * {margin: 0; padding: 0;}
 
 html {
-	height: 100%;
-	/*Image only BG fallback*/
+  height: 100%;
+  /*Image only BG fallback*/
 
-	/*background = gradient + image pattern combo*/
-	background:
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+  /*background = gradient + image pattern combo*/
+  background:
+    linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
 }
 
 body {
-	font-family: montserrat, arial, verdana;
+  font-family: montserrat, arial, verdana;
 }
 #cont{
   padding-left: 0px;
@@ -180,58 +180,58 @@ body {
 }
 /*form styles*/
 #msform {
-	text-align: center;
-	position: relative;
+  text-align: center;
+  position: relative;
 }
 #msform #dat1, #msform #dat2, #msform #dat3 {
-	background: white;
-	border: 0 none;
-	border-radius: 3px;
-	padding: 20px 30px;
-	box-sizing: border-box;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  padding: 20px 30px;
+  box-sizing: border-box;
   height: 570px;
-	width: 80%;
-	margin: 0 10%;
-	position: relative;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
 }
 #msform input, #msform textarea, #msform select {
-	padding: 15px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	margin-bottom: 10px;
-	box-sizing: border-box;
-	font-family: 'Dosis';
-	color: #2C3E50;
-	font-size: 13px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-family: 'Dosis';
+  color: #2C3E50;
+  font-size: 13px;
 }
 #msform a{
   height: 40px !important; 
   line-height: 40px;
 }
 #msform .action-button {
-	background: #c0c0c0;
-	font-weight: bold;
-	color: white;
-	border: 0 none;
-	border-radius: 1px;
-	cursor: pointer;
-	padding: 10px 5px;
+  background: #c0c0c0;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
   font-size: 1.2em;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #c0c0c0;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #c0c0c0;
 }
 .fs-title {
-	font-size: 15px;
-	text-transform: uppercase;
-	color: #2C3E50;
-	margin-bottom: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
 }
 .fs-subtitle {
-	font-weight: normal;
-	font-size: 13px;
-	color: #666;
-	margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
 }
 .cuadro-sup{
   height: 85px;
