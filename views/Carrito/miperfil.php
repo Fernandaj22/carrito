@@ -1,3 +1,13 @@
+<?php 
+
+	session_start();
+	if(isset($_SESSION['nombreUsuario'])){
+		$nombreUsuario = $_SESSION['nombreUsuario'];
+		$correo = $_SESSION['correo'];
+	}
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +77,12 @@
 			<div class="panel panel-default personal">
 			  <div class="panel-heading bold">Nombre</div>
 			  <div class="panel-body">
-			    María Fernanda Juárez Tirado
+			    <?php 
+
+					if (isset($nombreUsuario)) {
+						echo "<p>".$nombreUsuario."</p>";
+					}
+				 ?>
 			  </div>
 			</div>
 
@@ -76,7 +91,12 @@
 			    <h3 class="panel-title bold">Email</h3>
 			  </div>
 			  <div class="panel-body">
-			    ferjuareztirado@gmail.com
+			    <?php 
+
+					if (isset($correo)) {
+						echo "<p>".$correo."</p>";
+					}
+				 ?>
 			  </div>
 			</div>
 
