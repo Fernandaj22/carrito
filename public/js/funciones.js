@@ -210,6 +210,75 @@ function buscarProducto(){
 	document.location.href = "busquedas";
 }
 
+function cargarCarrito(idUsuario){
+
+	var usuario = idUsuario;
+	carritoAjax = new XMLHttpRequest();
+	carritoAjax.open('POST','../public/php/miCarrito.php');
+	carritoAjax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	carritoAjax.send(encodeURI('usuario='+idUsuario));
+	carritoAjax.onreadystatechange = function(){
+		
+		if (carritoAjax.readyState == 4 && carritoAjax.status == 200){
+			carrito = JSON.parse(carritoAjax.responseText);
+			//console.log(camisa);
+			for(i=0; i<carrito.length; i++){
+				div = "<div class='col-xs-12 col-md-5 borde'>"+
+				  	"<div class='col-xs-12 col-md-12 close'>"+
+						"<i class='fa fa-times' aria-hidden='true' title='Eliminar producto'></i>"+
+					"</div>"+
+					"<img src='../public/img/"+carrito[i].foto+"' class='col-xs-12 col-md-4 imgc'>"+
+				    "<p class='bold col-md-8 col-xs-12'>"+carrito[i].nombre+"</p>"+
+					"<p class='col-md-8 col-xs-12'>"+carrito[i].talla+"</p>"+
+					"<div class='file col-xs-12 col-md-8'>"+
+						"<p class=''>Cantidad</p>"+
+						"<input type='number' class='cantidad' name='' min='1' value='1'>"+
+					"</div>"+
+					"<p class='col-xs-12 col-md-8 top'>Subtotal: <span class='bold'>"+carrito[i].precio+"</span></p>"+
+				 "</div>";
+
+					//console.log(div);
+				document.querySelector('section').innerHTML += div;
+			
+			}
+		}
+	}
+}
+
+function eliminarAlgoCarrito(){
+
+	borrarAlgoAjax = new XMLHttpRequest();
+	borrarAlgoAjax.open('POST','../public/php/miCarrito.php');
+	borrarAlgoAjax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	borrarAlgoAjax.send(encodeURI('usuario='+idUsuario));
+	borrarAlgoAjax.onreadystatechange = function(){
+		
+		if (borrarAlgoAjax.readyState == 4 && borrarAlgoAjax.status == 200){
+			borrar = JSON.parse(borrarAlgoAjax.responseText);
+			//console.log(camisa);
+			for(i=0; i<carrito.length; i++){
+				div = "<div class='col-xs-12 col-md-5 borde'>"+
+				  	"<div class='col-xs-12 col-md-12 close'>"+
+						"<i class='fa fa-times' aria-hidden='true' title='Eliminar producto'></i>"+
+					"</div>"+
+					"<img src='../public/img/"+carrito[i].foto+"' class='col-xs-12 col-md-4 imgc'>"+
+				    "<p class='bold col-md-8 col-xs-12'>"+carrito[i].nombre+"</p>"+
+					"<p class='col-md-8 col-xs-12'>"+carrito[i].talla+"</p>"+
+					"<div class='file col-xs-12 col-md-8'>"+
+						"<p class=''>Cantidad</p>"+
+						"<input type='number' class='cantidad' name='' min='1' value='1'>"+
+					"</div>"+
+					"<p class='col-xs-12 col-md-8 top'>Subtotal: <span class='bold'>"+carrito[i].precio+"</span></p>"+
+				 "</div>";
+
+					//console.log(div);
+				document.querySelector('section').innerHTML += div;
+			
+			}
+		}
+	}
+}
+
 /*PARA EL ADMIN*/
 
 function acargarPlayeras(){
