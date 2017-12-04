@@ -77,18 +77,30 @@
  		</div>
 	</nav>
 
-	<section class="">
- 		<div class="container top">
- 			<div class="col-xs-12 col-sm-10 col-md-10 padding"></div>
- 			<div class="col-xs-12 col-sm-6 col-md-6 padding">
- 				<input class="input col-xs-6 col-md-8" id="" type="text" placeholder="Ingresa nombre del producto">
- 			</div>
- 
- 			<div class="col-xs-12 col-sm-2 col-md-2 padding">
- 				<input type="submit" name="" value="Buscar" class="buscar">
- 			</div>
-  		</div>
- 	</section>
+	<section class="main">
+		<div class="container-top">
+			<div  class="col-xs-12 col-sm-2 col-md-1 padding"></div>
+				<form onsubmit="return false" method="POST">
+					<div class="col-xs-12 col-sm-3 col-md-3 padding">
+						<select class="select" name="cateBuscar" id="cateBuscar">
+							<option value="0">Todas las categorías</option>
+							<option value="1">Playeras</option>
+							<option value="2">Camisas</option>
+							<option value="3">Pantalones</option>
+							<option value="4">Suéter/Chamarra</option>
+							<option value="5">Zapatos</option>
+						</select>
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-5 padding">
+						<input class="input col-xs-6 col-md-9" id="valorBuscar" name="valorBuscar" type="text" placeholder="Ingresa nombre del producto">
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-2 padding">
+						<input type="submit" name="buscar" value="Buscar" class="buscar" onclick="buscarProducto();">
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
 
 
 	<section class="container color">

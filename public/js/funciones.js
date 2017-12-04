@@ -159,6 +159,7 @@ function cargarZapatos(){
 
 function cargarBusqueda(){
 	string = localStorage.getItem('busqueda');
+	categoria = localStorage.getItem('categoria');
 	localStorage.clear();
 	keywords = string.split(" ");
 	regex = "";
@@ -171,11 +172,10 @@ function cargarBusqueda(){
 			regex= regex + keywords[i]+"|";
 		}
 	}
-	data = {'regex':regex};
 	busquedaAjax = new XMLHttpRequest();
 	busquedaAjax.open('POST','../public/php/busqueda.php');
 	busquedaAjax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	busquedaAjax.send(encodeURI('reg=' + regex));
+	busquedaAjax.send(encodeURI('reg=' + regex+"&cat="+categoria));
 	busquedaAjax.onreadystatechange = function(){
 		
 		if (busquedaAjax.readyState == 4 && busquedaAjax.status == 200){
@@ -204,7 +204,10 @@ function cargarBusqueda(){
 
 function buscarProducto(){
 	busqueda = document.getElementById("valorBuscar").value;
+	categoria = document.getElementById('cateBuscar');
+	categoria = categoria[categoria.selectedIndex].value;
 	localStorage.setItem("busqueda", busqueda);
+	localStorage.setItem("categoria", categoria);
 	document.location.href = "busquedas";
 }
 
